@@ -1,4 +1,4 @@
-<! -- sidebar.html -->
+<!-- sidebar.html -->
 <header class="sidebar-header" role="banner">
 	<a href="{{ site.BASE_PATH }}/">
 		<img src="http://www.gravatar.com/avatar/{{site.author.email_md5}}?s=150" class="img-circle" />
@@ -19,21 +19,21 @@
 		{% if site.author.github %}
 		<li>
 			<a class="btn btn-default btn-sm" href="https://github.com/{{ site.author.github }}">
-				<i class="fa fa-github-alt fa-lg"></i>
+				<span class="fa fa-github-alt fa-lg"></span><span class="sr-only">Github</span>
 			</a>
 		</li>
 		{% endif %}
 		{% if site.author.twitter %}
 		<li>
 			<a class="btn btn-default btn-sm" href="https://twitter.com/{{ site.author.twitter }}">
-				<i class="fa fa-twitter fa-lg"></i>
+				<span class="fa fa-twitter fa-lg"></span><span class="sr-only">Twitter</span>
 			</a>
 		</li>
 		{% endif %}
 		{% if site.author.email %}
 		<li>
 			<a class="btn btn-default btn-sm" href="mailto:{{ site.author.email }}">
-				<i class="fa fa-envelope fa-lg"></i>
+				<span class="fa fa-envelope fa-lg"></span><span class="sr-only">Email</span>
 			</a>
 		</li>
 		{% endif %}
@@ -42,25 +42,23 @@
 		{% if site.author.pinterest %}
 		<li>
 			<a class="btn btn-default btn-sm" href="https://pinterest.com/{{ site.author.pinterest }}">
-				<i class="fa fa-pinterest fa-lg"></i>
+				<span class="fa fa-pinterest fa-lg"></span><span class="sr-only">Pinterest</span>
 			</a>
 		</li>
 		{% endif %}
 		{% if site.author.linkedin %}
 		<li>
 			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/{{ site.author.linkedin }}">
-				<i class="fa fa-linkedin fa-lg"></i>
+				<span class="fa fa-linkedin fa-lg"></span><span class="sr-only">Linkedin</span>
 			</a>
 		</li>
 		{% endif %}
 		<li>
 			<a class="btn btn-default btn-sm" href="{{ site.BASE_PATH }}/{{ site.rss_path }}">
-				<i class="fa fa-rss fa-lg"></i>
+				<span class="fa fa-rss fa-lg"></span><span class="sr-only">Rss</span>
 			</a>
 		</li>
 	</ul>
 </div>
 
-	
-
-<! -- sidebar.html end -->
+<!-- sidebar.html end -->

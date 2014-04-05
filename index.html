@@ -1,13 +1,12 @@
 ---
 layout: page
-title: dbyll
-tagline:
+title: Andrea D. Blog
+tagline: ...and definitely It steals the fish.
 ---
 
 {% for post in paginator.posts %}
 
         <article class="home">
-
             <span class="post-date">
                 {% assign d = post.date | date: "%d" | plus:'0' %}
                 {{ post.date | date: "%B" }}
@@ -40,9 +39,11 @@ tagline:
 
         </article>
 {% endfor %}
-<hr/>
 
-<ul class="pager"> 
+
+{% if paginator.total_pages > 1 %}
+<hr/>
+<ul class="pager">
 
   {% if paginator.previous_page %}
     <li class="previous">
@@ -57,7 +58,7 @@ tagline:
       <a>&larr; Newer</a>
     </li>
   {% endif %}
-  
+
   <li>
           <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   </li>
@@ -68,8 +69,9 @@ tagline:
     </li>
   {% else %}
     <li class="next disabled">
-            <a>Older &rarr;</a>        
+            <a>Older &rarr;</a>
     </li>
   {% endif %}
 
 </ul>
+{% endif %}

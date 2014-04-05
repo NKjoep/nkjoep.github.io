@@ -21,6 +21,12 @@ rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
 
+gems:
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+
+
 # BASE_PATH: http://stealthefish.com
 
 # All links will be namespaced by BASE_PATH if defined.
