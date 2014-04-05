@@ -26,6 +26,7 @@ gems:
 - jemoji
 - jekyll-redirect-from
 
+markdown: kramdown
 
 # BASE_PATH: http://stealthefish.com
 
