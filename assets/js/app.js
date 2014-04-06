@@ -1,16 +1,21 @@
-$( document ).ready(function() {
+jQuery(function() {
 
 	/* Sidebar height set */
-	$('.sidebar').css('min-height',$(document).height());
+		var setHeight = function() {
+			$( '.sidebar' ).css( 'min-height',$( document ).height() );
+		};
+
+		setHeight();
+		$( window ).on( 'resize', setHeight );
 
 	/* Secondary contact links */
-	var scontacts = $('#contact-list-secondary');
-	var contact_list = $('#contact-list');
-	
+	var scontacts = $( '#contact-list-secondary' );
+	var contact_list = $( '#contact-list' );
+
 	scontacts.hide();
-	
-	contact_list.mouseenter(function(){ scontacts.slideDown(); });
-	
-	contact_list.mouseleave(function(){ scontacts.slideUp(); });
+
+	contact_list.mouseenter( function() { scontacts.slideDown(); } );
+
+	contact_list.mouseleave( function() { scontacts.slideUp(); } );
 
 });
