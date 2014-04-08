@@ -12,10 +12,25 @@ jQuery(function() {
 	var scontacts = $( '#contact-list-secondary' );
 	var contact_list = $( '#contact-list' );
 
-	scontacts.hide();
+	//scontacts.hide();
+	//contact_list.mouseenter( function() { scontacts.slideDown(); } );
+	//contact_list.mouseleave( function() { scontacts.slideUp(); } );
 
-	contact_list.mouseenter( function() { scontacts.slideDown(); } );
 
-	contact_list.mouseleave( function() { scontacts.slideUp(); } );
+	if (!window.jXHR){
+			var jxhr = document.createElement('script');
+			jxhr.type = 'text/javascript';
+			jxhr.src = window.BASE_PATH+'/assets/resources/jxhr.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(jxhr, s);
+	}
 
+	github.showRepos({
+		user: 'nkjoep',
+		count: 0,
+		skip_forks: true,
+		target: '#gh_repos',
+		itemClass: '',
+		descriptions: false
+	});
 });

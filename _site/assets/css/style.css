@@ -15,6 +15,9 @@ body {
 	top: 0px;
 	padding-top: 10%;
 	background-color: #D3DFEE;
+	max-height: 100%;
+	min-height: 100%;
+	height: 100%;
 }
 
 .sidebar-header {
@@ -137,6 +140,18 @@ h1 a:focus {
 	color: #0f5fc5;
 }
 
+.home h2 a:link,
+.home h2 a:visited {
+	color: #0f5fc5;
+
+}
+
+.home h2 a:hover,
+.home h2 a:active,
+.home h2 a:focus {
+	color: #0f5fc5;
+}
+
 h2, h3 {
 	font-family: 'Philosopher', 'Ubuntu', Arial, sans;
 	color: #b3b3b3;
@@ -211,4 +226,15 @@ footer {
 #nav-menu .dropdown-menu {
 	left: inherit;
 	right: 0px;
+}
+
+#gh_repos {
+	font-size: 12px;
+	overflow: scroll;
+	text-align: center;
+}
+#gh_repos li {
+	display: inline-block;
+	margin-right: 0.35em;
+	margin-right: 1ch;
 }

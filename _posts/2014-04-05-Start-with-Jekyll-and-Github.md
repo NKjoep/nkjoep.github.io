@@ -2,8 +2,8 @@
 layout: post
 title: Start with Jekyll and Github
 description: How I'm starting my blog (again).
-status: draft
-hn-discussion:
+categories: [blog]
+tags: [jeykyll,github]
 ---
 
 I'm a web developer and I follow people, stay update with open source projects
