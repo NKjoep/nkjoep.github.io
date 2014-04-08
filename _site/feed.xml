@@ -8,9 +8,80 @@
 		
 			<item>
 				<title>Start with Jekyll and Github</title>
-				<description>&lt;p&gt;I’ve just installed everything on my machine and uploaded it to my github account.&lt;/p&gt;
+				<description>&lt;p&gt;I’m a web developer and I follow people, stay update with open source projects
+I love &amp;lt;\3, I try to fix bugs and sometimes I create them too (oh who doesn’t?).&lt;/p&gt;
 
-&lt;p&gt;Soon a recap.&lt;/p&gt;
+&lt;p&gt;I had some blogs. No really. I had more than one, more than once.
+Most of them were in my my mind.
+You know, You think writing for a blog is easy and, despite everything I’m a developer:
+I technically know how to code a blog so I would be cool also to write posts in!&lt;/p&gt;
+
+&lt;p&gt;Yes, I said I had them in my mind because I had never found the right platform for my needs. Fast publishing, great html output, fully customizable, mobile ready…&lt;/p&gt;
+
+&lt;p&gt;My favourite was Posterous, but &lt;a href=&quot;http://www.theverge.com/2013/4/30/4281780/posterous-is-shutting-down-tomorrow-here-are-the-best-alternatives&quot;&gt;Twitter acquired and put them down&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All the alternatives to my old blog were flowing in my mind and after a long time I finally found a good solution. This could be a good solution also for you if:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you love markdown and git&lt;/li&gt;
+  &lt;li&gt;you want great control of everything&lt;/li&gt;
+  &lt;li&gt;you don’t want to bother with hostings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;so get my advice, use &lt;a href=&quot;https://pages.github.com/&quot;&gt;Jekyll + GitHub Pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-do-this&quot;&gt;let’s do this&lt;/h2&gt;
+
+&lt;p&gt;The outstanding guide about &lt;strong&gt;Pages&lt;/strong&gt; you find will cover most of common issues, however I’d like to talk you about the some details.&lt;/p&gt;
+
+&lt;p&gt;You need first to have a personal repository &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;.
+If you have a public domain name, then create a file &lt;code&gt;CNAME&lt;/code&gt; and push it in the root of your github project.&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll&quot;&gt;jekyll&lt;/h3&gt;
+
+&lt;p&gt;Then move forward to jekyll. The just created repo supports some special files: whenever you push some special &lt;strong&gt;markdown&lt;/strong&gt; automatically they are translated to .html and are available as a static website. Cool right?&lt;/p&gt;
+
+&lt;p&gt;In order to preview your blog locally you need to install jekyll in your machine. It’s python based so make sure you have:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python --version
+Python 2.7.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Install Jekyll it:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gem install jekyll &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &amp;lt;username&amp;gt;.github.com &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+jekyll new myblog &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And you’re ready to run it locally with &lt;code&gt;jekyll serve -w&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll serve -w
+Configuration file: username.github.io/_config.yml
+            Source: username.github.io
+       Destination: username.github.io/_site
+      Generating... &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;.
+ Auto-regeneration: enabled
+    Server address: http://0.0.0.0:4000
+  Server running... press ctrl-c to stop.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;now open &lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next step is to create markdown files within the &lt;code&gt;_posts&lt;/code&gt; folder.
+Rember you can still create plain .html files.
+Nothing more to say, follow the &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;official guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;themes&quot;&gt;themes&lt;/h3&gt;
+&lt;p&gt;Generally Jekyll supports themes too, just google around.&lt;/p&gt;
+
+&lt;h2 id=&quot;github&quot;&gt;github&lt;/h2&gt;
+&lt;p&gt;You have nothing to do with github, just push the jekyll files to your personal
+repository. Rember that if you want to use jekyll with github projects, use branch &lt;em&gt;gh-pages&lt;/em&gt;. You have to enable it per project.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So this is my first official post with Jekyll@Github, this configuration gives me soooo much flexibility. That freedom I need while experimenting.&lt;/p&gt;
 </description>
 				<pubDate>Sat, 05 Apr 2014 00:00:00 +0200</pubDate>
 				<link>/2014/04/05/Start-with-Jekyll-and-Github.html</link>
