@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Improve your GIT prompt
+title: "Improve your GIT prompt"
 categories: [development, git]
-description: How to get a nice git prompt in no time.
+description: "How to get a nice git prompt in no time."
 tags: [osx, dev, environment]
 ---
 
