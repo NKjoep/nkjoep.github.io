@@ -122,4 +122,5 @@ $ git pull
 {% endhighlight %}
 
 ### enjoy
+
 That's all. enjoy your cool prompt :D
