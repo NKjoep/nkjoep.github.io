@@ -14,7 +14,7 @@ body {
 	position: fixed;
 	top: 0px;
 	padding-top: 10%;
-	background-color: #D3DFEE;
+	background-color: #d3dfee;
 	max-height: 100%;
 	min-height: 100%;
 	height: 100%;
@@ -27,7 +27,7 @@ body {
 
 .sidebar-header .title {
 	letter-spacing: 3px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	margin-top: 0;
 }
 .sidebar-header .title a {
@@ -42,7 +42,7 @@ body {
 
 .sidebar-header .title a:link,
 .sidebar-header .title a:visited {
-	color: #0F5FC5;
+	color: #0f5fc5;
 	text-decoration: none;
 }
 
@@ -120,10 +120,21 @@ article.home pre a:hover {
 
 article img {
 	max-width: 100%;
+	display: block;
+	border-radius: 6px;
+}
+
+article blockquote {
+	font-family: 'Philosopher', 'Ubuntu', sans;
+	font-size: 18px;
+	font-style: italic;
+	letter-spacing: 0.015em;
+	background-color: rgba(0,0,0,.02);
+	border-radius: 5px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family:'Ubuntu', sans-serif;
+	font-family: 'Philosopher', 'Ubuntu', sans-serif;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
 
@@ -156,6 +167,7 @@ h2, h3 {
 	font-family: 'Philosopher', 'Ubuntu', Arial, sans;
 	color: #b3b3b3;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+	margin: 1.1em 0 0.6em 0;
 }
 h2 a:link, h3 a:link,
 h2 a:visited, h3 a:visited {
@@ -169,6 +181,7 @@ h2 a:focus, h3 a:focus {
 }
 
 h4, h5, h6 {
+	margin: 1em 0 0.4em 0;
 	font-family: 'Philosopher', 'Ubuntu', Arial, sans;
 	color: #b3b3b3;
 }
@@ -189,7 +202,7 @@ footer {
 
 /* nav-vertical-tabs component */
  .nav-tabs-vertical {
-	border-right: 1px solid #ddd;
+	border-right: 1px solid #dddddd;
 }
 
 .nav-tabs-vertical li {
@@ -199,10 +212,10 @@ footer {
 .nav-tabs-vertical > li.active > a,
 .nav-tabs-vertical > li.active > a:hover,
 .nav-tabs-vertical > li.active > a:focus {
-	color: #555;
+	color: #555555;
 	cursor: default;
-	background-color: #fff;
-	border: 1px solid #ddd;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
 	border-right-color: transparent;
 }
 
@@ -213,7 +226,7 @@ footer {
 }
 
 .badge {
-	background: #0F5FC5;
+	background-color: #0f5fc5;
 }
 
 #nav-menu {
@@ -228,13 +241,19 @@ footer {
 	right: 0px;
 }
 
-#gh_repos {
+#gh-repos {
 	font-size: 12px;
-	overflow: scroll;
 	text-align: center;
 }
-#gh_repos li {
+#gh-repos li {
 	display: inline-block;
-	margin-right: 0.35em;
-	margin-right: 1ch;
+	margin: 0 0.25em 0 0;
+	margin: 0 1ch 0 0;
+}
+
+.post-info {
+	margin: 3em 0;
+	background-color: #d3dfee;
+	background-color: rgba(211,223,238,.3);
+	border-radius: 3px;
 }

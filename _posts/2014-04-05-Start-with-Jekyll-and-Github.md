@@ -7,7 +7,7 @@ tags: [jeykyll,github]
 ---
 
 I'm a web developer and I follow people, stay update with open source projects
-I love <\3, I try to fix bugs and sometimes I create them too (oh who doesn't?).
+I love <3, I try to fix bugs and sometimes I create them too (oh who doesn't?).
 
 I had some blogs. No really. I had more than one, more than once.
 Most of them were in my my mind.

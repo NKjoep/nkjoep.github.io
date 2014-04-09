@@ -26,11 +26,12 @@ jQuery(function() {
 	}
 
 	github.showRepos({
-		user: 'nkjoep',
-		count: 0,
-		skip_forks: true,
-		target: '#gh_repos',
-		itemClass: '',
-		descriptions: false
+	        user: 'nkjoep',
+	       count: 0,
+  	skip_forks: true,
+	      target: '#gh-repos',
+	   itemClass: '',
+	descriptions: false
 	});
-});
+
+}); //domready
