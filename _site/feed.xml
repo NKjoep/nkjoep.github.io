@@ -7,6 +7,39 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>i-love-markdown.css</title>
+				<description>&lt;p&gt;As developer I started with Markdown few years ago, when GitHub started trending.
+I’d like to remember the true Markdown father John Gruber and the his &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I started using the Markdown syntax almost for everything and if you aren’t doing so, please you have to.&lt;/p&gt;
+
+&lt;p&gt;It’s a great too, it makes possible to write HTML knowing nothing about that.&lt;/p&gt;
+
+&lt;p&gt;You can use a simple text editor, and most important, it can be “embedded” in whatever website, desktop app or mobile.
+Seriously, they should teach it in school.&lt;/p&gt;
+
+&lt;h2 id=&quot;so&quot;&gt;so?&lt;/h2&gt;
+&lt;p&gt;More than once I had to create css styles for the html result of markdowns, and you probably know I’m talking about the most important html tags: &lt;code&gt;&amp;lt;h[1-6]&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;ul|ol&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; and few others.&lt;/p&gt;
+
+&lt;p&gt;Then I thought I would be cool to create a css that would dress up everything like the plain markdown source.&lt;/p&gt;
+
+&lt;h2 id=&quot;check-it-out&quot;&gt;check it out&lt;/h2&gt;
+&lt;p&gt;That’s why I created &lt;a href=&quot;http://stealthefish.com/i-love-markdown.css/index.html&quot;&gt;i-love-markdown.css&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts/2014-04-16-i-love-markdowncss/i-love-markdown.jpg&quot; alt=&quot;i-love-markdown.css homepage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I started with a simple css then ended up with a less file and a container so it’ll be easy to integrate it with existant websites.&lt;/p&gt;
+
+&lt;p&gt;After I finished I googled a bit for something similar and I discovered many others had my same idea…&lt;/p&gt;
+
+&lt;p&gt;One of my favourites is: &lt;a href=&quot;http://mrcoles.com/demo/markdown-css/&quot;&gt;markdown-css (http://mrcoles.com/demo/markdown-css/)&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Wed, 16 Apr 2014 00:00:00 +0200</pubDate>
+				<link>/experiments/css/2014/04/16/i-love-markdowncss.html</link>
+				<guid isPermaLink="true">/experiments/css/2014/04/16/i-love-markdowncss.html</guid>
+			</item>
+		
+			<item>
 				<title>Improve your GIT prompt</title>
 				<description>&lt;p&gt;A &lt;a href=&quot;http://simoneloru.com/&quot;&gt;friend of mine&lt;/a&gt;, during a remote shared video session,
 noticied my shell while we were deciding what to commit and what to merge.&lt;/p&gt;
