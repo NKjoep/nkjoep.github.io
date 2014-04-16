@@ -20,9 +20,9 @@
 		{{ content }}
 		</div>
 
-		{% unless (!(page.categories == empty) || !(page.tags == empty)) %}
+		{% if page.categories != empty or page.tags != empty  %}
 			<div class="post-info alert text-right">
-		{% endunless %}
+		{% endif %}
 
 			{% unless page.categories == empty %}
 				<span class="sr-only">Read more posts of the same categories:</span>
@@ -75,9 +75,9 @@
 				</ul>
 			{% endunless %}
 
-		{% unless (!(page.categories == empty) || !(page.tags == empty)) %}
-			</div>
-		{% endunless %}
+		{% if page.categories != empty or page.tags != empty  %}
+				</div>
+		{% endif %}
 
 		{% if paginator.total_pages > 1 %}
 				<hr>
@@ -95,7 +95,10 @@
 				</ul>
 				<hr>
 		{% endif %}
-	</div>
+
+	{% unless (!(page.categories == empty) || !(page.tags == empty)) %}
+		</div>
+	{% endunless %}
 
 	<div class="col-sm-2 sidebar-2">
 	</div>
