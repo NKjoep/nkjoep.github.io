@@ -7,6 +7,63 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>How to learn CSS layout</title>
+				<description>&lt;p&gt;You surely need to check this website out: &lt;a href=&quot;http://learnlayout.com&quot;&gt;learnlayout.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s a great resource created by &lt;a href=&quot;https://github.com/incompl&quot; class=&quot;user-mention&quot;&gt;@incompl&lt;/a&gt; and &lt;a href=&quot;http://www.isaacdurazo.com/&quot;&gt;Isaac Durazo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts/2014-04-24-How-to-learn-CSS-layout/learn-layout.com.png&quot; alt=&quot;learncss.com homepage&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That’s all. Oh yes… and I just traslated it to &lt;a href=&quot;http://it.learnlayout.com/&quot;&gt;italian&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;learnlayout is now available in Italian! &lt;a href=&quot;http://t.co/wSXFaj7hZb&quot;&gt;http://t.co/wSXFaj7hZb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Greg Smith (@_gsmith) &lt;a href=&quot;https://twitter.com/_gsmith/statuses/458679325358063617&quot;&gt;April 22, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;wtf-css-layout---tldr&quot;&gt;wtf css layout - TL;DR&lt;/h3&gt;
+
+&lt;p&gt;When I started studying CSS I remember that the most difficult thing to understand
+was figure out how to use those cool selectors and properties to properly
+reproduce great page layouts.&lt;/p&gt;
+
+&lt;p&gt;There are several positioning methods you can approach, mastering them surely
+would take you much time.&lt;/p&gt;
+
+&lt;p&gt;Tricky names impossible to remember and awful results.&lt;/p&gt;
+
+&lt;p&gt;I clearly remember that I wanted a quick guide, a reference where to learn the CSS
+layout, but nothing was there. A guide developers from all over the world could
+use and start doing their work: create the layout they need.&lt;/p&gt;
+
+&lt;p&gt;If you are a frontend developer, or if you worked with them before,
+you probably would know that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;position&lt;/strong&gt; has strange values&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;fixed&lt;/strong&gt; really does not fix your problems&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;block&lt;/strong&gt; is the opposit of &lt;strong&gt;inline&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;margin&lt;/strong&gt; not always works&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;padding&lt;/strong&gt; and &lt;strong&gt;width&lt;/strong&gt;, they just mess everything up&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;float&lt;/strong&gt; … uh?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After few years of trying, creating static mockups, jsfiddles, pastebins and tons of
+stackoverflow you probably will end up mastering all of them :)&lt;/p&gt;
+
+&lt;p&gt;I think &lt;em&gt;learnlayout.com&lt;/em&gt; is a great resource, I know it will help future developers
+to better undestand the CSS and how to properly use it in order to achieve the desired layout.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;learnlayout.com&lt;/em&gt; is straightforward, you can’t ask for better examples or explanation.
+Not even MDN is so clear.&lt;/p&gt;
+
+</description>
+				<pubDate>Thu, 24 Apr 2014 00:00:00 +0200</pubDate>
+				<link>/development/2014/04/24/How-to-learn-CSS-layout.html</link>
+				<guid isPermaLink="true">/development/2014/04/24/How-to-learn-CSS-layout.html</guid>
+			</item>
+		
+			<item>
 				<title>i-love-markdown.css</title>
 				<description>&lt;p&gt;As developer I started with Markdown few years ago, when GitHub started trending.
 I’d like to remember the true Markdown father John Gruber and the his &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown post&lt;/a&gt;.&lt;/p&gt;
