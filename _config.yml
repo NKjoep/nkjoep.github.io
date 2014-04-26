@@ -28,6 +28,8 @@ gems:
 
 markdown: kramdown
 
+disqus_shortname: stealthefish
+
 # BASE_PATH: http://stealthefish.com
 
 # All links will be namespaced by BASE_PATH if defined.

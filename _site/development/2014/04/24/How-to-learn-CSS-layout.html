@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<!-- header.html -->
-<meta charset="utf-8">
+	<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>How to learn CSS layout</title>
-<meta name="description" content="Something every frontend developer should know">
-<meta name="author" content="Andrea Dessì">
-
-<!-- Enable responsive viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Andrea Dessì">
+<meta name="description" content="Something every frontend developer should know">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 <!--[if lt IE 9]>
  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!-- Le styles -->
 <link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
-<link href="/assets/css/style.css" rel="stylesheet">
+<link href="/assets/resources/syntax/syntax.css?201404251558" rel="stylesheet">
+<link href="/assets/css/style.css?201404251558" rel="stylesheet">
 
-<!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/favicon-apple-touch-icon-144-precomposed.png">
 <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
 <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
-
-<!-- header.html end -->
 
 
 	<body>
@@ -62,17 +55,15 @@
 			</a>
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="/">Home</a></li>
 				<li><a href="/categories.html">Categories</a></li>
 					<li><a href="/tags.html">Tags</a></li>
 			</ul>
-			</div><!-- /.navbar-collapse -->
+			</div>
 		</nav>
 
-		<!-- nav-menu-dropdown -->
 			<div class="btn-group hidden-xs" id="nav-menu">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 						<span class="icon fa fa-bars"></span>
@@ -89,10 +80,6 @@
 		<div class="col-sm-3 sidebar hidden-xs">
 			<!-- sidebar.html -->
 <header class="sidebar-header" role="banner">
-	<!--
-	<a href="/">
-	</a>
-	-->
 		<h3 class="title">
 			<a href="/">
 			<img src="http://www.gravatar.com/avatar/cc669cccf3cf6118c1efac45de802710?s=150" class="img-circle logo" alt=" " />
@@ -289,19 +276,79 @@ Not even MDN is so clear.</p>
 </article>
 <div class="clearfix"></div>
 
+<!-- comments -->
+		<div class="col-sm-10">
+			<div id="disqus_thread">
+			</div>
+		</div>
+		<div class="col-sm-2 sidebar-2"></div>
+
+	<script type="text/javascript">
+			disqus_shortname = 'stealthefish';
+			disqus_identifier = '/development/2014/04/24/How-to-learn-CSS-layout';
+			disqus_title = 'How to learn CSS layout';
+			disqus_container_id = 'disqus_thread';
+
+			(function() {
+
+				var comments = document.getElementById('disqus_thread'),
+						disqusLoaded=false;
+
+				function loadDisqus() {
+						var disqus_shortname = window.disqus_shortname;
+						var dsq = document.createElement('script');
+						dsq.type = 'text/javascript';
+						dsq.async = true;
+						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						disqusLoaded = true;
+				}
+
+				//Get the offset of an object
+				function findTop(obj) {
+						var curtop = 0;
+						if (obj.offsetParent) {
+								do {
+										curtop += obj.offsetTop;
+								} while (obj = obj.offsetParent);
+								return curtop;
+						}
+				}
+
+				if(window.location.hash.indexOf('#disqus_thread') > 0) {
+					loadDisqus();
+				}
+
+				if(comments) {
+						var commentsOffset = findTop(comments);
+
+						window.onscroll = function() {
+								if(!disqusLoaded && window.pageYOffset > commentsOffset - 1500) {
+										//console.log('load comments, NOW!!');
+										loadDisqus();
+								}
+						}
+				}
+
+			})();
+	</script>
+
+<!-- comments end-->
 
 
-			<!-- footer.html -->
-<footer>
- <hr/>
- <p class="small text-muted">
- 	&copy; 2014 Andrea Dessì.<span class="sr-only">Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a>by dbtek.</span>
- </p>
+
+
+			<footer class="row">
+ <div class="col-xs-12">
+	 <hr/>
+	 <p class="small text-muted">
+	 	&copy; 2014 Andrea Dessì.<span class="sr-only">Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a>by dbtek.</span>
+	 </p>
+ </div>
 </footer>
 
-<!-- footer.html end -->
-
 		</div>
+
 		<script>window.BASE_PATH = '';</script>
 		<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
