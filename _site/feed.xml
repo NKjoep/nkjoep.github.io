@@ -7,6 +7,71 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Better bash man pages</title>
+				<description>&lt;p&gt;We, developers, live much of our time within a shell.
+Modern &lt;a href=&quot;http://en.wikipedia.org/wiki/Command-line_interface&quot;&gt;CLI&lt;/a&gt;s output
+stunning help in a way before was not possibile. Think of NPM or Heroku or the great
+GIT.&lt;/p&gt;
+
+&lt;p&gt;However we still have the &lt;a href=&quot;http://en.wikipedia.org/wiki/Man_page&quot;&gt;man pages&lt;/a&gt; with their
+default style: black&amp;amp;white with some underline or bold.&lt;/p&gt;
+
+&lt;p&gt;So, we can change this luckly. It’s a feature, probably an ancient one, most of us
+don’t know or just forget about it.&lt;/p&gt;
+
+&lt;h3 id=&quot;change-it&quot;&gt;change it&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png&quot; alt=&quot;standard man page VS. colorized man page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How to do that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;create a file called &lt;strong&gt;.LESS_TERMCAP:&lt;/strong&gt; &lt;code&gt;touch ~/.LESS_TERMCAP&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;edit the &lt;strong&gt;~/.LESS_TERMCAP&lt;/strong&gt; file with an editor: &lt;code&gt;nano ~/.LESS_TERMCAP&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;fill &lt;strong&gt;~/.LESS_TERMCAP&lt;/strong&gt; with this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Less Colors for Man Pages&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_mb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0;103m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin blinking&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_md&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0;93m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin bold&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_me&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# end mode&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_se&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# end standout-mode&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_so&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput bold&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; tput setaf 8&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; tput setab 3&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin standout-mode - info box&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# end underline&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_us&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[04;32m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin underline&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_mr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput rev&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_mh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput dim&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput ssubm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput rsubm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput ssupm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput rsupm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;open your &lt;strong&gt;~/.bash_profile&lt;/strong&gt; with an editor: &lt;code&gt;nano ~/.bash_profile&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;add to &lt;strong&gt;~/.bash_profile&lt;/strong&gt; this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -f ~/.LESS_TERMCAP &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; . ~/.LESS_TERMCAP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;reload the &lt;strong&gt;~/.bash_profile&lt;/strong&gt; (or restart the bash session): &lt;code&gt;source ~/.bash_profile&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;done&quot;&gt;done&lt;/h3&gt;
+
+&lt;p&gt;Now you have colorized the man pages. It’s possible also to customize the colors,
+if you google a bit you’ll find the table of colors and the meaning of those variables.&lt;/p&gt;
+
+&lt;p&gt;Enjoy.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 26 Apr 2014 00:00:00 +0200</pubDate>
+				<link>/development/2014/04/26/Better-bash-man-pages.html</link>
+				<guid isPermaLink="true">/development/2014/04/26/Better-bash-man-pages.html</guid>
+			</item>
+		
+			<item>
 				<title>How to learn CSS layout</title>
 				<description>&lt;p&gt;You surely need to check this website out: &lt;a href=&quot;http://learnlayout.com&quot;&gt;learnlayout.com&lt;/a&gt;&lt;/p&gt;
 

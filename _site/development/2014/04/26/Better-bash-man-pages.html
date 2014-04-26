@@ -3,10 +3,10 @@
 
 	<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>How to learn CSS layout</title>
+<title>Better bash man pages</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Andrea Dessì">
-<meta name="description" content="Something every frontend developer should know">
+<meta name="description" content="Colorize them all.">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 <!--[if lt IE 9]>
@@ -143,68 +143,76 @@
 		<div class="col-sm-9 col-sm-offset-3">
 			<article>
 	<div class="page-header">
-		<h1>How to learn CSS layout </h1>
+		<h1>Better bash man pages </h1>
 	</div>
 
 	<div class="col-sm-10">
 		<span class="post-date">
 			
 			April
-			24th,
+			26th,
 			
 			2014
 		</span>
 
 		<div class="article_body">
-		<p>You surely need to check this website out: <a href="http://learnlayout.com">learnlayout.com</a></p>
+		<p>We, developers, live much of our time within a shell.
+Modern <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>s output
+stunning help in a way before was not possibile. Think of NPM or Heroku or the great
+GIT.</p>
 
-<p>It’s a great resource created by <a href="https://github.com/incompl" class="user-mention">@incompl</a> and <a href="http://www.isaacdurazo.com/">Isaac Durazo</a>.</p>
+<p>However we still have the <a href="http://en.wikipedia.org/wiki/Man_page">man pages</a> with their
+default style: black&amp;white with some underline or bold.</p>
 
-<p><img src="/assets/posts/2014-04-24-How-to-learn-CSS-layout/learn-layout.com.png" alt="learncss.com homepage" /></p>
+<p>So, we can change this luckly. It’s a feature, probably an ancient one, most of us
+don’t know or just forget about it.</p>
 
-<hr />
+<h3 id="change-it">change it</h3>
 
-<p>That’s all. Oh yes… and I just traslated it to <a href="http://it.learnlayout.com/">italian</a>.</p>
+<p><img src="/assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png" alt="standard man page VS. colorized man page" /></p>
 
-<blockquote class="twitter-tweet" lang="en"><p>learnlayout is now available in Italian! <a href="http://t.co/wSXFaj7hZb">http://t.co/wSXFaj7hZb</a></p>&mdash; Greg Smith (@_gsmith) <a href="https://twitter.com/_gsmith/statuses/458679325358063617">April 22, 2014</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<h3 id="wtf-css-layout---tldr">wtf css layout - TL;DR</h3>
-
-<p>When I started studying CSS I remember that the most difficult thing to understand
-was figure out how to use those cool selectors and properties to properly
-reproduce great page layouts.</p>
-
-<p>There are several positioning methods you can approach, mastering them surely
-would take you much time.</p>
-
-<p>Tricky names impossible to remember and awful results.</p>
-
-<p>I clearly remember that I wanted a quick guide, a reference where to learn the CSS
-layout, but nothing was there. A guide developers from all over the world could
-use and start doing their work: create the layout they need.</p>
-
-<p>If you are a frontend developer, or if you worked with them before,
-you probably would know that:</p>
+<p>How to do that:</p>
 
 <ul>
-  <li><strong>position</strong> has strange values</li>
-  <li><strong>fixed</strong> really does not fix your problems</li>
-  <li><strong>block</strong> is the opposit of <strong>inline</strong></li>
-  <li><strong>margin</strong> not always works</li>
-  <li><strong>padding</strong> and <strong>width</strong>, they just mess everything up</li>
-  <li><strong>float</strong> … uh?</li>
+  <li>create a file called <strong>.LESS_TERMCAP:</strong> <code>touch ~/.LESS_TERMCAP</code></li>
+  <li>edit the <strong>~/.LESS_TERMCAP</strong> file with an editor: <code>nano ~/.LESS_TERMCAP</code></li>
+  <li>fill <strong>~/.LESS_TERMCAP</strong> with this:</li>
 </ul>
 
-<p>After few years of trying, creating static mockups, jsfiddles, pastebins and tons of
-stackoverflow you probably will end up mastering all of them :)</p>
+<div class="highlight"><pre><code class="bash"><span class="c"># Less Colors for Man Pages</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_mb</span><span class="o">=</span><span class="s1">$&#39;\E[0;103m&#39;</span> <span class="c"># begin blinking</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_md</span><span class="o">=</span><span class="s1">$&#39;\E[0;93m&#39;</span> <span class="c"># begin bold</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_me</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="c"># end mode</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_se</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="c"># end standout-mode</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_so</span><span class="o">=</span><span class="k">$(</span>tput bold<span class="p">;</span> tput setaf 8<span class="p">;</span> tput setab 3<span class="k">)</span> <span class="c"># begin standout-mode - info box</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_ue</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="c"># end underline</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_us</span><span class="o">=</span><span class="s1">$&#39;\E[04;32m&#39;</span> <span class="c"># begin underline</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_mr</span><span class="o">=</span><span class="k">$(</span>tput rev<span class="k">)</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_mh</span><span class="o">=</span><span class="k">$(</span>tput dim<span class="k">)</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZN</span><span class="o">=</span><span class="k">$(</span>tput ssubm<span class="k">)</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZV</span><span class="o">=</span><span class="k">$(</span>tput rsubm<span class="k">)</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZO</span><span class="o">=</span><span class="k">$(</span>tput ssupm<span class="k">)</span>
+ <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZW</span><span class="o">=</span><span class="k">$(</span>tput rsupm<span class="k">)</span>
+</code></pre></div>
 
-<p>I think <em>learnlayout.com</em> is a great resource, I know it will help future developers
-to better undestand the CSS and how to properly use it in order to achieve the desired layout.</p>
+<ul>
+  <li>open your <strong>~/.bash_profile</strong> with an editor: <code>nano ~/.bash_profile</code></li>
+  <li>add to <strong>~/.bash_profile</strong> this:</li>
+</ul>
 
-<p><em>learnlayout.com</em> is straightforward, you can’t ask for better examples or explanation.
-Not even MDN is so clear.</p>
+<div class="highlight"><pre><code class="bash"><span class="o">[[</span> -f ~/.LESS_TERMCAP <span class="o">]]</span> <span class="o">&amp;&amp;</span> . ~/.LESS_TERMCAP
+</code></pre></div>
 
+<ul>
+  <li>reload the <strong>~/.bash_profile</strong> (or restart the bash session): <code>source ~/.bash_profile</code></li>
+</ul>
+
+<h3 id="done">done</h3>
+
+<p>Now you have colorized the man pages. It’s possible also to customize the colors,
+if you google a bit you’ll find the table of colors and the meaning of those variables.</p>
+
+<p>Enjoy.</p>
 
 		</div>
 
@@ -236,22 +244,22 @@ Not even MDN is so clear.</p>
 					
 					
 						<li class="small">
-							<a href="/tags.html#frontend-ref">
-							frontend <span>(1)</span>
+							<a href="/tags.html#osx-ref">
+							osx <span>(2)</span>
 							,
 							</a>
 						</li>
 					
 						<li class="small">
-							<a href="/tags.html#css-ref">
-							css <span>(2)</span>
+							<a href="/tags.html#dev-ref">
+							dev <span>(2)</span>
 							,
 							</a>
 						</li>
 					
 						<li class="small">
-							<a href="/tags.html#howto-ref">
-							howto <span>(1)</span>
+							<a href="/tags.html#environment-ref">
+							environment <span>(2)</span>
 							
 							</a>
 						</li>
@@ -285,8 +293,8 @@ Not even MDN is so clear.</p>
 
 	<script type="text/javascript">
 			disqus_shortname = 'stealthefish';
-			disqus_identifier = '/development/2014/04/24/How-to-learn-CSS-layout';
-			disqus_title = 'How to learn CSS layout';
+			disqus_identifier = '/development/2014/04/26/Better-bash-man-pages';
+			disqus_title = 'Better bash man pages';
 			disqus_container_id = 'disqus_thread';
 
 			(function() {
