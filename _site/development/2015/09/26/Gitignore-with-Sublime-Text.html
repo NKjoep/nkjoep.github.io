@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Gitignore with SublimeText</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Andrea Dessì">
+<meta name="description" content="Guide for fast .gitignore items">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/resources/syntax/syntax.css?201404251558" rel="stylesheet">
+<link href="/assets/css/style.css?201404251558" rel="stylesheet">
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/favicon-apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+
+	<body>
+			<nav class="navbar navbar-default visible-xs" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-toggle nav-link" href="http://github.com/nkjoep">
+					<span class="icon fa fa-github"></span><span class="sr-only">Github</span>
+				</a>
+				
+				
+				<a class="navbar-toggle nav-link" href="http://twitter.com/NKjoep">
+					<span class="icon fa fa-twitter"></span><span class="sr-only">Twitter</span>
+				</a>
+				
+				
+				<a class="navbar-toggle nav-link" href="mailto:nkjoep@gmail.com">
+					<span class="icon fa fa-envelope"></span><span class="sr-only">Email</span>
+				</a>
+				
+			<a class="navbar-brand" href="/">
+				<img src="http://www.gravatar.com/avatar/cc669cccf3cf6118c1efac45de802710?s=35" class="img-circle" alt=" " />
+				Andrea D. Blog
+			</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/categories.html">Categories</a></li>
+					<li><a href="/tags.html">Tags</a></li>
+			</ul>
+			</div>
+		</nav>
+
+			<div class="btn-group hidden-xs" id="nav-menu">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="icon fa fa-bars"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="/"><span class="icon fa fa-home"></span> Home</a></li>
+						<li><a href="/categories.html"><span class="icon fa fa-folder"></span> Categories</a></li>
+						<li><a href="/tags.html"><span class="icon fa fa-tags"></span> Tags</a></li>
+							<li class="divider"></li>
+						<li><a href="#"><span class="icon fa fa-arrow-up"></span> Top of Page</a></li>
+					</ul>
+			</div>
+
+		<div class="col-sm-3 sidebar hidden-xs">
+			<!-- sidebar.html -->
+<header class="sidebar-header" role="banner">
+		<h3 class="title">
+			<a href="/">
+			<img src="http://www.gravatar.com/avatar/cc669cccf3cf6118c1efac45de802710?s=150" class="img-circle logo" alt=" " />
+				Andrea D. Blog
+			</a>
+		</h3>
+</header>
+
+
+<div id="bio" class="text-center">
+	Andrea, man, html operator, css dispeller, js runner, web lover. Entando Developer too.
+</div>
+
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/nkjoep">
+				<span class="fa fa-github-alt fa-lg"></span><span class="sr-only">Github</span>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/NKjoep">
+				<span class="fa fa-twitter fa-lg"></span><span class="sr-only">Twitter</span>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="mailto:nkjoep@gmail.com">
+				<span class="fa fa-envelope fa-lg"></span><span class="sr-only">Email</span>
+			</a>
+		</li>
+		
+	</ul>
+	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/andreadessi">
+				<span class="fa fa-linkedin fa-lg"></span><span class="sr-only">Linkedin</span>
+			</a>
+		</li>
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<span class="fa fa-rss fa-lg"></span><span class="sr-only">Rss</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<ul id="gh-repos" class="list-unstyled text-center"></ul>
+
+<!-- sidebar.html end -->
+
+		</div>
+
+		<div class="col-sm-9 col-sm-offset-3">
+			<article>
+	<div class="page-header">
+		<h1>Gitignore with SublimeText </h1>
+	</div>
+
+	<div class="col-sm-10">
+		<span class="post-date">
+			
+			September
+			26th,
+			
+			2015
+		</span>
+
+		<div class="article_body">
+		<p>I was looking for a good way to fill the .gitignore when starting a new project.</p>
+
+<p>I then remembered about a collection of useful <a href="https://github.com/github/gitignore">gitignore templates from GitHub</a>, which is basically a list of gitignore for each programming language.</p>
+
+<p>There you’ll find files like these:</p>
+
+<ul>
+  <li>Ada.gitignore</li>
+  <li>Agda.gitignore</li>
+  <li>Android.gitignore</li>
+  <li>AppEngine.gitignore</li>
+  <li>AppceleratorTitanium.gitignore</li>
+  <li>…</li>
+  <li>…</li>
+  <li>Node.gitignore</li>
+  <li>…</li>
+  <li>And so on…</li>
+</ul>
+
+<p>Great, we have a repository with good gitignores! The problem now is how to add them quickly to your project.</p>
+
+<p>Such problem, very Google: I found a <a href="https://plausiblethought.net/pull-gitignore-files-with-the-sublime-text-nettuts-fetch-plugin/">post from  Marc Jenkins</a> suggest to use Nettuts-Fetch for Sublime Text to achive exactly what I was looking for.</p>
+
+<p>Basically Nettuts-Fetch is a download &amp; paste tool: you fill its configuration file with name and url then you it will download the content from those urls and paste it directly in your editor.</p>
+
+<h2 id="configure-nettus">Configure Nettus</h2>
+
+<p>Soooo, open the default configuration
+<img src="/assets/posts/2015-09-26-Gitignore-with-Sublime/3-fetch-manage.png" alt="1" /></p>
+
+<p>and add to <code>files</code>
+<img src="/assets/posts/2015-09-26-Gitignore-with-Sublime/5-default-config.png" alt="2" /></p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+<span class="nt">&quot;files&quot;</span><span class="p">:</span>
+<span class="p">{</span>
+ <span class="nt">&quot;gitignore Anjuta&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Anjuta.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Archives&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Archives.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore BricxCC&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/BricxCC.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CVS&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/CVS.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Cloud9&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Cloud9.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CodeKit&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/CodeKit.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore DartEditor&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/DartEditor.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Dreamweaver&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Dreamweaver.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Eclipse&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Eclipse.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore EiffelStudio&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/EiffelStudio.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Emacs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Emacs.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Ensime&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Ensime.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Espresso&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Espresso.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore FlexBuilder&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/FlexBuilder.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore GPG&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/GPG.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore IPythonNotebook&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/IPythonNotebook.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore JDeveloper&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/JDeveloper.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore JetBrains&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/JetBrains.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore KDevelop4&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/KDevelop4.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Kate&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Kate.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Lazarus&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Lazarus.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore LibreOffice&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/LibreOffice.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Linux&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Linux.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore LyX&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/LyX.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Matlab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Matlab.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Mercurial&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Mercurial.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore MicrosoftOffice&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/MicrosoftOffice.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ModelSim&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/ModelSim.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Momentics&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Momentics.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore MonoDevelop&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/MonoDevelop.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore NetBeans&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/NetBeans.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Ninja&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Ninja.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore NotepadPP&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/NotepadPP.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore OSX&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/OSX.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Redcar&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Redcar.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Redis&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Redis.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SBT&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/SBT.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SVN&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/SVN.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SlickEdit&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/SlickEdit.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SublimeText&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/SublimeText.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SynopsysVCS&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/SynopsysVCS.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Tags&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Tags.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore TextMate&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/TextMate.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore TortoiseGit&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/TortoiseGit.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Vagrant&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Vagrant.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Vim&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Vim.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore VirtualEnv&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/VirtualEnv.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore VisualStudioCode&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/VisualStudioCode.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore WebMethods&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/WebMethods.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Windows&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Windows.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Xcode&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/Xcode.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore XilinxISE&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Global/XilinxISE.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Actionscript&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Actionscript.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Ada&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Ada.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Agda&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Agda.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Android&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Android.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore AppEngine&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/AppEngine.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore AppceleratorTitanium&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/AppceleratorTitanium.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ArchLinuxPackages&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/ArchLinuxPackages.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Autotools&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Autotools.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore C++&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/C%2B%2B.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore C&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/C.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CFWheels&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/CFWheels.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CMake&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/CMake.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CUDA&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/CUDA.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CakePHP&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/CakePHP.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ChefCookbook&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/ChefCookbook.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Clojure&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Clojure.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CodeIgniter&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/CodeIgniter.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CommonLisp&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/CommonLisp.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Composer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Composer.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Concrete5&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Concrete5.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Coq&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Coq.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore CraftCMS&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/CraftCMS.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore DM&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/DM.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Dart&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Dart.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Delphi&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Delphi.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Drupal&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Drupal.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore EPiServer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/EPiServer.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Eagle&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Eagle.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Elisp&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Elisp.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Elixir&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Elixir.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Erlang&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Erlang.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ExpressionEngine&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/ExpressionEngine.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ExtJs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/ExtJs.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Fancy&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Fancy.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Finale&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Finale.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ForceDotCom&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/ForceDotCom.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Fortran&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Fortran.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore FuelPHP&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/FuelPHP.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore GWT&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/GWT.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Gcov&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Gcov.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore GitBook&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/GitBook.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Go&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Go.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Gradle&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Gradle.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Grails&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Grails.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Haskell&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Haskell.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore IGORPro&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/IGORPro.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Idris&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Idris.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Java&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Java.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Jboss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Jboss.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Jekyll&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Jekyll.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Joomla&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Joomla.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore KiCAD&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/KiCAD.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Kohana&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Kohana.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore LabVIEW&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/LabVIEW.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Laravel&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Laravel.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Leiningen&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Leiningen.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore LemonStand&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/LemonStand.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Lilypond&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Lilypond.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Lithium&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Lithium.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Lua&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Lua.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Magento&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Magento.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Maven&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Maven.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Mercury&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Mercury.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore MetaProgrammingSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/MetaProgrammingSystem.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Nanoc&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Nanoc.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Nim&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Nim.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Node&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Node.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore OCaml&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/OCaml.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Objective-C&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Objective-C.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Opa&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Opa.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore OpenCart&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/OpenCart.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore OracleForms&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/OracleForms.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Packer&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Packer.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Perl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Perl.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Phalcon&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Phalcon.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore PlayFramework&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/PlayFramework.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Plone&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Plone.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Prestashop&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Prestashop.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Processing&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Processing.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Python&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Python.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Qooxdoo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Qooxdoo.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Qt&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Qt.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore R&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/R.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ROS&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/ROS.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Rails&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Rails.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore RhodesRhomobile&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/RhodesRhomobile.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Ruby&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Ruby.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Rust&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Rust.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SCons&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/SCons.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Sass&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Sass.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Scala&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Scala.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Scrivener&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Scrivener.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Sdcc&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Sdcc.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SeamGen&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/SeamGen.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SketchUp&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/SketchUp.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Stella&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Stella.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SugarCRM&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/SugarCRM.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Swift&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Swift.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Symfony&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Symfony.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore SymphonyCMS&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/SymphonyCMS.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore TeX&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/TeX.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Textpattern&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Textpattern.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore TurboGears2&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/TurboGears2.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Typo3&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Typo3.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Umbraco&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Umbraco.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Unity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Unity.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore VVVV&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/VVVV.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore VisualStudio&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/VisualStudio.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Waf&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Waf.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore WordPress&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/WordPress.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Xojo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Xojo.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Yeoman&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Yeoman.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Yii&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Yii.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore ZendFramework&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/ZendFramework.gitignore&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;gitignore Zephir&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/github/gitignore/raw/master/Zephir.gitignore&quot;</span>
+<span class="p">},</span>
+<span class="nt">&quot;packages&quot;</span><span class="p">:</span>
+<span class="p">{</span>
+<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="finally-use-it">Finally Use It</h2>
+
+<p><img src="/assets/posts/2015-09-26-Gitignore-with-Sublime/6-ignore.png" alt="3" /></p>
+
+<p>Enjoy.</p>
+
+		</div>
+
+		
+			<div class="post-info alert text-right">
+		
+
+			
+				<span class="sr-only">Read more posts of the same categories:</span>
+				<ul class="categories-box list-unstyled list-inline">
+					<li class="small"><span class="icon fa fa-folder-open"></span></li>
+					
+					
+					
+						<li class="small"><a href="/categories.html#development-ref">
+							development <span>(4)</span>
+							
+						</a></li>
+					
+					
+				</ul>
+			
+
+			
+				<span class="sr-only">Read similar posts:</span>
+				<ul class="tag-box list-inline">
+					<li class="small"><span class="icon fa fa-tags"></span></li>
+					
+					
+					
+						<li class="small">
+							<a href="/tags.html#dev-ref">
+							dev <span>(3)</span>
+							,
+							</a>
+						</li>
+					
+						<li class="small">
+							<a href="/tags.html#git-ref">
+							git <span>(1)</span>
+							
+							</a>
+						</li>
+					
+					
+					
+				</ul>
+			
+
+		
+				</div>
+		
+
+		
+
+	
+		</div>
+	
+
+	<div class="col-sm-2 sidebar-2">
+	</div>
+</article>
+<div class="clearfix"></div>
+
+<!-- comments -->
+		<div class="col-sm-10">
+			<div id="disqus_thread">
+			</div>
+		</div>
+		<div class="col-sm-2 sidebar-2"></div>
+
+	<script type="text/javascript">
+			disqus_shortname = 'stealthefish';
+			disqus_identifier = '/development/2015/09/26/Gitignore-with-Sublime-Text';
+			disqus_title = 'Gitignore with SublimeText';
+			disqus_container_id = 'disqus_thread';
+
+			(function() {
+
+				var comments = document.getElementById('disqus_thread'),
+						disqusLoaded=false;
+
+				function loadDisqus() {
+						var disqus_shortname = window.disqus_shortname;
+						var dsq = document.createElement('script');
+						dsq.type = 'text/javascript';
+						dsq.async = true;
+						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						disqusLoaded = true;
+				}
+
+				//Get the offset of an object
+				function findTop(obj) {
+						var curtop = 0;
+						if (obj.offsetParent) {
+								do {
+										curtop += obj.offsetTop;
+								} while (obj = obj.offsetParent);
+								return curtop;
+						}
+				}
+
+				if(window.location.hash.indexOf('#disqus_thread') > 0) {
+					loadDisqus();
+				}
+
+				if(comments) {
+						var commentsOffset = findTop(comments);
+
+						window.onscroll = function() {
+								if(!disqusLoaded && window.pageYOffset > commentsOffset - 1500) {
+										//console.log('load comments, NOW!!');
+										loadDisqus();
+								}
+						}
+				}
+
+			})();
+	</script>
+
+<!-- comments end-->
+
+
+
+
+			<footer class="row">
+ <div class="col-xs-12">
+	 <hr/>
+	 <p class="small text-muted">
+	 	&copy; 2015 Andrea Dessì.<span class="sr-only">Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a>by dbtek.</span>
+	 </p>
+ </div>
+</footer>
+
+		</div>
+
+		<script>window.BASE_PATH = '';</script>
+		<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/assets/resources/github.js"></script>
+		<script type="text/javascript" src="/assets/js/app.js"></script>
+
+	</body>
+</html>
+
