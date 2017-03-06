@@ -41,181 +41,182 @@
 &lt;p&gt;and add to &lt;code&gt;files&lt;/code&gt;
 &lt;img src=&quot;/assets/posts/2015-09-26-Gitignore-with-Sublime/5-default-config.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;quot;files&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Anjuta&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Anjuta.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Archives&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Archives.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore BricxCC&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/BricxCC.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CVS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/CVS.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Cloud9&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Cloud9.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CodeKit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/CodeKit.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore DartEditor&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/DartEditor.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Dreamweaver&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Dreamweaver.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Eclipse&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Eclipse.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore EiffelStudio&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/EiffelStudio.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Emacs&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Emacs.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Ensime&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Ensime.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Espresso&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Espresso.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore FlexBuilder&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/FlexBuilder.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore GPG&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/GPG.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore IPythonNotebook&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/IPythonNotebook.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore JDeveloper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/JDeveloper.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore JetBrains&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/JetBrains.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore KDevelop4&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/KDevelop4.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Kate&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Kate.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Lazarus&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Lazarus.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore LibreOffice&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/LibreOffice.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Linux&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Linux.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore LyX&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/LyX.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Matlab&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Matlab.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Mercurial&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Mercurial.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore MicrosoftOffice&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/MicrosoftOffice.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ModelSim&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/ModelSim.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Momentics&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Momentics.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore MonoDevelop&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/MonoDevelop.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore NetBeans&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/NetBeans.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Ninja&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Ninja.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore NotepadPP&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/NotepadPP.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore OSX&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/OSX.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Redcar&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Redcar.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Redis&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Redis.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SBT&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/SBT.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SVN&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/SVN.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SlickEdit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/SlickEdit.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SublimeText&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/SublimeText.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SynopsysVCS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/SynopsysVCS.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Tags&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Tags.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore TextMate&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/TextMate.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore TortoiseGit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/TortoiseGit.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Vagrant&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Vagrant.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Vim&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Vim.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore VirtualEnv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/VirtualEnv.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore VisualStudioCode&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/VisualStudioCode.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore WebMethods&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/WebMethods.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Windows&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Windows.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Xcode&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/Xcode.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore XilinxISE&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Global/XilinxISE.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Actionscript&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Actionscript.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Ada&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Ada.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Agda&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Agda.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Android&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Android.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore AppEngine&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/AppEngine.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore AppceleratorTitanium&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/AppceleratorTitanium.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ArchLinuxPackages&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/ArchLinuxPackages.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Autotools&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Autotools.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore C++&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/C%2B%2B.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore C&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/C.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CFWheels&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/CFWheels.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CMake&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/CMake.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CUDA&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/CUDA.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CakePHP&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/CakePHP.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ChefCookbook&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/ChefCookbook.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Clojure&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Clojure.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CodeIgniter&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/CodeIgniter.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CommonLisp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/CommonLisp.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Composer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Composer.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Concrete5&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Concrete5.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Coq&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Coq.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore CraftCMS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/CraftCMS.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore DM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/DM.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Dart&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Dart.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Delphi&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Delphi.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Drupal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Drupal.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore EPiServer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/EPiServer.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Eagle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Eagle.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Elisp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Elisp.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Elixir&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Elixir.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Erlang&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Erlang.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ExpressionEngine&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/ExpressionEngine.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ExtJs&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/ExtJs.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Fancy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Fancy.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Finale&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Finale.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ForceDotCom&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/ForceDotCom.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Fortran&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Fortran.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore FuelPHP&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/FuelPHP.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore GWT&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/GWT.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Gcov&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Gcov.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore GitBook&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/GitBook.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Go&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Go.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Gradle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Gradle.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Grails&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Grails.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Haskell&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Haskell.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore IGORPro&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/IGORPro.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Idris&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Idris.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Java&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Java.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Jboss&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Jboss.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Jekyll&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Jekyll.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Joomla&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Joomla.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore KiCAD&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/KiCAD.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Kohana&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Kohana.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore LabVIEW&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/LabVIEW.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Laravel&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Laravel.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Leiningen&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Leiningen.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore LemonStand&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/LemonStand.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Lilypond&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Lilypond.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Lithium&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Lithium.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Lua&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Lua.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Magento&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Magento.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Maven&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Maven.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Mercury&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Mercury.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore MetaProgrammingSystem&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/MetaProgrammingSystem.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Nanoc&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Nanoc.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Nim&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Nim.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Node&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Node.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore OCaml&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/OCaml.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Objective-C&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Objective-C.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Opa&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Opa.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore OpenCart&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/OpenCart.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore OracleForms&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/OracleForms.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Packer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Packer.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Perl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Perl.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Phalcon&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Phalcon.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore PlayFramework&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/PlayFramework.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Plone&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Plone.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Prestashop&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Prestashop.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Processing&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Processing.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Python&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Python.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Qooxdoo&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Qooxdoo.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Qt&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Qt.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore R&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/R.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ROS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/ROS.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Rails&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Rails.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore RhodesRhomobile&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/RhodesRhomobile.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Ruby&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Ruby.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Rust&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Rust.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SCons&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/SCons.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Sass&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Sass.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Scala&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Scala.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Scrivener&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Scrivener.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Sdcc&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Sdcc.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SeamGen&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/SeamGen.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SketchUp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/SketchUp.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Stella&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Stella.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SugarCRM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/SugarCRM.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Swift&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Swift.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Symfony&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Symfony.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore SymphonyCMS&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/SymphonyCMS.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore TeX&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/TeX.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Textpattern&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Textpattern.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore TurboGears2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/TurboGears2.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Typo3&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Typo3.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Umbraco&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Umbraco.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Unity&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Unity.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore VVVV&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/VVVV.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore VisualStudio&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/VisualStudio.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Waf&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Waf.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore WordPress&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/WordPress.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Xojo&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Xojo.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Yeoman&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Yeoman.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Yii&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Yii.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore ZendFramework&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/ZendFramework.gitignore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;quot;gitignore Zephir&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://github.com/github/gitignore/raw/master/Zephir.gitignore&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;quot;packages&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
+&quot;files&quot;:
+{
+ &quot;gitignore Anjuta&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Anjuta.gitignore&quot;,
+ &quot;gitignore Archives&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Archives.gitignore&quot;,
+ &quot;gitignore BricxCC&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/BricxCC.gitignore&quot;,
+ &quot;gitignore CVS&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/CVS.gitignore&quot;,
+ &quot;gitignore Cloud9&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Cloud9.gitignore&quot;,
+ &quot;gitignore CodeKit&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/CodeKit.gitignore&quot;,
+ &quot;gitignore DartEditor&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/DartEditor.gitignore&quot;,
+ &quot;gitignore Dreamweaver&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Dreamweaver.gitignore&quot;,
+ &quot;gitignore Eclipse&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Eclipse.gitignore&quot;,
+ &quot;gitignore EiffelStudio&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/EiffelStudio.gitignore&quot;,
+ &quot;gitignore Emacs&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Emacs.gitignore&quot;,
+ &quot;gitignore Ensime&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Ensime.gitignore&quot;,
+ &quot;gitignore Espresso&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Espresso.gitignore&quot;,
+ &quot;gitignore FlexBuilder&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/FlexBuilder.gitignore&quot;,
+ &quot;gitignore GPG&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/GPG.gitignore&quot;,
+ &quot;gitignore IPythonNotebook&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/IPythonNotebook.gitignore&quot;,
+ &quot;gitignore JDeveloper&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/JDeveloper.gitignore&quot;,
+ &quot;gitignore JetBrains&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/JetBrains.gitignore&quot;,
+ &quot;gitignore KDevelop4&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/KDevelop4.gitignore&quot;,
+ &quot;gitignore Kate&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Kate.gitignore&quot;,
+ &quot;gitignore Lazarus&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Lazarus.gitignore&quot;,
+ &quot;gitignore LibreOffice&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/LibreOffice.gitignore&quot;,
+ &quot;gitignore Linux&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Linux.gitignore&quot;,
+ &quot;gitignore LyX&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/LyX.gitignore&quot;,
+ &quot;gitignore Matlab&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Matlab.gitignore&quot;,
+ &quot;gitignore Mercurial&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Mercurial.gitignore&quot;,
+ &quot;gitignore MicrosoftOffice&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/MicrosoftOffice.gitignore&quot;,
+ &quot;gitignore ModelSim&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/ModelSim.gitignore&quot;,
+ &quot;gitignore Momentics&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Momentics.gitignore&quot;,
+ &quot;gitignore MonoDevelop&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/MonoDevelop.gitignore&quot;,
+ &quot;gitignore NetBeans&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/NetBeans.gitignore&quot;,
+ &quot;gitignore Ninja&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Ninja.gitignore&quot;,
+ &quot;gitignore NotepadPP&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/NotepadPP.gitignore&quot;,
+ &quot;gitignore OSX&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/OSX.gitignore&quot;,
+ &quot;gitignore Redcar&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Redcar.gitignore&quot;,
+ &quot;gitignore Redis&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Redis.gitignore&quot;,
+ &quot;gitignore SBT&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/SBT.gitignore&quot;,
+ &quot;gitignore SVN&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/SVN.gitignore&quot;,
+ &quot;gitignore SlickEdit&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/SlickEdit.gitignore&quot;,
+ &quot;gitignore SublimeText&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/SublimeText.gitignore&quot;,
+ &quot;gitignore SynopsysVCS&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/SynopsysVCS.gitignore&quot;,
+ &quot;gitignore Tags&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Tags.gitignore&quot;,
+ &quot;gitignore TextMate&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/TextMate.gitignore&quot;,
+ &quot;gitignore TortoiseGit&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/TortoiseGit.gitignore&quot;,
+ &quot;gitignore Vagrant&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Vagrant.gitignore&quot;,
+ &quot;gitignore Vim&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Vim.gitignore&quot;,
+ &quot;gitignore VirtualEnv&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/VirtualEnv.gitignore&quot;,
+ &quot;gitignore VisualStudioCode&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/VisualStudioCode.gitignore&quot;,
+ &quot;gitignore WebMethods&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/WebMethods.gitignore&quot;,
+ &quot;gitignore Windows&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Windows.gitignore&quot;,
+ &quot;gitignore Xcode&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/Xcode.gitignore&quot;,
+ &quot;gitignore XilinxISE&quot;: &quot;https://github.com/github/gitignore/raw/master/Global/XilinxISE.gitignore&quot;,
+ &quot;gitignore Actionscript&quot;: &quot;https://github.com/github/gitignore/raw/master/Actionscript.gitignore&quot;,
+ &quot;gitignore Ada&quot;: &quot;https://github.com/github/gitignore/raw/master/Ada.gitignore&quot;,
+ &quot;gitignore Agda&quot;: &quot;https://github.com/github/gitignore/raw/master/Agda.gitignore&quot;,
+ &quot;gitignore Android&quot;: &quot;https://github.com/github/gitignore/raw/master/Android.gitignore&quot;,
+ &quot;gitignore AppEngine&quot;: &quot;https://github.com/github/gitignore/raw/master/AppEngine.gitignore&quot;,
+ &quot;gitignore AppceleratorTitanium&quot;: &quot;https://github.com/github/gitignore/raw/master/AppceleratorTitanium.gitignore&quot;,
+ &quot;gitignore ArchLinuxPackages&quot;: &quot;https://github.com/github/gitignore/raw/master/ArchLinuxPackages.gitignore&quot;,
+ &quot;gitignore Autotools&quot;: &quot;https://github.com/github/gitignore/raw/master/Autotools.gitignore&quot;,
+ &quot;gitignore C++&quot;: &quot;https://github.com/github/gitignore/raw/master/C%2B%2B.gitignore&quot;,
+ &quot;gitignore C&quot;: &quot;https://github.com/github/gitignore/raw/master/C.gitignore&quot;,
+ &quot;gitignore CFWheels&quot;: &quot;https://github.com/github/gitignore/raw/master/CFWheels.gitignore&quot;,
+ &quot;gitignore CMake&quot;: &quot;https://github.com/github/gitignore/raw/master/CMake.gitignore&quot;,
+ &quot;gitignore CUDA&quot;: &quot;https://github.com/github/gitignore/raw/master/CUDA.gitignore&quot;,
+ &quot;gitignore CakePHP&quot;: &quot;https://github.com/github/gitignore/raw/master/CakePHP.gitignore&quot;,
+ &quot;gitignore ChefCookbook&quot;: &quot;https://github.com/github/gitignore/raw/master/ChefCookbook.gitignore&quot;,
+ &quot;gitignore Clojure&quot;: &quot;https://github.com/github/gitignore/raw/master/Clojure.gitignore&quot;,
+ &quot;gitignore CodeIgniter&quot;: &quot;https://github.com/github/gitignore/raw/master/CodeIgniter.gitignore&quot;,
+ &quot;gitignore CommonLisp&quot;: &quot;https://github.com/github/gitignore/raw/master/CommonLisp.gitignore&quot;,
+ &quot;gitignore Composer&quot;: &quot;https://github.com/github/gitignore/raw/master/Composer.gitignore&quot;,
+ &quot;gitignore Concrete5&quot;: &quot;https://github.com/github/gitignore/raw/master/Concrete5.gitignore&quot;,
+ &quot;gitignore Coq&quot;: &quot;https://github.com/github/gitignore/raw/master/Coq.gitignore&quot;,
+ &quot;gitignore CraftCMS&quot;: &quot;https://github.com/github/gitignore/raw/master/CraftCMS.gitignore&quot;,
+ &quot;gitignore DM&quot;: &quot;https://github.com/github/gitignore/raw/master/DM.gitignore&quot;,
+ &quot;gitignore Dart&quot;: &quot;https://github.com/github/gitignore/raw/master/Dart.gitignore&quot;,
+ &quot;gitignore Delphi&quot;: &quot;https://github.com/github/gitignore/raw/master/Delphi.gitignore&quot;,
+ &quot;gitignore Drupal&quot;: &quot;https://github.com/github/gitignore/raw/master/Drupal.gitignore&quot;,
+ &quot;gitignore EPiServer&quot;: &quot;https://github.com/github/gitignore/raw/master/EPiServer.gitignore&quot;,
+ &quot;gitignore Eagle&quot;: &quot;https://github.com/github/gitignore/raw/master/Eagle.gitignore&quot;,
+ &quot;gitignore Elisp&quot;: &quot;https://github.com/github/gitignore/raw/master/Elisp.gitignore&quot;,
+ &quot;gitignore Elixir&quot;: &quot;https://github.com/github/gitignore/raw/master/Elixir.gitignore&quot;,
+ &quot;gitignore Erlang&quot;: &quot;https://github.com/github/gitignore/raw/master/Erlang.gitignore&quot;,
+ &quot;gitignore ExpressionEngine&quot;: &quot;https://github.com/github/gitignore/raw/master/ExpressionEngine.gitignore&quot;,
+ &quot;gitignore ExtJs&quot;: &quot;https://github.com/github/gitignore/raw/master/ExtJs.gitignore&quot;,
+ &quot;gitignore Fancy&quot;: &quot;https://github.com/github/gitignore/raw/master/Fancy.gitignore&quot;,
+ &quot;gitignore Finale&quot;: &quot;https://github.com/github/gitignore/raw/master/Finale.gitignore&quot;,
+ &quot;gitignore ForceDotCom&quot;: &quot;https://github.com/github/gitignore/raw/master/ForceDotCom.gitignore&quot;,
+ &quot;gitignore Fortran&quot;: &quot;https://github.com/github/gitignore/raw/master/Fortran.gitignore&quot;,
+ &quot;gitignore FuelPHP&quot;: &quot;https://github.com/github/gitignore/raw/master/FuelPHP.gitignore&quot;,
+ &quot;gitignore GWT&quot;: &quot;https://github.com/github/gitignore/raw/master/GWT.gitignore&quot;,
+ &quot;gitignore Gcov&quot;: &quot;https://github.com/github/gitignore/raw/master/Gcov.gitignore&quot;,
+ &quot;gitignore GitBook&quot;: &quot;https://github.com/github/gitignore/raw/master/GitBook.gitignore&quot;,
+ &quot;gitignore Go&quot;: &quot;https://github.com/github/gitignore/raw/master/Go.gitignore&quot;,
+ &quot;gitignore Gradle&quot;: &quot;https://github.com/github/gitignore/raw/master/Gradle.gitignore&quot;,
+ &quot;gitignore Grails&quot;: &quot;https://github.com/github/gitignore/raw/master/Grails.gitignore&quot;,
+ &quot;gitignore Haskell&quot;: &quot;https://github.com/github/gitignore/raw/master/Haskell.gitignore&quot;,
+ &quot;gitignore IGORPro&quot;: &quot;https://github.com/github/gitignore/raw/master/IGORPro.gitignore&quot;,
+ &quot;gitignore Idris&quot;: &quot;https://github.com/github/gitignore/raw/master/Idris.gitignore&quot;,
+ &quot;gitignore Java&quot;: &quot;https://github.com/github/gitignore/raw/master/Java.gitignore&quot;,
+ &quot;gitignore Jboss&quot;: &quot;https://github.com/github/gitignore/raw/master/Jboss.gitignore&quot;,
+ &quot;gitignore Jekyll&quot;: &quot;https://github.com/github/gitignore/raw/master/Jekyll.gitignore&quot;,
+ &quot;gitignore Joomla&quot;: &quot;https://github.com/github/gitignore/raw/master/Joomla.gitignore&quot;,
+ &quot;gitignore KiCAD&quot;: &quot;https://github.com/github/gitignore/raw/master/KiCAD.gitignore&quot;,
+ &quot;gitignore Kohana&quot;: &quot;https://github.com/github/gitignore/raw/master/Kohana.gitignore&quot;,
+ &quot;gitignore LabVIEW&quot;: &quot;https://github.com/github/gitignore/raw/master/LabVIEW.gitignore&quot;,
+ &quot;gitignore Laravel&quot;: &quot;https://github.com/github/gitignore/raw/master/Laravel.gitignore&quot;,
+ &quot;gitignore Leiningen&quot;: &quot;https://github.com/github/gitignore/raw/master/Leiningen.gitignore&quot;,
+ &quot;gitignore LemonStand&quot;: &quot;https://github.com/github/gitignore/raw/master/LemonStand.gitignore&quot;,
+ &quot;gitignore Lilypond&quot;: &quot;https://github.com/github/gitignore/raw/master/Lilypond.gitignore&quot;,
+ &quot;gitignore Lithium&quot;: &quot;https://github.com/github/gitignore/raw/master/Lithium.gitignore&quot;,
+ &quot;gitignore Lua&quot;: &quot;https://github.com/github/gitignore/raw/master/Lua.gitignore&quot;,
+ &quot;gitignore Magento&quot;: &quot;https://github.com/github/gitignore/raw/master/Magento.gitignore&quot;,
+ &quot;gitignore Maven&quot;: &quot;https://github.com/github/gitignore/raw/master/Maven.gitignore&quot;,
+ &quot;gitignore Mercury&quot;: &quot;https://github.com/github/gitignore/raw/master/Mercury.gitignore&quot;,
+ &quot;gitignore MetaProgrammingSystem&quot;: &quot;https://github.com/github/gitignore/raw/master/MetaProgrammingSystem.gitignore&quot;,
+ &quot;gitignore Nanoc&quot;: &quot;https://github.com/github/gitignore/raw/master/Nanoc.gitignore&quot;,
+ &quot;gitignore Nim&quot;: &quot;https://github.com/github/gitignore/raw/master/Nim.gitignore&quot;,
+ &quot;gitignore Node&quot;: &quot;https://github.com/github/gitignore/raw/master/Node.gitignore&quot;,
+ &quot;gitignore OCaml&quot;: &quot;https://github.com/github/gitignore/raw/master/OCaml.gitignore&quot;,
+ &quot;gitignore Objective-C&quot;: &quot;https://github.com/github/gitignore/raw/master/Objective-C.gitignore&quot;,
+ &quot;gitignore Opa&quot;: &quot;https://github.com/github/gitignore/raw/master/Opa.gitignore&quot;,
+ &quot;gitignore OpenCart&quot;: &quot;https://github.com/github/gitignore/raw/master/OpenCart.gitignore&quot;,
+ &quot;gitignore OracleForms&quot;: &quot;https://github.com/github/gitignore/raw/master/OracleForms.gitignore&quot;,
+ &quot;gitignore Packer&quot;: &quot;https://github.com/github/gitignore/raw/master/Packer.gitignore&quot;,
+ &quot;gitignore Perl&quot;: &quot;https://github.com/github/gitignore/raw/master/Perl.gitignore&quot;,
+ &quot;gitignore Phalcon&quot;: &quot;https://github.com/github/gitignore/raw/master/Phalcon.gitignore&quot;,
+ &quot;gitignore PlayFramework&quot;: &quot;https://github.com/github/gitignore/raw/master/PlayFramework.gitignore&quot;,
+ &quot;gitignore Plone&quot;: &quot;https://github.com/github/gitignore/raw/master/Plone.gitignore&quot;,
+ &quot;gitignore Prestashop&quot;: &quot;https://github.com/github/gitignore/raw/master/Prestashop.gitignore&quot;,
+ &quot;gitignore Processing&quot;: &quot;https://github.com/github/gitignore/raw/master/Processing.gitignore&quot;,
+ &quot;gitignore Python&quot;: &quot;https://github.com/github/gitignore/raw/master/Python.gitignore&quot;,
+ &quot;gitignore Qooxdoo&quot;: &quot;https://github.com/github/gitignore/raw/master/Qooxdoo.gitignore&quot;,
+ &quot;gitignore Qt&quot;: &quot;https://github.com/github/gitignore/raw/master/Qt.gitignore&quot;,
+ &quot;gitignore R&quot;: &quot;https://github.com/github/gitignore/raw/master/R.gitignore&quot;,
+ &quot;gitignore ROS&quot;: &quot;https://github.com/github/gitignore/raw/master/ROS.gitignore&quot;,
+ &quot;gitignore Rails&quot;: &quot;https://github.com/github/gitignore/raw/master/Rails.gitignore&quot;,
+ &quot;gitignore RhodesRhomobile&quot;: &quot;https://github.com/github/gitignore/raw/master/RhodesRhomobile.gitignore&quot;,
+ &quot;gitignore Ruby&quot;: &quot;https://github.com/github/gitignore/raw/master/Ruby.gitignore&quot;,
+ &quot;gitignore Rust&quot;: &quot;https://github.com/github/gitignore/raw/master/Rust.gitignore&quot;,
+ &quot;gitignore SCons&quot;: &quot;https://github.com/github/gitignore/raw/master/SCons.gitignore&quot;,
+ &quot;gitignore Sass&quot;: &quot;https://github.com/github/gitignore/raw/master/Sass.gitignore&quot;,
+ &quot;gitignore Scala&quot;: &quot;https://github.com/github/gitignore/raw/master/Scala.gitignore&quot;,
+ &quot;gitignore Scrivener&quot;: &quot;https://github.com/github/gitignore/raw/master/Scrivener.gitignore&quot;,
+ &quot;gitignore Sdcc&quot;: &quot;https://github.com/github/gitignore/raw/master/Sdcc.gitignore&quot;,
+ &quot;gitignore SeamGen&quot;: &quot;https://github.com/github/gitignore/raw/master/SeamGen.gitignore&quot;,
+ &quot;gitignore SketchUp&quot;: &quot;https://github.com/github/gitignore/raw/master/SketchUp.gitignore&quot;,
+ &quot;gitignore Stella&quot;: &quot;https://github.com/github/gitignore/raw/master/Stella.gitignore&quot;,
+ &quot;gitignore SugarCRM&quot;: &quot;https://github.com/github/gitignore/raw/master/SugarCRM.gitignore&quot;,
+ &quot;gitignore Swift&quot;: &quot;https://github.com/github/gitignore/raw/master/Swift.gitignore&quot;,
+ &quot;gitignore Symfony&quot;: &quot;https://github.com/github/gitignore/raw/master/Symfony.gitignore&quot;,
+ &quot;gitignore SymphonyCMS&quot;: &quot;https://github.com/github/gitignore/raw/master/SymphonyCMS.gitignore&quot;,
+ &quot;gitignore TeX&quot;: &quot;https://github.com/github/gitignore/raw/master/TeX.gitignore&quot;,
+ &quot;gitignore Textpattern&quot;: &quot;https://github.com/github/gitignore/raw/master/Textpattern.gitignore&quot;,
+ &quot;gitignore TurboGears2&quot;: &quot;https://github.com/github/gitignore/raw/master/TurboGears2.gitignore&quot;,
+ &quot;gitignore Typo3&quot;: &quot;https://github.com/github/gitignore/raw/master/Typo3.gitignore&quot;,
+ &quot;gitignore Umbraco&quot;: &quot;https://github.com/github/gitignore/raw/master/Umbraco.gitignore&quot;,
+ &quot;gitignore Unity&quot;: &quot;https://github.com/github/gitignore/raw/master/Unity.gitignore&quot;,
+ &quot;gitignore VVVV&quot;: &quot;https://github.com/github/gitignore/raw/master/VVVV.gitignore&quot;,
+ &quot;gitignore VisualStudio&quot;: &quot;https://github.com/github/gitignore/raw/master/VisualStudio.gitignore&quot;,
+ &quot;gitignore Waf&quot;: &quot;https://github.com/github/gitignore/raw/master/Waf.gitignore&quot;,
+ &quot;gitignore WordPress&quot;: &quot;https://github.com/github/gitignore/raw/master/WordPress.gitignore&quot;,
+ &quot;gitignore Xojo&quot;: &quot;https://github.com/github/gitignore/raw/master/Xojo.gitignore&quot;,
+ &quot;gitignore Yeoman&quot;: &quot;https://github.com/github/gitignore/raw/master/Yeoman.gitignore&quot;,
+ &quot;gitignore Yii&quot;: &quot;https://github.com/github/gitignore/raw/master/Yii.gitignore&quot;,
+ &quot;gitignore ZendFramework&quot;: &quot;https://github.com/github/gitignore/raw/master/ZendFramework.gitignore&quot;,
+ &quot;gitignore Zephir&quot;: &quot;https://github.com/github/gitignore/raw/master/Zephir.gitignore&quot;
+},
+&quot;packages&quot;:
+{
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;finally-use-it&quot;&gt;Finally Use It&lt;/h2&gt;
 
@@ -250,32 +251,30 @@ don’t know or just forget about it.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;create a file called &lt;strong&gt;.LESS_TERMCAP:&lt;/strong&gt; &lt;code&gt;touch ~/.LESS_TERMCAP&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;edit the &lt;strong&gt;~/.LESS_TERMCAP&lt;/strong&gt; file with an editor: &lt;code&gt;nano ~/.LESS_TERMCAP&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;fill &lt;strong&gt;~/.LESS_TERMCAP&lt;/strong&gt; with this:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Less Colors for Man Pages&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_mb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0;103m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin blinking&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_md&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0;93m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin bold&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_me&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# end mode&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_se&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# end standout-mode&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_so&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput bold&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; tput setaf 8&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; tput setab 3&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin standout-mode - info box&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[0m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# end underline&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_us&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\E[04;32m&amp;#39;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# begin underline&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_mr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput rev&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_mh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput dim&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput ssubm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput rsubm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput ssupm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LESS_TERMCAP_ZW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;tput rsupm&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;fill &lt;strong&gt;~/.LESS_TERMCAP&lt;/strong&gt; with this:
+~~~bash
+# Less Colors for Man Pages
+ export LESS_TERMCAP_mb=$’\E[0;103m’ # begin blinking
+ export LESS_TERMCAP_md=$’\E[0;93m’ # begin bold
+ export LESS_TERMCAP_me=$’\E[0m’ # end mode
+ export LESS_TERMCAP_se=$’\E[0m’ # end standout-mode
+ export LESS_TERMCAP_so=$(tput bold; tput setaf 8; tput setab 3) # begin standout-mode - info box
+ export LESS_TERMCAP_ue=$’\E[0m’ # end underline
+ export LESS_TERMCAP_us=$’\E[04;32m’ # begin underline
+ export LESS_TERMCAP_mr=$(tput rev)
+ export LESS_TERMCAP_mh=$(tput dim)
+ export LESS_TERMCAP_ZN=$(tput ssubm)
+ export LESS_TERMCAP_ZV=$(tput rsubm)
+ export LESS_TERMCAP_ZO=$(tput ssupm)
+ export LESS_TERMCAP_ZW=$(tput rsupm)
+~~~&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;open your &lt;strong&gt;~/.bash_profile&lt;/strong&gt; with an editor: &lt;code&gt;nano ~/.bash_profile&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;add to &lt;strong&gt;~/.bash_profile&lt;/strong&gt; this:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -f ~/.LESS_TERMCAP &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; . ~/.LESS_TERMCAP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
+  &lt;li&gt;add to &lt;strong&gt;~/.bash_profile&lt;/strong&gt; this:
+~~~bash
+[[ -f ~/.LESS_TERMCAP ]] &amp;amp;&amp;amp; . ~/.LESS_TERMCAP
+~~~&lt;/li&gt;
   &lt;li&gt;reload the &lt;strong&gt;~/.bash_profile&lt;/strong&gt; (or restart the bash session): &lt;code&gt;source ~/.bash_profile&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -405,13 +404,15 @@ and that there is &lt;a href=&quot;https://github.com/magicmonty/bash-git-prompt
 &lt;h2 id=&quot;use-bash-git-prompt&quot;&gt;use bash-git-prompt&lt;/h2&gt;
 &lt;p&gt;First of all:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~ &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ cd ~ ;
+$ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt ;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Than you have to edit the &lt;code&gt;.bash_profile&lt;/code&gt; and add this at the end:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_ONLY_IN_REPO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
-&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash-git-prompt/gitprompt.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;export GIT_PROMPT_ONLY_IN_REPO=1
+source ~/.bash-git-prompt/gitprompt.sh
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;code&gt;.bash_profile&lt;/code&gt; is in your home folder if you are using OSX, otherwise
 check for a &lt;code&gt;.bashrc&lt;/code&gt; if you are using linux or unix.&lt;/p&gt;
@@ -427,7 +428,8 @@ check for a &lt;code&gt;.bashrc&lt;/code&gt; if you are using linux or unix.&lt;
 &lt;p&gt;Don’t panic, it’s possible to tweak it a bit. Create a file in your home folder called
 &lt;code&gt;.git-prompt-colors.sh&lt;/code&gt;, so:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch .git-prompt-colors.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ touch .git-prompt-colors.sh
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Then you want to write some variables inside it:&lt;/p&gt;
 
@@ -453,27 +455,28 @@ check for a &lt;code&gt;.bashrc&lt;/code&gt; if you are using linux or unix.&lt;
 
 &lt;p&gt;Then here’s my config for &lt;code&gt;.git-prompt-color.sh&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;BYellow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[1;33m\]&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;IBlack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;90m\]&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;Green&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;32m\]&amp;quot;&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;BYellow=&quot;\[\033[1;33m\]&quot;
+IBlack=&quot;\[\033[0;90m\]&quot;
+Green=&quot;\[\033[0;32m\]&quot;
 
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_PREFIX&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${IBlack}(${ResetColor}&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# start of the git info string&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_SUFFIX&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${IBlack})${ResetColor} &amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# the end of the git info string&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_SEPARATOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${IBlack} ${ResetColor}&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# separates each item&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_BRANCH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${IBlack}&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# the git branch that is active in the current directory&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_STAGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${Green}&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# the number of staged files/directories&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_CONFLICTS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${Magenta}✖&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# the number of files in conflict&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_CHANGED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${Yellow}&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# the number of changed files&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_REMOTE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# the remote branch name (if any)&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_UNTRACKED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${Cyan}&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# the number of untracked files/dirs&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_STASHED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${BoldBlue}&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#⚑  	# the number of stashed files/dir&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_CLEAN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${IBlack}✔&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# a colored flag indicating a &amp;quot;clean&amp;quot; repo&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_SYMBOLS_AHEAD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;↑&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_SYMBOLS_BEHIND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;↓&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_SYMBOLS_PREHASH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;:&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_START&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${ResetColor} &amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_END&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${ResetColor}${BYellow}\w${ResetColor} ${IBlack}∫${ResetColor} &amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;GIT_PROMPT_LEADING_SPACE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+GIT_PROMPT_PREFIX=&quot;${IBlack}(${ResetColor}&quot; # start of the git info string
+GIT_PROMPT_SUFFIX=&quot;${IBlack})${ResetColor} &quot; # the end of the git info string
+GIT_PROMPT_SEPARATOR=&quot;${IBlack} ${ResetColor}&quot; # separates each item
+GIT_PROMPT_BRANCH=&quot;${IBlack}&quot; # the git branch that is active in the current directory
+GIT_PROMPT_STAGED=&quot;${Green}&quot; # the number of staged files/directories
+GIT_PROMPT_CONFLICTS=&quot;${Magenta}✖&quot; # the number of files in conflict
+GIT_PROMPT_CHANGED=&quot;${Yellow}&quot; # the number of changed files
+GIT_PROMPT_REMOTE=&quot; &quot; # the remote branch name (if any)
+GIT_PROMPT_UNTRACKED=&quot;${Cyan}&quot; # the number of untracked files/dirs
+GIT_PROMPT_STASHED=&quot;${BoldBlue}&quot; #⚑  	# the number of stashed files/dir
+GIT_PROMPT_CLEAN=&quot;${IBlack}✔&quot; # a colored flag indicating a &quot;clean&quot; repo
+GIT_PROMPT_SYMBOLS_AHEAD=&#39;↑&#39;
+GIT_PROMPT_SYMBOLS_BEHIND=&#39;↓&#39;
+GIT_PROMPT_SYMBOLS_PREHASH=&#39;:&#39;
+GIT_PROMPT_START=&quot;${ResetColor} &quot;
+GIT_PROMPT_END=&quot;${ResetColor}${BYellow}\w${ResetColor} ${IBlack}∫${ResetColor} &quot;
+GIT_PROMPT_LEADING_SPACE=&quot;0&quot;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;try-everything&quot;&gt;try everything&lt;/h2&gt;
 &lt;p&gt;Logout from the current session and login again, or simply close the terminal and open it again.&lt;/p&gt;
@@ -485,8 +488,9 @@ check for a &lt;code&gt;.bashrc&lt;/code&gt; if you are using linux or unix.&lt;
 &lt;p&gt;Having this configuration you can keep updated the bash-git-prompt pulling it from github.
 Periodically give a &lt;code&gt;git pull&lt;/code&gt; under &lt;code&gt;~/.bash-git-prompt&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.bash-git-prompt
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git pull&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ cd ~/.bash-git-prompt
+$ git pull
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;enjoy&quot;&gt;enjoy&lt;/h3&gt;
 
@@ -534,25 +538,28 @@ If you have a public domain name, then create a file &lt;code&gt;CNAME&lt;/code&
 
 &lt;p&gt;In order to preview your blog locally you need to install jekyll in your machine. It’s python based so make sure you have:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python --version
-Python 2.7.5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ python --version
+Python 2.7.5
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Install Jekyll it:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install jekyll &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &amp;lt;username&amp;gt;.github.com &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-jekyll new myblog &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;gem install jekyll ;
+cd &amp;lt;username&amp;gt;.github.com ;
+jekyll new myblog ;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And you’re ready to run it locally with &lt;code&gt;jekyll serve -w&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;jekyll serve -w
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ jekyll serve -w
 Configuration file: username.github.io/_config.yml
             Source: username.github.io
        Destination: username.github.io/_site
-      Generating... &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;.
+      Generating... done.
  Auto-regeneration: enabled
     Server address: http://0.0.0.0:4000
-  Server running... press ctrl-c to stop.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  Server running... press ctrl-c to stop.
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;now open &lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt;.&lt;/p&gt;
 

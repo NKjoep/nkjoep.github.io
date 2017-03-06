@@ -40,7 +40,7 @@ and add to `files`
 ![2]({{ site.url }}/assets/posts/2015-09-26-Gitignore-with-Sublime/5-default-config.png)
 
 
-{% highlight json %}
+~~~json
 {
 "files":
 {
@@ -216,7 +216,7 @@ and add to `files`
 {
 }
 }
-{% endhighlight %}
+~~~
 
 
 ## Finally Use It

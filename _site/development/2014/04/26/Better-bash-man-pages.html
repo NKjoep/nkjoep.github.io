@@ -90,7 +90,7 @@
 
 
 <div id="bio" class="text-center">
-	Andrea, man, html operator, css dispeller, js runner, web lover. Entando Developer too.
+	Andrea, man, html operator, css dispeller, js runner, web lover.
 </div>
 
 
@@ -176,32 +176,30 @@ don’t know or just forget about it.</p>
 <ul>
   <li>create a file called <strong>.LESS_TERMCAP:</strong> <code>touch ~/.LESS_TERMCAP</code></li>
   <li>edit the <strong>~/.LESS_TERMCAP</strong> file with an editor: <code>nano ~/.LESS_TERMCAP</code></li>
-  <li>fill <strong>~/.LESS_TERMCAP</strong> with this:</li>
-</ul>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Less Colors for Man Pages</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_mb</span><span class="o">=</span><span class="s1">$&#39;\E[0;103m&#39;</span> <span class="c"># begin blinking</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_md</span><span class="o">=</span><span class="s1">$&#39;\E[0;93m&#39;</span> <span class="c"># begin bold</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_me</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="c"># end mode</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_se</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="c"># end standout-mode</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_so</span><span class="o">=</span><span class="k">$(</span>tput bold<span class="p">;</span> tput setaf 8<span class="p">;</span> tput setab 3<span class="k">)</span> <span class="c"># begin standout-mode - info box</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_ue</span><span class="o">=</span><span class="s1">$&#39;\E[0m&#39;</span> <span class="c"># end underline</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_us</span><span class="o">=</span><span class="s1">$&#39;\E[04;32m&#39;</span> <span class="c"># begin underline</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_mr</span><span class="o">=</span><span class="k">$(</span>tput rev<span class="k">)</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_mh</span><span class="o">=</span><span class="k">$(</span>tput dim<span class="k">)</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZN</span><span class="o">=</span><span class="k">$(</span>tput ssubm<span class="k">)</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZV</span><span class="o">=</span><span class="k">$(</span>tput rsubm<span class="k">)</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZO</span><span class="o">=</span><span class="k">$(</span>tput ssupm<span class="k">)</span>
- <span class="nb">export </span><span class="nv">LESS_TERMCAP_ZW</span><span class="o">=</span><span class="k">$(</span>tput rsupm<span class="k">)</span></code></pre></div>
-
-<ul>
+  <li>
+    <p>fill <strong>~/.LESS_TERMCAP</strong> with this:
+~~~bash
+# Less Colors for Man Pages
+ export LESS_TERMCAP_mb=$’\E[0;103m’ # begin blinking
+ export LESS_TERMCAP_md=$’\E[0;93m’ # begin bold
+ export LESS_TERMCAP_me=$’\E[0m’ # end mode
+ export LESS_TERMCAP_se=$’\E[0m’ # end standout-mode
+ export LESS_TERMCAP_so=$(tput bold; tput setaf 8; tput setab 3) # begin standout-mode - info box
+ export LESS_TERMCAP_ue=$’\E[0m’ # end underline
+ export LESS_TERMCAP_us=$’\E[04;32m’ # begin underline
+ export LESS_TERMCAP_mr=$(tput rev)
+ export LESS_TERMCAP_mh=$(tput dim)
+ export LESS_TERMCAP_ZN=$(tput ssubm)
+ export LESS_TERMCAP_ZV=$(tput rsubm)
+ export LESS_TERMCAP_ZO=$(tput ssupm)
+ export LESS_TERMCAP_ZW=$(tput rsupm)
+~~~</p>
+  </li>
   <li>open your <strong>~/.bash_profile</strong> with an editor: <code>nano ~/.bash_profile</code></li>
-  <li>add to <strong>~/.bash_profile</strong> this:</li>
-</ul>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[[</span> -f ~/.LESS_TERMCAP <span class="o">]]</span> <span class="o">&amp;&amp;</span> . ~/.LESS_TERMCAP</code></pre></div>
-
-<ul>
+  <li>add to <strong>~/.bash_profile</strong> this:
+~~~bash
+[[ -f ~/.LESS_TERMCAP ]] &amp;&amp; . ~/.LESS_TERMCAP
+~~~</li>
   <li>reload the <strong>~/.bash_profile</strong> (or restart the bash session): <code>source ~/.bash_profile</code></li>
 </ul>
 
@@ -348,7 +346,7 @@ if you google a bit you’ll find the table of colors and the meaning of those v
  <div class="col-xs-12">
 	 <hr/>
 	 <p class="small text-muted">
-	 	&copy; 2016 Andrea Dessì.<span class="sr-only">Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a>by dbtek.</span>
+	 	&copy; 2017 Andrea Dessì.<span class="sr-only">Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a>by dbtek.</span>
 	 </p>
  </div>
 </footer>

@@ -39,22 +39,22 @@ Then move forward to jekyll. The just created repo supports some special files: 
 
 In order to preview your blog locally you need to install jekyll in your machine. It's python based so make sure you have:
 
-{% highlight bash %}
+~~~bash
 $ python --version
 Python 2.7.5
-{% endhighlight %}
+~~~
 
 Install Jekyll it:
 
-{% highlight bash %}
+~~~bash
 gem install jekyll ;
 cd <username>.github.com ;
 jekyll new myblog ;
-{% endhighlight %}
+~~~
 
 And you're ready to run it locally with <code>jekyll serve -w</code>
 
-{% highlight bash %}
+~~~bash
 $ jekyll serve -w
 Configuration file: username.github.io/_config.yml
             Source: username.github.io
@@ -63,7 +63,7 @@ Configuration file: username.github.io/_config.yml
  Auto-regeneration: enabled
     Server address: http://0.0.0.0:4000
   Server running... press ctrl-c to stop.
-{% endhighlight %}
+~~~
 
 now open [http://localhost:4000/](http://localhost:4000/).
 

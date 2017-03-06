@@ -3,7 +3,6 @@
 paginate: 5 # pagination based on number of posts
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
-highlighter: pygments
 
 title: Andrea D. Blog
 description: ...and definitely It steals the fish.
@@ -14,7 +13,7 @@ author:
   twitter: NKjoep
   # pinterest: asd123
   linkedin: andreadessi
-  bio: Andrea, man, html operator, css dispeller, js runner, web lover. Entando Developer too.
+  bio: Andrea, man, html operator, css dispeller, js runner, web lover.
   email_md5: cc669cccf3cf6118c1efac45de802710
 
 rss_path: feed.xml
@@ -27,6 +26,7 @@ gems:
 - jekyll-redirect-from
 
 markdown: kramdown
+highlighter: rouge
 
 disqus_shortname: stealthefish
 
