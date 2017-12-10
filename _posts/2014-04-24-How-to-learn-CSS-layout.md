@@ -14,7 +14,7 @@ It's a great resource created by @incompl and [Isaac Durazo](http://www.isaacdur
 
 ----
 
-That's all. Oh yes... and I just traslated it to [italian](http://it.learnlayout.com/).
+That's all. Oh yes... and I just translated it to [italian](http://it.learnlayout.com/).
 
 <blockquote class="twitter-tweet" lang="en"><p>learnlayout is now available in Italian! <a href="http://t.co/wSXFaj7hZb">http://t.co/wSXFaj7hZb</a></p>&mdash; Greg Smith (@_gsmith) <a href="https://twitter.com/_gsmith/statuses/458679325358063617">April 22, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -40,7 +40,7 @@ you probably would know that:
 
 - **position** has strange values
 - **fixed** really does not fix your problems
-- **block** is the opposit of **inline**
+- **block** is the opposite of **inline**
 - **margin** not always works
 - **padding** and **width**, they just mess everything up
 - **float** ... uh?
@@ -49,7 +49,7 @@ After few years of trying, creating static mockups, jsfiddles, pastebins and ton
 stackoverflow you probably will end up mastering all of them :)
 
 I think *learnlayout.com* is a great resource, I know it will help future developers
-to better undestand the CSS and how to properly use it in order to achieve the desired layout.
+to better understand the CSS and how to properly use it in order to achieve the desired layout.
 
 *learnlayout.com* is straightforward, you can't ask for better examples or explanation.
 Not even MDN is so clear.

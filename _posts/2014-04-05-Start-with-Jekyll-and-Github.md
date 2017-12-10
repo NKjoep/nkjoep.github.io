@@ -16,13 +16,13 @@ I technically know how to code a blog so I would be cool also to write posts in!
 
 Yes, I said I had them in my mind because I had never found the right platform for my needs. Fast publishing, great html output, fully customizable, mobile ready...
 
-My favourite was Posterous, but [Twitter acquired and put them down](http://www.theverge.com/2013/4/30/4281780/posterous-is-shutting-down-tomorrow-here-are-the-best-alternatives).
+My favorite was Posterous, but [Twitter acquired and put them down](http://www.theverge.com/2013/4/30/4281780/posterous-is-shutting-down-tomorrow-here-are-the-best-alternatives).
 
 All the alternatives to my old blog were flowing in my mind and after a long time I finally found a good solution. This could be a good solution also for you if:
 
 - you love markdown and git
 - you want great control of everything
-- you don't want to bother with hostings
+- you don't want to bother with hosting
 
 so get my advice, use [Jekyll + GitHub Pages](https://pages.github.com/)
 
@@ -68,7 +68,7 @@ Configuration file: username.github.io/_config.yml
 now open [http://localhost:4000/](http://localhost:4000/).
 
 Next step is to create markdown files within the <code>_posts</code> folder.
-Rember you can still create plain .html files.
+Remember you can still create plain .html files.
 Nothing more to say, follow the [official guide](http://jekyllrb.com/docs/posts/).
 
 ### themes
@@ -80,4 +80,4 @@ repository. Rember that if you want to use jekyll with github projects, use bran
 
 ----
 
-So this is my first official post with Jekyll@Github, this configuration gives me soooo much flexibility. That freedom I need while experimenting.
+So this is my first official post with Jekyll@Github, this configuration gives me so much flexibility. That freedom I need while experimenting.

@@ -7,7 +7,7 @@ tags: [osx, dev, environment]
 ---
 
 A [friend of mine](http://simoneloru.com/), during a remote shared video session,
-noticied my shell while we were deciding what to commit and what to merge.
+noticed my shell while we were deciding what to commit and what to merge.
 
 ![Example of my prompt]({{ site.url }}/assets/posts/2014-04-09-Improve-your-Git-prompt/prompt.png)
 
@@ -43,7 +43,7 @@ check for a `.bashrc` if you are using linux or unix.
 
 
 
-Doing this you'll have enabled the cool git prompt with its default setting. Setting the `GIT_PROMPT_ONLY_IN_REPO` variable you are preserving the [PS1](http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html) when outsite a git folder.
+Doing this you'll have enabled the cool git prompt with its default setting. Setting the `GIT_PROMPT_ONLY_IN_REPO` variable you are preserving the [PS1](http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html) when outside a git folder.
 
 ## customize it
 

@@ -27,8 +27,8 @@ That's why I created [i-love-markdown.css](http://stealthefish.com/i-love-markdo
 ![i-love-markdown.css homepage]({{ site.url }}/assets/posts/2014-04-16-i-love-markdowncss/i-love-markdown.jpg)
 
 
-I started with a simple css then ended up with a less file and a container so it'll be easy to integrate it with existant websites.
+I started with a simple css then ended up with a less file and a container so it'll be easy to integrate it with existent websites.
 
 After I finished I googled a bit for something similar and I discovered many others had my same idea...
 
-One of my favourites is: [markdown-css (http://mrcoles.com/demo/markdown-css/)](http://mrcoles.com/demo/markdown-css/)
+One of my favorites is: [markdown-css (http://mrcoles.com/demo/markdown-css/)](http://mrcoles.com/demo/markdown-css/)

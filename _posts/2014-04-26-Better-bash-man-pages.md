@@ -8,14 +8,14 @@ tags: [osx, dev, environment]
 
 We, developers, live much of our time within a shell.
 Modern [CLI](http://en.wikipedia.org/wiki/Command-line_interface)s output
-stunning help in a way before was not possibile. Think of NPM or Heroku or the great
+stunning help in a way before was not possible. Think of NPM or Heroku or the great
 GIT.
 
 However we still have the [man pages](http://en.wikipedia.org/wiki/Man_page) with their
 default style: black&white with some underline or bold.
 
-So, we can change this luckly. It's a feature, probably an ancient one, most of us
-don't know or just forget about it.
+So, we can change this luckily. It's a feature, probably an ancient one, most of us
+don't know or just forgot about it.
 
 ### change it
 

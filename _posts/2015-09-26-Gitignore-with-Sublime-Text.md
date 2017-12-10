@@ -26,7 +26,7 @@ There you'll find files like these:
 
 Great, we have a repository with good gitignores! The problem now is how to add them quickly to your project.
 
-Such problem, very Google: I found a [post from  Marc Jenkins](https://plausiblethought.net/pull-gitignore-files-with-the-sublime-text-nettuts-fetch-plugin/) suggest to use Nettuts-Fetch for Sublime Text to achive exactly what I was looking for.
+Such problem, very Google: I found a [post from  Marc Jenkins](https://plausiblethought.net/pull-gitignore-files-with-the-sublime-text-nettuts-fetch-plugin/) suggest to use Nettuts-Fetch for Sublime Text to achieve exactly what I was looking for.
 
 Basically Nettuts-Fetch is a download & paste tool: you fill its configuration file with name and url then you it will download the content from those urls and paste it directly in your editor.
 
