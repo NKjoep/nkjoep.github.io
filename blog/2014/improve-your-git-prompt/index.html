@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Improve your GIT prompt | Andrea D. Blog</title>
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed | Andrea D. Blog" href="/feed.xml?rev=e16a73b">
+
+  <meta name="description" content="How to get a nice git prompt in no time.">
+  <meta property="og:title" content="Improve your GIT prompt | Andrea D. Blog" />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:url" content="/" />
+
+  <link rel="icon" href="/assets/ico/favicon.ico?rev=e16a73b">
+  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev=e16a73b">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12754582-1"></script>
+  <script async src="/assets/js/app.js?rev=e16a73b"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <a href="/">
+      <img src="http://www.gravatar.com/avatar/cc669cccf3cf6118c1efac45de802710?s=150" alt=" ">
+      <br /> Andrea Dessì
+      <br /> Andrea, man, html operator, css dispeller, js runner, web lover.
+    </a>
+    <br />
+
+    <a href="https://github.com/nkjoep">
+      <span class="fab fa-github"></span>nkjoep
+    </a>
+    <br />
+
+    <a href="https://twitter.com/NKjoep">
+      <span class="fab fa-twitter"></span> NKjoep
+    </a>
+    <br />
+
+    <a href="https://www.linkedin.com/in/andreadessi">
+      <span class="fab fa-linkedin"></span> andreadessi
+    </a>
+    <br />
+
+    <a href="/feed.xml">
+      <span class="fas fa-rss"></span> Feed
+    </a>
+    <br />
+  </header>
+
+  <main>
+    <h1>Improve your GIT prompt</h1>
+    <p>How to get a nice git prompt in no time.</p>
+
+    <p>A <a href="http://simoneloru.com/">friend of mine</a>, during a remote shared video session,
+noticed my shell while we were deciding what to commit and what to merge.</p>
+<p><img src="/assets/posts/2014-04-09-Improve-your-Git-prompt/prompt.png" alt="Example of my prompt"></p>
+<p><a href="http://simoneloru.com">Simone</a> told me:</p>
+<blockquote>
+<p>Cool, you should write some instructions on how to configure it...</p>
+<p>I want it too!</p>
+</blockquote>
+<h2 id="so-here-s-how-to-do-it">so here&#39;s how to do it</h2>
+<p>Some time ago <a href="https://gist.github.com/NKjoep/4194041">I wrote a script</a> for parsing the <code>git status</code> and return numbers of
+modified files and the current branch. Soon I understood it is annoying to maintain
+and that there is <a href="https://github.com/magicmonty/bash-git-prompt">so much better out there</a>.</p>
+<h2 id="use-bash-git-prompt">use bash-git-prompt</h2>
+<p>First of all:</p>
+<pre><code class="lang-bash">$ cd ~ ;
+$ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt ;
+</code></pre>
+<p>Than you have to edit the <code>.bash_profile</code> and add this at the end:</p>
+<pre><code class="lang-bash">export GIT_PROMPT_ONLY_IN_REPO=1
+source ~/.bash-git-prompt/gitprompt.sh
+</code></pre>
+<p><code>.bash_profile</code> is in your home folder if you are using OSX, otherwise
+check for a <code>.bashrc</code> if you are using linux or unix.</p>
+<p>Doing this you&#39;ll have enabled the cool git prompt with its default setting. Setting the <code>GIT_PROMPT_ONLY_IN_REPO</code> variable you are preserving the <a href="http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html">PS1</a> when outside a git folder.</p>
+<h2 id="customize-it">customize it</h2>
+<p>However, the default config probably will hurt you, the default settings is something like this:</p>
+<p><img src="/assets/posts/2014-04-09-Improve-your-Git-prompt/default-gitprompt.png" alt="Default bash-git-prompt"></p>
+<p>Don&#39;t panic, it&#39;s possible to tweak it a bit. Create a file in your home folder called
+<code>.git-prompt-colors.sh</code>, so:</p>
+<pre><code class="lang-bash">$ touch .git-prompt-colors.sh
+</code></pre>
+<p>Then you want to write some variables inside it:</p>
+<ul>
+<li><strong>GIT_PROMPT_START</strong>: the start of the prompt</li>
+<li><strong>GIT_PROMPT_END</strong>: the end of prompt</li>
+<li><strong>GIT_PROMPT_LEADING_SPACE</strong>: add a space at last</li>
+<li><strong>GIT_PROMPT_PREFIX</strong>: start of the git info string</li>
+<li><strong>GIT_PROMPT_SUFFIX</strong>: the end of the git info string</li>
+<li><strong>GIT_PROMPT_SEPARATOR</strong>: separates each item</li>
+<li><strong>GIT_PROMPT_BRANCH</strong>: the git branch that is active in the current directory</li>
+<li><strong>GIT_PROMPT_STAGED</strong>: the number of staged files/directories</li>
+<li><strong>GIT_PROMPT_CONFLICTS</strong>: the number of files in conflict</li>
+<li><strong>GIT_PROMPT_CHANGED</strong>: the number of changed files</li>
+<li><strong>GIT_PROMPT_REMOTE</strong>: the remote branch name (if any)</li>
+<li><strong>GIT_PROMPT_UNTRACKED</strong>: the number of untracked files/dirs</li>
+<li><strong>GIT_PROMPT_STASHED</strong>: the number of stashed files/dir</li>
+<li><strong>GIT_PROMPT_CLEAN</strong>: a colored flag indicating a &quot;clean&quot; repo</li>
+<li><strong>GIT_PROMPT_SYMBOLS_AHEAD</strong>: indicates when you have commit ahead to push</li>
+<li><strong>GIT_PROMPT_SYMBOLS_BEHIND</strong>: indicated when you have commit behind to pull</li>
+<li><strong>GIT_PROMPT_SYMBOLS_PREHASH</strong>: hash indicator</li>
+</ul>
+<p>Then here&#39;s my config for <code>.git-prompt-color.sh</code></p>
+<pre><code class="lang-bash">BYellow=&quot;\[\033[1;33m\]&quot;
+IBlack=&quot;\[\033[0;90m\]&quot;
+Green=&quot;\[\033[0;32m\]&quot;
+
+GIT_PROMPT_PREFIX=&quot;${IBlack}(${ResetColor}&quot; # start of the git info string
+GIT_PROMPT_SUFFIX=&quot;${IBlack})${ResetColor} &quot; # the end of the git info string
+GIT_PROMPT_SEPARATOR=&quot;${IBlack} ${ResetColor}&quot; # separates each item
+GIT_PROMPT_BRANCH=&quot;${IBlack}&quot; # the git branch that is active in the current directory
+GIT_PROMPT_STAGED=&quot;${Green}&quot; # the number of staged files/directories
+GIT_PROMPT_CONFLICTS=&quot;${Magenta}✖&quot; # the number of files in conflict
+GIT_PROMPT_CHANGED=&quot;${Yellow}&quot; # the number of changed files
+GIT_PROMPT_REMOTE=&quot; &quot; # the remote branch name (if any)
+GIT_PROMPT_UNTRACKED=&quot;${Cyan}&quot; # the number of untracked files/dirs
+GIT_PROMPT_STASHED=&quot;${BoldBlue}&quot; #⚑      # the number of stashed files/dir
+GIT_PROMPT_CLEAN=&quot;${IBlack}✔&quot; # a colored flag indicating a &quot;clean&quot; repo
+GIT_PROMPT_SYMBOLS_AHEAD=&#39;↑&#39;
+GIT_PROMPT_SYMBOLS_BEHIND=&#39;↓&#39;
+GIT_PROMPT_SYMBOLS_PREHASH=&#39;:&#39;
+GIT_PROMPT_START=&quot;${ResetColor} &quot;
+GIT_PROMPT_END=&quot;${ResetColor}${BYellow}\w${ResetColor} ${IBlack}∫${ResetColor} &quot;
+GIT_PROMPT_LEADING_SPACE=&quot;0&quot;
+</code></pre>
+<h2 id="try-everything">try everything</h2>
+<p>Logout from the current session and login again, or simply close the terminal and open it again.</p>
+<p>Many uses this command <code>source ~/.bash_profile</code> but I do not like it. That way you are not cleaning previous loaded environment variables, so seems better to me perform a clean login.</p>
+<h2 id="stay-updated">stay updated</h2>
+<p>Having this configuration you can keep updated the bash-git-prompt pulling it from github.
+Periodically give a <code>git pull</code> under <code>~/.bash-git-prompt</code></p>
+<pre><code class="lang-bash">$ cd ~/.bash-git-prompt
+$ git pull
+</code></pre>
+<h3 id="enjoy">enjoy</h3>
+<p>That&#39;s all. enjoy your cool prompt :D</p>
+
+  </main>
+
+  <aside>
+    <h3>Posts</h3>
+    <ul>
+      <li>
+        <a href="/blog/2015/gitignore-with-sublimetext">
+          <h2>Gitignore with SublimeText</h2>
+          <p>I was looking for a good way to fill the .gitignore when starting a new project.</p>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/2014/better-bash-man-pages">
+          <h2>Better bash man pages</h2>
+          <p>We, developers, live much of our time within a shell.
+Modern <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>s output
+stunning help in a way before was not possible. Think of NPM or Heroku or the great
+GIT.</p>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/2014/how-to-learn-css-layout">
+          <h2>How to learn CSS layout</h2>
+          <p>You surely need to check this website out: <a href="http://learnlayout.com">learnlayout.com</a></p>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/2014/i-love-markdown-css">
+          <h2>i-love-markdown.css</h2>
+          <p>As developer I started with Markdown few years ago, when GitHub started trending.
+I&#39;d like to remember the true Markdown father John Gruber and the his <a href="https://daringfireball.net/projects/markdown/">Markdown post</a>.</p>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/2014/improve-your-git-prompt">
+          <h2>Improve your GIT prompt</h2>
+          <p>A <a href="http://simoneloru.com/">friend of mine</a>, during a remote shared video session,
+noticed my shell while we were deciding what to commit and what to merge.</p>
+        </a>
+      </li>
+      <li>
+        <a href="/blog/2014/start-with-jekyll-and-github">
+          <h2>Start with Jekyll and Github</h2>
+          <p>I&#39;m a web developer and I follow people, stay update with open source projects
+I love &lt;3, I try to fix bugs and sometimes I create them too (oh who doesn&#39;t?).</p>
+        </a>
+      </li>
+    </ul>
+
+    <h3>Unwritten</h3>
+    <p>Because sometimes I have something to talk about, but never the time or courage to write a full post.</p>
+    <p>Here are some of those bits:</p>
+    <ul>
+      <li>
+        <a href="/blog/2018/move-my-posts-to-metalsmith">
+          <h2>Move my posts to Metalsmith</h2>
+          
+          How I dropped Jekyll in favour of Metalsmith. Seems <i>yesterday</i> I stared with Jekyll.
+        </a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="https://github.com/NKjoep/repo1">NKjoep/repo1</a>
+      </li>
+      <li>
+        <a href="https://github.com/NKjoep/repo2">NKjoep/repo2</a>
+      </li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>
+      &copy; Andrea Dessì 2018
+    </p>
+    <p id="cookie-ok" style="display: none;">
+      About cookies: Cookies help me to deliver a better service. By using this website, you agree to the use of cookies.
+      <button role="button">Ok, got it.</button>
+    </p>
+  </footer>
+</body>
+
+</html>

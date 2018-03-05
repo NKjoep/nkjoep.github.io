@@ -1,40 +1,22 @@
-jQuery(function() {
+document.addEventListener('readystatechange', function (ev) {
+	var status = ev.target.readyState;
+	if (status != 'complete') { return; }
+	init();
+}, false);
 
-	/* Sidebar height set */
-		var setHeight = function() {
-			$( '.sidebar' ).css( 'min-height',$( document ).height() );
-		};
+function init() {
+	// if (window.location.hostname === 'localhost') { console.log('skip tracking'); return; }
+	// window.dataLayer = window.dataLayer || [];
+	// function gtag() { dataLayer.push(arguments); }
+	// gtag('js', new Date());
+	// gtag('config', 'UA-12754582-1');
 
-		setHeight();
-		$( window ).on( 'resize', setHeight );
-
-	/* Secondary contact links */
-	var scontacts = $( '#contact-list-secondary' );
-	var contact_list = $( '#contact-list' );
-
-	//scontacts.hide();
-	//contact_list.mouseenter( function() { scontacts.slideDown(); } );
-	//contact_list.mouseleave( function() { scontacts.slideUp(); } );
-
-	if (!(/^localhost/.test(window.location.host))) {
-
-		if (!window.jXHR){
-				var jxhr = document.createElement('script');
-				jxhr.type = 'text/javascript';
-				jxhr.src = window.BASE_PATH+'/assets/resources/jxhr.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(jxhr, s);
-		}
-
-		github.showRepos({
-		        user: 'nkjoep',
-		       count: 0,
-	  	skip_forks: true,
-		      target: '#gh-repos',
-		   itemClass: '',
-		descriptions: false
-		});
-	}
-
-
-}); //domready
+	var hideCookieNotice = window.localStorage.getItem('c') === '1';
+	var cookieEl = document.querySelector('#cookie-ok');
+	if (hideCookieNotice) { return; }
+	cookieEl.style.display = '';
+	cookieEl.addEventListener('click', function () {
+		window.localStorage.setItem('c', '1');
+		cookieEl.remove();
+	});
+}

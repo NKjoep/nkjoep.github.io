@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }} | Andrea D. Blog</title>
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed | Andrea D. Blog" href="/feed.xml?rev={{revision}}">
+
+  <meta name="description" content="{{ description }}">
+  <meta property="og:title" content="{{title}} | Andrea D. Blog" />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:url" content="/" />
+
+  <link rel="icon" href="/assets/ico/favicon.ico?rev={{revision}}">
+  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev={{revision}}">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12754582-1"></script>
+  <script async src="/assets/js/app.js?rev={{revision}}"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <a href="/">
+      <img src="http://www.gravatar.com/avatar/{{author.emailMd5}}?s=150" alt=" ">
+      <br /> {{ author.name }}
+      <br /> {{ author.bio }}
+    </a>
+    <br />
+
+    <a href="https://github.com/{{author.github}}">
+      <span class="fab fa-github"></span>{{ author.github }}
+    </a>
+    <br />
+
+    <a href="https://twitter.com/{{author.twitter}}">
+      <span class="fab fa-twitter"></span> {{ author.twitter }}
+    </a>
+    <br />
+
+    <a href="https://www.linkedin.com/in/{{author.linkedin}}">
+      <span class="fab fa-linkedin"></span> {{ author.linkedin }}
+    </a>
+    <br />
+
+    <a href="/feed.xml">
+      <span class="fas fa-rss"></span> Feed
+    </a>
+    <br />
+  </header>
+
+  <main>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+
+    {{{ contents }}}
+  </main>
+
+  <aside>
+    <h3>Posts</h3>
+    <ul>
+      {{#each articles}}
+      <li>
+        <a href="/{{path}}">
+          <h2>{{title}}</h2>
+          {{#if excerpt}}{{{excerpt}}}{{/if}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+
+    <h3>Unwritten</h3>
+    <p>Because sometimes I have something to talk about, but never the time or courage to write a full post.</p>
+    <p>Here are some of those bits:</p>
+    <ul>
+      {{#each unwritten}}
+      <li>
+        <a href="/{{path}}">
+          <h2>{{title}}</h2>
+          {{#if excerpt}}{{{excerpt}}}{{/if}}
+          {{#if description}}{{{description}}}{{/if}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+
+    <ul>
+      {{#each author.githubRepos}}
+      <li>
+        <a href="{{html_url}}">{{full_name}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </aside>
+
+  <footer>
+    <p>
+      &copy; {{ author.name }} {{ copyrightYear }}
+    </p>
+    <p id="cookie-ok" style="display: none;">
+      About cookies: Cookies help me to deliver a better service. By using this website, you agree to the use of cookies.
+      <button role="button">Ok, got it.</button>
+    </p>
+  </footer>
+</body>
+
+</html>
