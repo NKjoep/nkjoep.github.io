@@ -50,7 +50,6 @@ const mp_feed = require('metalsmith-feed');
 const mp_layouts = require('metalsmith-layouts');
 const mp_markdown = require('metalsmith-markdown');
 const mp_permalinks = require('metalsmith-permalinks');
-const mp_slug = require('metalsmith-slug');
 
 Metalsmith(__dirname)
   .metadata(websiteOptions.metadata)
