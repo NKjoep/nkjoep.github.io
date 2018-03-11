@@ -16,12 +16,8 @@ $color_mute: desaturate($color_main, 20%);
 $color_white: #fdfdfd;
 $color_black: #373737;
 $color_gray: lighten(desaturate($color_main, 60%), 40%);
-
-.border-top {
-    border-top: 1px solid $color_gray;
-}
-.border-bottom {
-    border-bottom: 1px solid $color_gray;
+* {
+    box-sizing: border-box;
 }
 
 @mixin width-limits {
@@ -29,8 +25,20 @@ $color_gray: lighten(desaturate($color_main, 60%), 40%);
     margin: 0 auto;
 }
 
-* {
-    box-sizing: border-box;
+.nowrap {
+  white-space: nowrap;
+}
+
+.border-top {
+    border-top: 1px solid $color_gray;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $color_gray;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 html {
@@ -53,18 +61,47 @@ body {
     padding: 0;
 }
 
+.text-color-normal {
+  color: $color_black;
+}
+
+.text-color-main {
+  color: $color_main;
+}
+
 a {
     &:link,
     &:visited {
-        color: $color_main;
+        @extend .text-color-main;
         text-decoration: none;
+        .nolink, .nolink * {
+            text-decoration: none !important;
+            -webkit-text-decorations-in-effect: none !important;
+
+        }
     }
     &:hover,
     &:active,
     &:focus {
+        @extend .text-color-main;
         text-decoration: underline;
-    }
+        .nolink, .nolink * {
+            text-decoration: none !important;
+            -webkit-text-decorations-in-effect: none !important;
 
+        }
+    }
+    &.text-color-normal {
+      &:link,
+      &:visited {
+        @extend .text-color-normal;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        @extend .text-color-normal;
+      }
+    }
 }
 
 .sr-only {
@@ -88,7 +125,12 @@ a {
 }
 
 #cookie-ok {
-    background: $color_secondary;
+    @extend .cursor-pointer;
+    @extend .m-0;
+    background: #2D559F;
+    background: linear-gradient(to bottom, rgba(45,85,159,1) 90%,rgba(11,51,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-radius: 0.3rem 0.3rem  0 0;
+    box-shadow: 3px 3px 3px 0px $color_gray;
     color: white;
     position: fixed;
     bottom: 0;
@@ -97,46 +139,72 @@ a {
     width: 100%;
     width: 100vw;
     z-index: 10;
-    cursor: pointer;
-    @extend .m-0;
     padding: 1rem;
     font-size: 0.8rem;
     @include width-limits();
+
+    button {
+      @extend .cursor-pointer;
+      border: 1px solid $color_black;
+      padding: .5em .8em;
+      &:after {
+        font-family: monospace;
+        content: " 👍"
+      }
+    }
+
+    &:hover {
+      button {
+        &:after {
+          font-family: monospace;
+          content: " 😅"
+        }
+      }
+    }
 }
 
 nav {
-    @include width-limits();
-    @extend .m-0;
-    @extend .border-top;
-    @extend .border-bottom;
-    position: fixed;
-    width: 100%;
-    width: 100vw;
-    top: 0;
-    height: 3.1rem;
-    background-color: $color_white;
-    background-color: rgba($color_white, 0.98);
-    padding: 1rem 1rem 0.8rem 1rem;
-    ul,
-    li {
-        @extend .m-0;
-        @extend .p-0;
-        list-style-type: none;
-        -webkit-margin-before: 0 !important;
-        -webkit-margin-after: 0 !important;
-        -webkit-margin-start: 0 !important;
-        -webkit-margin-end: 0 !important;
-        -webkit-padding-start: 0 !important;
-    }
-    li {
-        a,
-        a:link,
-        a:visited {
-            padding-left: 0.6rem;
-            color: $color_black;
-        }
-    }
+  position: fixed;
+  background: #efefef;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 0.5rem;
+  background-color: $color_white;
+  background-color: rgba($color_white, 0.98);
+  .nav {
+      // @include width-limits();
+      @extend .m-0;
+      @extend .border-top;
+      @extend .border-bottom;
+      // position: fixed;
+      width: 100%;
+      width: 100vw;
+      // top: 0;
+      height: 3.1rem;
+      // padding: 1rem 1rem 0.8rem 1rem;
+      padding: 1rem 0rem 0.8rem 0rem;
+      ul,
+      li {
+          @extend .m-0;
+          @extend .p-0;
+          list-style-type: none;
+          -webkit-margin-before: 0 !important;
+          -webkit-margin-after: 0 !important;
+          -webkit-margin-start: 0 !important;
+          -webkit-margin-end: 0 !important;
+          -webkit-padding-start: 0 !important;
+      }
+      li {
+          a,
+          a:link,
+          a:visited {
+              padding-left: 0.6rem;
+          }
+      }
+  }
 }
+
 
 header,
 main,
@@ -151,7 +219,7 @@ aside {
 }
 
 header {
-    text-align: center;
+    @extend .text-center;
     padding: 0 2rem;
     padding-top: 2.5rem;
     h1 {
@@ -162,6 +230,7 @@ header {
 
 aside {
     @extend .border-bottom;
+    margin-bottom: 20vh;
 }
 
 .img-badge {
@@ -178,8 +247,12 @@ aside {
     text-align: center;
 }
 
+.text-normal {
+  font-weight: 400;
+}
+
 .text-bold {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .text-light {
@@ -192,6 +265,29 @@ aside {
     letter-spacing: 0.2em;
     margin: 4rem 0 3rem 0;
     text-transform: uppercase;
+    & + .title-spacer {
+      margin-top: -2.5rem;
+    }
+}
+
+.title-entry {
+  font-size: 1.6rem;
+  @extend .text-normal;
+  time {
+    .DD {
+      font-size: 1.3em;
+      letter-spacing: -1px;
+      @extend .text-bold;
+    }
+    .MMM {
+        font-size: 0.5em;
+        @extend .text-light;
+    }
+  }
+  small {
+    font-size: 0.6em;
+    @extend .text-color-normal;
+  }
 }
 
 .article-list {
@@ -203,8 +299,10 @@ aside {
         @extend .m-0;
         @extend .p-0;
         list-style-type: none;
+        margin: 1rem 0;
         &:first-child {
-            h2, h3 {
+            h2,
+            h3 {
                 margin-top: 0;
             }
         }
@@ -212,31 +310,22 @@ aside {
             border-bottom: 0;
         }
     }
-    h2, h3 {
+    h2,
+    h3 {
         margin: 1rem;
     }
     time {
-        .DD {
-            font-size: 1.5rem;
-        }
-        .MMM {
-            font-size: 0.8rem;
-            @extend .text-light;
-        }
         margin-right: 2.5rem;
     }
-    a {
-        &:hover,
-        &:active {
-            time, h3, h2 {
-                background: red;
-                text-decoration: none !important;
-                text-decoration-line: none !important;
-                & > * {
-                    text-decoration: none !important;
-                    text-decoration-line: none !important;
-                }
-            }
-        }
-    }
+}
+
+.btn-light {
+    background: none;
+    border-radius: 0;
+    border: 2px solid $color_black;
+    color: $color_black;
+    display: inline-block;
+    font-size: 11px;
+    outline: 0;
+    padding: 14px 26px;
 }

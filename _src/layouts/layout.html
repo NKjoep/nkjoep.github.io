@@ -27,36 +27,38 @@
 </head>
 
 <body>
-  <nav role="navigation" class="d-flex flex-direction-row justify-content-around">
-    <a href="/" class="d-flex flex-row justify-content-around">
-      {{ site.title }}
-    </a>
+  <nav>
+    <div class="nav d-flex flex-direction-row justify-content-around">
+        <a href="/" class="d-flex flex-row justify-content-around">
+          {{ site.title }}
+        </a>
 
-    <ul class="d-flex flex-row justify-content-around">
-        <li class="d-flex flex-column justify-content-center">
-          <a href="https://twitter.com/{{author.twitter}}" title="Go to: twitter/@{{ author.twitter }}">
-            <span class="fab fa-twitter"></span>
-            <span class="sr-only">{{ author.twitter }}</span>
-        </a></li>
+        <ul class="d-flex flex-row justify-content-around">
+            <li class="d-flex flex-column justify-content-center">
+              <a href="https://twitter.com/{{author.twitter}}" title="Go to: twitter/@{{ author.twitter }}" class="text-color-normal">
+                <span class="fab fa-twitter"></span>
+                <span class="sr-only">{{ author.twitter }}</span>
+            </a></li>
 
-        <li class="d-flex flex-column justify-content-center">
-          <a href="https://www.linkedin.com/in/{{author.linkedin}}" title="Go to: linkedin/{{ author.linkedin }}">
-            <span class="fab fa-linkedin"></span>
-            <span class="sr-only">{{ author.linkedin }}</span>
-        </a></li>
+            <li class="d-flex flex-column justify-content-center">
+              <a href="https://www.linkedin.com/in/{{author.linkedin}}" title="Go to: linkedin/{{ author.linkedin }}" class="text-color-normal">
+                <span class="fab fa-linkedin"></span>
+                <span class="sr-only">{{ author.linkedin }}</span>
+            </a></li>
 
-        <li class="d-flex flex-column justify-content-center">
-          <a href="https://github.com/{{author.github}}" title="Go to: github/{{ author.github }}">
-            <span class="fab fa-github"></span>
-            <span class="sr-only">{{ author.github }}</span>
-        </a></li>
+            <li class="d-flex flex-column justify-content-center">
+              <a href="https://github.com/{{author.github}}" title="Go to: github/{{ author.github }}" class="text-color-normal">
+                <span class="fab fa-github"></span>
+                <span class="sr-only">{{ author.github }}</span>
+            </a></li>
 
-        <li class="d-flex flex-column justify-content-center">
-          <a href="/feed.xml" title="Subscribe to this website's RSS feed">
-            <span class="fas fa-rss"></span>
-            <span class="sr-only">RSS Feed</span>
-        </a></li>
-    </ul>
+            <li class="d-flex flex-column justify-content-center">
+              <a href="/feed.xml" title="Subscribe to this website's RSS feed" class="text-color-normal">
+                <span class="fas fa-rss"></span>
+                <span class="sr-only">RSS Feed</span>
+            </a></li>
+        </ul>
+    </div>
   </nav>
 
   <header>
@@ -65,14 +67,15 @@
           <img src="http://www.gravatar.com/avatar/{{author.emailMd5}}?s=150" alt=" " class="sr-only">
         </span>
       </p>
-      <h1>
-        {{ site.title }}<br>
-        {{ site.description }}
-        <br>
-      </h1>
-      <p>
+      <h1 style="font-size: 4vw;">
+        <span class="sr-only">
+          {{ site.title }}<br>
+        </span>
         {{ author.bio }}
-      </p>
+      </h1>
+      <blockquote cite="https://www.youtube.com/watch?v=2Zg4ubL4efw&list=PLkB-BAAgmaG0HVzO9YX42S_MRfWvCmIKS" class="m-0 p-0 text-light text-">
+        {{ site.description }}
+      </blockquote>
   </header>
 
   <!-- <main>
@@ -90,12 +93,13 @@
       {{#each articles}}
       <li>
         <a href="/{{path}}" class="d-inline-block">
-          <h3 class="d-flex flex-row-reverse justify-content-end align-items-center">
+          <h3 class="d-flex flex-row-reverse justify-content-end align-items-center title-entry">
             <span>
-              {{title}}
+              {{title}}<br>
+              {{#if description}}<small>{{{description}}}</small>{{/if}}
             </span>
             <span class="sr-only">&mdash;</span>
-            <time class="d-flex flex-column justy-content-center align-items-center"
+            <time class="nolink d-flex flex-column justy-content-center align-items-center"
                   datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
               <span class="DD text-center">
                 {{#datefn date 'DD'}}{{/datefn}}
@@ -108,7 +112,6 @@
               </span>
             </time>
           </h3>
-          <!-- {{#if excerpt}}{{{excerpt}}}{{/if}} -->
         </a>
       </li>
       {{/each}}
@@ -122,13 +125,13 @@
       {{#each unwritten}}
       <li>
           <a href="/{{path}}" class="d-inline-block">
-            <h3 class="d-flex flex-row-reverse justify-content-end align-items-center">
+            <h3 class="d-flex flex-row-reverse justify-content-end align-items-center title-entry">
               <span>
                 {{title}}
               </span>
               <span class="sr-only">&mdash;</span>
-              <time class="d-flex flex-column justy-content-center align-items-center"
-              datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
+              <time class="nolink d-flex flex-column justy-content-center align-items-center"
+                    datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
                 <span class="DD text-center">
                   {{#datefn date 'DD'}}{{/datefn}}
                 </span>
@@ -156,23 +159,39 @@
     <ul class="article-list">
       {{#each author.githubRepos}}
       <li>
-        <a href="{{html_url}}">
-          <h3>
-            {{full_name}}
-          </h3>
-        </a>
-      </li>
+          <a href="{{html_url}}" title="{{ description }}" class="d-inline-block text-color-normal">
+            <h3 class="d-flex flex-row-reverse justify-content-end align-items-center">
+              <span>
+                {{name}}
+              </span>
+            </h3>
+            <!-- {{#if excerpt}}{{{excerpt}}}{{/if}} -->
+          </a>
+        </li>
       {{/each}}
     </ul>
+    <p>
+      <a href="https://github.com/{{ author.github }}" class="text-color-normal">
+          browse all my projects on GitHub
+      </a>
+    </p>
   </aside>
 
   <footer>
-    <p>
-      &copy; {{ author.name }} {{ copyrightYear }}
+    <p class="title-spacer text-center">
+      &copy; {{ author.name }} {{ site.copyrightYear }}
+      <span class="sr-only">.</span>
+      <br />
     </p>
-    <p id="cookie-ok" style="display: none;">
-      Cookie Disclaimer: This website uses cookies. By further browsing you consent to such use.
-      <button role="button" role="link">OK, got it.</button>
+    <p class="title-spacer text-center">
+      All the ideas are mine if not specified otherwise.
+    </p>
+
+    <p id="cookie-ok" style="display: none;" class="d-flex flex-row justify-content-around align-content-center">
+      <span class="d-flex flex-column justify-content-center">
+        Cookie Disclaimer: This website uses cookies. By further browsing you consent to such use.
+      </span>
+      <button type="button" class="nowrap">OK, got it.</button>
     </p>
   </footer>
 </body>
