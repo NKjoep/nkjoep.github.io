@@ -6,14 +6,78 @@
 
 /* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); */
 
-@import url('https://fonts.googleapis.com/css?family=Expletus+Sans');
+// @import url('https://fonts.googleapis.com/css?family=Expletus+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css');
+$color_main: #2c62b8;
+$color_secondary: lighten($color_main, 40%);
+$color_mute: desaturate($color_main, 20%);
+$color_white: #fdfdfd;
+$color_black: #373737;
+$color_gray: lighten(desaturate($color_main, 60%), 40%);
+
+.border-top {
+    border-top: 1px solid $color_gray;
+}
+.border-bottom {
+    border-bottom: 1px solid $color_gray;
+}
+
+@mixin width-limits {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 * {
     box-sizing: border-box;
 }
 
+html {
+    background-color: $color_white;
+}
+
 body {
-    font-family: 'Expletus Sans';
+    @include width-limits();
+    font-family: 'Raleway', sans-serif;
+    background-color: $color_white;
+    padding: 3.1rem 0 5rem 0;
+    color: $color_black;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+a {
+    &:link,
+    &:visited {
+        color: $color_main;
+        text-decoration: none;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+
+}
+
+.sr-only {
+    -webkit-clip-path: inset(50%);
+    border: 0;
+    clip-path: inset(50%);
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 .fas,
@@ -24,15 +88,155 @@ body {
 }
 
 #cookie-ok {
-    background: black;
+    background: $color_secondary;
     color: white;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
+    width: 100vw;
     z-index: 10;
     cursor: pointer;
-    margin: 0;
-    padding: 0;
+    @extend .m-0;
+    padding: 1rem;
+    font-size: 0.8rem;
+    @include width-limits();
+}
+
+nav {
+    @include width-limits();
+    @extend .m-0;
+    @extend .border-top;
+    @extend .border-bottom;
+    position: fixed;
+    width: 100%;
+    width: 100vw;
+    top: 0;
+    height: 3.1rem;
+    background-color: $color_white;
+    background-color: rgba($color_white, 0.98);
+    padding: 1rem 1rem 0.8rem 1rem;
+    ul,
+    li {
+        @extend .m-0;
+        @extend .p-0;
+        list-style-type: none;
+        -webkit-margin-before: 0 !important;
+        -webkit-margin-after: 0 !important;
+        -webkit-margin-start: 0 !important;
+        -webkit-margin-end: 0 !important;
+        -webkit-padding-start: 0 !important;
+    }
+    li {
+        a,
+        a:link,
+        a:visited {
+            padding-left: 0.6rem;
+            color: $color_black;
+        }
+    }
+}
+
+header,
+main,
+aside,
+footer {
+    margin-bottom: 3rem;
+}
+
+main,
+aside {
+    padding: 1rem 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 0 2rem;
+    padding-top: 2.5rem;
+    h1 {
+        font-size: 1rem;
+    }
+    p {}
+}
+
+aside {
+    @extend .border-bottom;
+}
+
+.img-badge {
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    width: 10rem;
+    background-size: cover;
+    display: inline-block; // border: 1px solid $color_secondary;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-light {
+    font-weight: 200;
+}
+
+.title-spacer {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin: 4rem 0 3rem 0;
+    text-transform: uppercase;
+}
+
+.article-list {
+    @extend .m-0;
+    @extend .p-0;
+    list-style-type: none;
+    li {
+        @extend .border-bottom;
+        @extend .m-0;
+        @extend .p-0;
+        list-style-type: none;
+        &:first-child {
+            h2, h3 {
+                margin-top: 0;
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    h2, h3 {
+        margin: 1rem;
+    }
+    time {
+        .DD {
+            font-size: 1.5rem;
+        }
+        .MMM {
+            font-size: 0.8rem;
+            @extend .text-light;
+        }
+        margin-right: 2.5rem;
+    }
+    a {
+        &:hover,
+        &:active {
+            time, h3, h2 {
+                background: red;
+                text-decoration: none !important;
+                text-decoration-line: none !important;
+                & > * {
+                    text-decoration: none !important;
+                    text-decoration-line: none !important;
+                }
+            }
+        }
+    }
 }

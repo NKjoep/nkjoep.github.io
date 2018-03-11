@@ -1,97 +1,166 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-last-build="{{site.lastBuild}}">
 
 <head>
   <meta charset="UTF-8" />
-  <title>{{ title }} | Andrea D. Blog</title>
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed | Andrea D. Blog" href="/feed.xml?rev={{revision}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }} | {{ site.title }}</title>
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed | {{ site.title }}" href="/feed.xml?rev={{site.revision}}">
 
-  <meta name="description" content="{{ description }}">
-  <meta property="og:title" content="{{title}} | Andrea D. Blog" />
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ title }} | {{ site.title }}" />
   <meta property="og:type" content="website" />
 
   <meta property="og:url" content="/" />
 
-  <link rel="icon" href="/assets/ico/favicon.ico?rev={{revision}}">
-  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev={{revision}}">
-  <link rel="stylesheet" href="/assets/css/style.css">
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12754582-1"></script>
-  <script async src="/assets/js/app.js?rev={{revision}}"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script async src="/assets/js/app.js?rev={{site.revision}}"></script>
+
+
+
+  <link rel="icon" href="/assets/ico/favicon.ico?rev={{site.revision}}">
+  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev={{site.revision}}">
+  <link rel="stylesheet" href="/assets/css/style.css?rev={{site.revision}}">
+
 </head>
 
 <body>
+  <nav role="navigation" class="d-flex flex-direction-row justify-content-around">
+    <a href="/" class="d-flex flex-row justify-content-around">
+      {{ site.title }}
+    </a>
+
+    <ul class="d-flex flex-row justify-content-around">
+        <li class="d-flex flex-column justify-content-center">
+          <a href="https://twitter.com/{{author.twitter}}" title="Go to: twitter/@{{ author.twitter }}">
+            <span class="fab fa-twitter"></span>
+            <span class="sr-only">{{ author.twitter }}</span>
+        </a></li>
+
+        <li class="d-flex flex-column justify-content-center">
+          <a href="https://www.linkedin.com/in/{{author.linkedin}}" title="Go to: linkedin/{{ author.linkedin }}">
+            <span class="fab fa-linkedin"></span>
+            <span class="sr-only">{{ author.linkedin }}</span>
+        </a></li>
+
+        <li class="d-flex flex-column justify-content-center">
+          <a href="https://github.com/{{author.github}}" title="Go to: github/{{ author.github }}">
+            <span class="fab fa-github"></span>
+            <span class="sr-only">{{ author.github }}</span>
+        </a></li>
+
+        <li class="d-flex flex-column justify-content-center">
+          <a href="/feed.xml" title="Subscribe to this website's RSS feed">
+            <span class="fas fa-rss"></span>
+            <span class="sr-only">RSS Feed</span>
+        </a></li>
+    </ul>
+  </nav>
 
   <header>
-    <a href="/">
-      <img src="http://www.gravatar.com/avatar/{{author.emailMd5}}?s=150" alt=" ">
-      <br /> {{ author.name }}
-      <br /> {{ author.bio }}
-    </a>
-    <br />
-
-    <a href="https://github.com/{{author.github}}">
-      <span class="fab fa-github"></span>{{ author.github }}
-    </a>
-    <br />
-
-    <a href="https://twitter.com/{{author.twitter}}">
-      <span class="fab fa-twitter"></span> {{ author.twitter }}
-    </a>
-    <br />
-
-    <a href="https://www.linkedin.com/in/{{author.linkedin}}">
-      <span class="fab fa-linkedin"></span> {{ author.linkedin }}
-    </a>
-    <br />
-
-    <a href="/feed.xml">
-      <span class="fas fa-rss"></span> Feed
-    </a>
-    <br />
+      <p class="d-flex flex-row justify-content-center">
+        <span class="img-badge" style="background-image: url(http://www.gravatar.com/avatar/{{author.emailMd5}}?s=150);">
+          <img src="http://www.gravatar.com/avatar/{{author.emailMd5}}?s=150" alt=" " class="sr-only">
+        </span>
+      </p>
+      <h1>
+        {{ site.title }}<br>
+        {{ site.description }}
+        <br>
+      </h1>
+      <p>
+        {{ author.bio }}
+      </p>
   </header>
 
-  <main>
+  <!-- <main>
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
 
     {{{ contents }}}
-  </main>
+  </main> -->
 
   <aside>
-    <h3>Posts</h3>
-    <ul>
+    <h2 class="text-center text-light first-letter title-spacer">
+      Latest from the blog
+    </h2>
+    <ul class="article-list">
       {{#each articles}}
       <li>
-        <a href="/{{path}}">
-          <h2>{{title}}</h2>
-          {{#if excerpt}}{{{excerpt}}}{{/if}}
+        <a href="/{{path}}" class="d-inline-block">
+          <h3 class="d-flex flex-row-reverse justify-content-end align-items-center">
+            <span>
+              {{title}}
+            </span>
+            <span class="sr-only">&mdash;</span>
+            <time class="d-flex flex-column justy-content-center align-items-center"
+                  datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
+              <span class="DD text-center">
+                {{#datefn date 'DD'}}{{/datefn}}
+              </span>
+              <span class="MMM text-center">
+                {{#datefn date 'MMM'}}{{/datefn}}
+              </span>
+              <span class="sr-only">
+                {{#datefn date 'YYYY'}}{{/datefn}}
+              </span>
+            </time>
+          </h3>
+          <!-- {{#if excerpt}}{{{excerpt}}}{{/if}} -->
         </a>
       </li>
       {{/each}}
     </ul>
 
-    <h3>Unwritten</h3>
-    <p>Because sometimes I have something to talk about, but never the time or courage to write a full post.</p>
-    <p>Here are some of those bits:</p>
-    <ul>
+    <h2 class="text-center text-light first-letter title-spacer">
+      Unwritten
+    </h2>
+    <p>Topics I had in mind recently and never the time nor the courage to write a full post about.</p>
+    <ul class="article-list">
       {{#each unwritten}}
       <li>
-        <a href="/{{path}}">
-          <h2>{{title}}</h2>
-          {{#if excerpt}}{{{excerpt}}}{{/if}}
-          {{#if description}}{{{description}}}{{/if}}
-        </a>
-      </li>
+          <a href="/{{path}}" class="d-inline-block">
+            <h3 class="d-flex flex-row-reverse justify-content-end align-items-center">
+              <span>
+                {{title}}
+              </span>
+              <span class="sr-only">&mdash;</span>
+              <time class="d-flex flex-column justy-content-center align-items-center"
+              datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
+                <span class="DD text-center">
+                  {{#datefn date 'DD'}}{{/datefn}}
+                </span>
+                <span class="MMM text-center">
+                  {{#datefn date 'MMM'}}{{/datefn}}
+                </span>
+                <span class="sr-only">
+                  {{#datefn date 'YYYY'}}{{/datefn}}
+                </span>
+              </time>
+            </h3>
+            <!-- {{#if excerpt}}{{{excerpt}}}{{/if}} -->
+          </a>
+        </li>
       {{/each}}
     </ul>
 
-    <ul>
+    <h2 class="text-center text-light first-letter title-spacer">
+      Projects
+    </h2>
+    <p>
+      Experiments, tests and other stuff I've worked on. Have a look.
+    </p>
+
+    <ul class="article-list">
       {{#each author.githubRepos}}
       <li>
-        <a href="{{html_url}}">{{full_name}}</a>
+        <a href="{{html_url}}">
+          <h3>
+            {{full_name}}
+          </h3>
+        </a>
       </li>
       {{/each}}
     </ul>
@@ -102,8 +171,8 @@
       &copy; {{ author.name }} {{ copyrightYear }}
     </p>
     <p id="cookie-ok" style="display: none;">
-      About cookies: Cookies help me to deliver a better service. By using this website, you agree to the use of cookies.
-      <button role="button">Ok, got it.</button>
+      Cookie Disclaimer: This website uses cookies. By further browsing you consent to such use.
+      <button role="button" role="link">OK, got it.</button>
     </p>
   </footer>
 </body>

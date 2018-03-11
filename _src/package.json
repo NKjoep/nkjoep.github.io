@@ -2,8 +2,8 @@
   "name": "stealthefish.com",
   "private": true,
   "scripts": {
-    "start": "node metalsmith.js",
-    "watch": "nodemon  --watch _src/ --watch _src/src/posts/ -e md,js,html,scss  metalsmith.js"
+    "build": "node metalsmith.js",
+    "start": "nodemon  --watch _src/ --watch _src/src/posts/ -e md,js,html,scss  metalsmith.js"
   },
   "dependencies": {
     "handlebars": "^4.0.5",
@@ -19,10 +19,10 @@
   },
   "metalsmith": {
     "metadata": {
-      "title": "Andrea D. Blog",
-      "description": "...and definitely It steals the fish.",
-      "generator": "",
       "site": {
+        "title": "Andrea D. Blog",
+        "description": "...and definitely It steals the fish.",
+        "generator": "",
         "url": "http://stealthefish.com/"
       },
       "author": {

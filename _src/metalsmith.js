@@ -1,5 +1,7 @@
-const source = './src';
-const build = '../';
+const sourcePath = './src';
+const buildDistPath = '../';
+const datefns = require('date-fns');
+
 
 const Handlebars = require('handlebars');
 const handlebars_layouts = require('handlebars-layouts');
@@ -15,9 +17,24 @@ Handlebars.registerHelper('json', function (obj) {
   }
 });
 
+Handlebars.registerHelper('datefn', (dateObj, ...formatOpts) => {
+  let format;
+  let datefnsOpts;
+  if (formatOpts.length > 1) {
+    format = formatOpts[0];
+  }
+  if (formatOpts.length > 2) {
+    datefnsOpts = formatOpts[1];
+  }
+  const date = datefns.format(dateObj, format, datefnsOpts);
+  return new Handlebars.SafeString(date);
+});
+
+
 const websiteOptions = require('./package.json').metalsmith;
-websiteOptions.metadata.lastBuildDate = new Date();
-websiteOptions.metadata.copyrightYear = new Date().getFullYear();
+websiteOptions.metadata.site.lastBuildDate = new Date();
+websiteOptions.metadata.site.copyrightYear = new Date().getFullYear();
+websiteOptions.metadata.site.lastBuild = new Date().toISOString();
 
 websiteOptions.metadata.author.githubRepos = (() => {
   const user = websiteOptions.metadata.author.github;
@@ -28,7 +45,7 @@ websiteOptions.metadata.author.githubRepos = (() => {
   ]
 })();
 
-websiteOptions.metadata.revision = (() => {
+websiteOptions.metadata.site.revision = (() => {
   let REVISION = 'norev';
   // get the revision git rev-parse --short HEAD
   const spawn = require('child_process').spawnSync;
@@ -40,7 +57,7 @@ websiteOptions.metadata.revision = (() => {
   } else {
     REVISION = gitRevCmd.stdout.toString().trim();
   }
-  return REVISION;
+  return `${REVISION}-${new Date().toISOString()}`;
 })();
 
 const Metalsmith = require('metalsmith');
@@ -53,8 +70,8 @@ const mp_permalinks = require('metalsmith-permalinks');
 
 Metalsmith(__dirname)
   .metadata(websiteOptions.metadata)
-  .source(source)
-  .destination(build)
+  .source(sourcePath)
+  .destination(buildDistPath)
   .clean(false)
   .use(mp_collections({
     articles: {
@@ -83,8 +100,12 @@ Metalsmith(__dirname)
   }))
   .build((err, files) => {
     if (err) { throw err; }
-    compileCss();
-    console.log('Build done.');
+    compileCss().then(() => {
+      console.log(`Build done. Check ${require('path').resolve(buildDistPath, 'index.html')}`);
+    })
+    .catch((err) => {
+      console.log('Build done. CSS failure.');
+    });
   });
 
 function compileCss() {
@@ -92,14 +113,19 @@ function compileCss() {
   const fs = require('fs');
   const src = 'src/style.scss';
   const dest = '../assets/css/style.css';
-
-  sass.render({
-    file: src,
-  }, function(err, result) {
-    if (!err) {
-      fs.writeFileSync(dest, result.css);
-    }
+  return new Promise((resolve, reject) => {
+    sass.render({
+      file: src,
+    }, function(err, result) {
+      if (!err) {
+        fs.writeFileSync(dest, result.css);
+        return resolve();
+      }
+      if (err) {
+        console.error(err);
+        reject();
+      }
+    });
   });
-
 }
 
