@@ -14,7 +14,7 @@
 .border-top, nav .nav {
   border-top: 1px solid #d7d8d9; }
 
-.border-bottom, nav .nav, aside, .article-list li {
+.border-bottom, nav .nav, aside, .article-list:not(.simple) li {
   border-bottom: 1px solid #d7d8d9; }
 
 .cursor-pointer, #cookie-ok, #cookie-ok button {
@@ -24,19 +24,22 @@ html {
   background-color: #fdfdfd; }
 
 body {
-  max-width: 700px;
-  margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   background-color: #fdfdfd;
-  padding: 3.1rem 0 5rem 0;
+  padding: 3.1rem 0 0rem 0;
   color: #373737; }
+  body > header, body > aside {
+    max-width: 700px;
+    margin: 0 auto; }
+  body > footer {
+    margin-bottom: 0 !important; }
 
 .m-0, #cookie-ok, nav .nav, nav .nav ul,
-nav .nav li, .article-list, .article-list li {
+nav .nav li, .article-list, .article-list:not(.simple) li {
   margin: 0; }
 
 .p-0, nav .nav ul,
-nav .nav li, .article-list, .article-list li {
+nav .nav li, .article-list, .article-list:not(.simple) li {
   padding: 0; }
 
 .text-color-normal, a.text-color-normal:link, a.text-color-normal:visited, a.text-color-normal:hover, a.text-color-normal:active, a.text-color-normal:focus, .title-entry small {
@@ -191,19 +194,22 @@ aside {
 
 .article-list {
   list-style-type: none; }
-  .article-list li {
+  .article-list:not(.simple) li {
     list-style-type: none;
     margin: 1rem 0; }
-    .article-list li:first-child h2,
-    .article-list li:first-child h3 {
+    .article-list:not(.simple) li:first-child h2,
+    .article-list:not(.simple) li:first-child h3 {
       margin-top: 0; }
-    .article-list li:last-child {
+    .article-list:not(.simple) li:last-child {
       border-bottom: 0; }
-  .article-list h2,
-  .article-list h3 {
+  .article-list:not(.simple) h2,
+  .article-list:not(.simple) h3 {
     margin: 1rem; }
-  .article-list time {
+  .article-list:not(.simple) time {
     margin-right: 2.5rem; }
+  .article-list.simple li {
+    padding: 0.2rem 0.4rem;
+    display: inline-block; }
 
 .btn-light {
   background: none;

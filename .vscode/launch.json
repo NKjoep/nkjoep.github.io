@@ -7,8 +7,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/_src/metalsmith.js"
+      "name": "Compile Blog",
+      "program": "${workspaceFolder}/_src/metalsmith.js",
       "cwd": "${workspaceFolder}/_src/"
     }
   ]

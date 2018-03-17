@@ -3,7 +3,85 @@
   "private": true,
   "scripts": {
     "build": "node metalsmith.js",
-    "start": "nodemon  --watch _src/ --watch _src/src/posts/ -e md,js,html,scss  metalsmith.js"
+    "start": "nodemon  --watch _src/ --watch _src/src/posts/ -e md,js,html,scss  metalsmith.js & http-server ../"
+  },
+  "metalsmith": {
+    "metadata": {
+      "site": {
+        "title": "Andrea D. Blog",
+        "description": "...and definitely It steals the fish.",
+        "generator": "",
+        "url": "http://stealthefish.com/",
+        "images": [
+          {
+            "url": "/assets/img/img1.jpg",
+            "color": "#208a47"
+          },
+          {
+            "url": "/assets/img/img2.jpg",
+            "color": "#83828b"
+          },
+          {
+            "url": "/assets/img/img3.jpg",
+            "color": "#695641"
+          },
+          {
+            "url": "/assets/img/img4.jpg",
+            "color": "#8b8d8c"
+          },
+          {
+            "url": "/assets/img/img5.jpg",
+            "color": "#476580"
+          },
+          {
+            "url": "/assets/img/img6.jpg",
+            "color": "#7a879f"
+          },
+          {
+            "url": "/assets/img/img7.jpg",
+            "color": "#786f4a"
+          },
+          {
+            "url": "/assets/img/img8.jpg",
+            "color": "#717473"
+          },
+          {
+            "url": "/assets/img/img9.jpg",
+            "color": "#717667"
+          },
+          {
+            "url": "/assets/img/img10.jpg",
+            "color": "#676e71"
+          },
+          {
+            "url": "/assets/img/img11.jpg",
+            "color": "#647068"
+          },
+          {
+            "url": "/assets/img/img12.jpg",
+            "color": "#0a0802"
+          },
+          {
+            "url": "/assets/img/img13.jpg",
+            "color": "#625856"
+          },
+          {
+            "url": "/assets/img/img14.jpg",
+            "color": "#838a7d"
+          }
+        ]
+      },
+      "author": {
+        "name": "Andrea Dessì",
+        "email": "nkjoep@gmail.com",
+        "github": "nkjoep",
+        "twitter": "NKjoep",
+        "linkedin": "andreadessi",
+        "bio": "Andrea, man, html operator, css dispeller, js runner, web lover.",
+        "emailMd5": "cc669cccf3cf6118c1efac45de802710"
+      }
+    },
+    "disqus_shortname": "stealthefish"
   },
   "dependencies": {
     "handlebars": "^4.0.5",
@@ -17,24 +95,8 @@
     "metalsmith-permalinks": "^0.5.0",
     "node-sass": "^4.7.2"
   },
-  "metalsmith": {
-    "metadata": {
-      "site": {
-        "title": "Andrea D. Blog",
-        "description": "...and definitely It steals the fish.",
-        "generator": "",
-        "url": "http://stealthefish.com/"
-      },
-      "author": {
-        "name": "Andrea Dessì",
-        "email": "nkjoep@gmail.com",
-        "github": "nkjoep",
-        "twitter": "NKjoep",
-        "linkedin": "andreadessi",
-        "bio": "Andrea, man, html operator, css dispeller, js runner, web lover.",
-        "emailMd5": "cc669cccf3cf6118c1efac45de802710"
-      }
-    },
-    "disqus_shortname": "stealthefish"
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "nodemon": "^1.17.2"
   }
 }

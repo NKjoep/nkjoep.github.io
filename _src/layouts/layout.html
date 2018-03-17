@@ -73,7 +73,8 @@
         </span>
         {{ author.bio }}
       </h1>
-      <blockquote cite="https://www.youtube.com/watch?v=2Zg4ubL4efw&list=PLkB-BAAgmaG0HVzO9YX42S_MRfWvCmIKS" class="m-0 p-0 text-light text-">
+      <blockquote cite="https://www.youtube.com/watch?v=2Zg4ubL4efw&list=PLkB-BAAgmaG0HVzO9YX42S_MRfWvCmIKS"
+        class="m-0 p-0 text-light">
         {{ site.description }}
       </blockquote>
   </header>
@@ -93,7 +94,7 @@
       {{#each articles}}
       <li>
         <a href="/{{path}}" class="d-inline-block">
-          <h3 class="d-flex flex-row-reverse justify-content-end align-items-center title-entry">
+          <h3 class="d-flex flex-row-reverse justify-content-end align-items-start title-entry">
             <span>
               {{title}}<br>
               {{#if description}}<small>{{{description}}}</small>{{/if}}
@@ -120,7 +121,7 @@
     <h2 class="text-center text-light first-letter title-spacer">
       Unwritten
     </h2>
-    <p>Topics I had in mind recently and never the time nor the courage to write a full post about.</p>
+    <p class="text-light">Topics I had in mind recently and never the time nor the courage to write a full post about.</p>
     <ul class="article-list">
       {{#each unwritten}}
       <li>
@@ -152,32 +153,30 @@
     <h2 class="text-center text-light first-letter title-spacer">
       Projects
     </h2>
-    <p>
-      Experiments, tests and other stuff I've worked on. Have a look.
-    </p>
+    <p class="text-light">Experiments, tests and other stuff I've worked on. Have a look.</p>
 
-    <ul class="article-list">
+    <ul class="article-list simple">
       {{#each author.githubRepos}}
       <li>
           <a href="{{html_url}}" title="{{ description }}" class="d-inline-block text-color-normal">
-            <h3 class="d-flex flex-row-reverse justify-content-end align-items-center">
+            <span class="d-flex flex-row-reverse justify-content-end align-items-center">
               <span>
                 {{name}}
               </span>
-            </h3>
+            </span>
             <!-- {{#if excerpt}}{{{excerpt}}}{{/if}} -->
           </a>
         </li>
       {{/each}}
     </ul>
-    <p>
-      <a href="https://github.com/{{ author.github }}" class="text-color-normal">
-          browse all my projects on GitHub
+    <p class="sr-only text-center">
+      <a href="https://github.com/{{ author.github }}">
+          Browse all my projects on GitHub
       </a>
     </p>
   </aside>
 
-  <footer>
+  <footer class="container-fluid">
     <p class="title-spacer text-center">
       &copy; {{ author.name }} {{ site.copyrightYear }}
       <span class="sr-only">.</span>
@@ -187,7 +186,29 @@
       All the ideas are mine if not specified otherwise.
     </p>
 
-    <p id="cookie-ok" style="display: none;" class="d-flex flex-row justify-content-around align-content-center">
+    <div class="row">
+      {{#each site.images}}
+      <div class="col-2" style="
+          background: linear-gradient(to bottom, {{color}} 55%, rgba(44, 98, 184, 0.5) 100%);
+          background-image: url({{ url }}?rev={{../site.revision}});
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          overflow: hidden;
+          height: 0;
+          padding-top: 12.25%;
+
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 14.28571%;
+          flex: 0 0 14.28571%;
+          max-width: 14.28571%;
+        ">
+        </div>
+      {{/each}}
+    </div>
+
+    <p id="cookie-ok" style="display: none !important;" class="d-flex flex-row justify-content-around align-content-center">
+
       <span class="d-flex flex-column justify-content-center">
         Cookie Disclaimer: This website uses cookies. By further browsing you consent to such use.
       </span>
