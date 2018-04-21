@@ -272,8 +272,11 @@ aside {
 
 .layout-blog {
     main {
-        img {
+        img,
+        .twitter-tweet {
+            margin: 2.5rem auto !important;
             max-width: 100%;
+            display: block;
         }
         pre {
             max-width: 100%;
@@ -323,8 +326,4 @@ aside {
     -ms-flex: 0 0 14.28571% !important;
     flex: 0 0 14.28571% !important;
     max-width: 14.28571% !important;
-}
-
-.twitter-tweet {
-  margin: 2.5rem auto !important
 }
