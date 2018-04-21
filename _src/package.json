@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "node metalsmith.js",
+    "update-github-repo-list": "rm repo.json ; npm run build",
     "start": "nodemon  --watch _src/ --watch _src/src/posts/ -e md,js,html,scss  metalsmith.js & http-server ../"
   },
   "metalsmith": {
@@ -89,6 +90,9 @@
     }
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-solid": "^5.0.10",
+    "date-fns": "^1.29.0",
     "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.4",
     "metalsmith": "2.3.0",
@@ -98,6 +102,7 @@
     "metalsmith-layouts": "^1.4.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metallic": "^2.0.2",
+    "metalsmith-open-graph": "0.0.4",
     "metalsmith-permalinks": "^0.5.0",
     "node-sass": "^4.7.2"
   },

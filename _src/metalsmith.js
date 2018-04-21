@@ -1,10 +1,27 @@
 (async function () {
   const sourcePath = './src';
   const buildDistPath = '../';
+
   const datefns = require('date-fns');
+  const fontawesome = require('@fortawesome/fontawesome');
+  const solid = require('@fortawesome/fontawesome-free-solid').default;
+  // Adds all the icons from the Solid style into our library for easy lookup
+  fontawesome.library.add(solid)
 
   const Handlebars = require('handlebars');
   const handlebars_layouts = require('handlebars-layouts');
+
+  Handlebars.registerHelper('fontawesome-css', function () {
+    return new Handlebars.SafeString(
+      fontawesome.dom.css()
+    )
+  });
+
+  Handlebars.registerHelper('fontawesome-icon', function (args) {
+    return new Handlebars.SafeString(
+      fontawesome.icon({ prefix: 'fas', icon: args.hash.icon }).html
+    )
+  });
 
   Handlebars.registerHelper('json', function (obj) {
     try {
@@ -41,7 +58,7 @@
     try {
       data = require('./repo.json');
       console.log('- read repo.json')
-    } catch(e) {
+    } catch (e) {
       const user = websiteOptions.metadata.author.github;
       const url = `https://api.github.com/users/${user}/repos?sort=pushed&_=${Math.random()}${new Date()}`;
       data = await fetchUrl(url);
