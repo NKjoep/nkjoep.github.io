@@ -5,6 +5,7 @@ description: "How to get a nice git prompt in no time."
 layout: layout-blog-article.html
 tags: [osx, dev, environment]
 title: "Improve your GIT prompt"
+image-preview: /assets/posts/2014-04-09-Improve-your-Git-prompt/default-gitprompt.png
 ---
 
 A [friend of mine](http://simoneloru.com/), during a remote shared video session,

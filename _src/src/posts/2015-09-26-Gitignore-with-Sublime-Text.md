@@ -5,6 +5,7 @@ description: "Guide for fast .gitignore items"
 layout: layout-blog-article.html
 tags: [dev, git]
 title: "Gitignore with SublimeText"
+image-preview: /assets/posts/2015-09-26-Gitignore-with-Sublime/6-ignore.png
 ---
 
 

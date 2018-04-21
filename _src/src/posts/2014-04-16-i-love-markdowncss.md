@@ -5,6 +5,7 @@ description: "My personal response to markdown"
 layout: layout-blog-article.html
 tags: [css, markdown, experiments]
 title: "i-love-markdown.css"
+image-preview: /assets/posts/2014-04-16-i-love-markdowncss/i-love-markdown.jpg
 ---
 
 As developer I started with Markdown few years ago, when GitHub started trending.

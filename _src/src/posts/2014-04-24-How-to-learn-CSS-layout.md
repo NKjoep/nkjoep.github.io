@@ -5,6 +5,7 @@ description: "Something every frontend developer should know"
 layout: layout-blog-article.html
 tags: [frontend, css, howto]
 title: "How to learn CSS layout"
+image-preview: /assets/posts/2014-04-24-How-to-learn-CSS-layout/learn-layout.com.png
 ---
 
 You surely need to check this website out: [learnlayout.com](http://learnlayout.com)

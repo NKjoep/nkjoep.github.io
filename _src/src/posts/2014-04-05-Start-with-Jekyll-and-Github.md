@@ -5,6 +5,7 @@ description: "How I'm starting my blog (again)."
 layout: layout-blog-article.html
 tags: [jeykyll,github]
 title: Start with Jekyll and Github
+image-preview: /assets/posts/2014-04-05-Start-with-Jekyll-and-Github/jekyll_github.jpg
 ---
 
 I'm a web developer and I follow people, stay update with open source projects
@@ -80,3 +81,5 @@ You have nothing to do with github, just push the jekyll files to your personal
 repository. Remember that if you want to use jekyll with github projects, use branch *gh-pages*. You have to enable it per project.
 
 So this is my first official post with Jekyll@Github, this configuration gives me so much flexibility. That freedom I need while experimenting.
+
+![Jekyll + Github](/assets/posts/2014-04-05-Start-with-Jekyll-and-Github/jekyll_github.jpg)

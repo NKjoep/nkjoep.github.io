@@ -5,6 +5,7 @@ description: "Colorize them all."
 layout: layout-blog-article.html
 tags: [osx, dev, environment]
 title: "Better bash man pages"
+image-preview: /assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png
 ---
 
 We, developers, live much of our time within a shell.

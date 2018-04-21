@@ -125,7 +125,8 @@ body {
     max-width: 700px;
     margin: 0 auto; }
   body > footer {
-    margin-bottom: 0 !important; }
+    margin-bottom: 0 !important;
+    padding-bottom: 6rem; }
 
 a:link, a:visited {
   text-decoration: none; }
