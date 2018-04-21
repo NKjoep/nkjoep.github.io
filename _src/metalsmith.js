@@ -116,12 +116,12 @@
     .destination(buildDistPath)
     .clean(false)
     .use(mp_collections({
-      articles: {
+      'articles': {
         pattern: 'posts/*.md',
         sortBy: 'date',
         reverse: true
       },
-      unwritten: {
+      'unwritten': {
         pattern: 'unwritten/*.md',
         sortBy: 'date',
         reverse: true
@@ -149,10 +149,12 @@
     }))
     .build((err, files) => {
       if (err) { throw err; }
-      compileCss().then(() => {
-        console.log(`Build done. Check ${require('path').resolve(buildDistPath, 'index.html')}`);
-      })
+      compileCss()
+        .then(() => {
+          console.log(`Build done. Check ${require('path').resolve(buildDistPath, 'index.html')}`);
+        })
         .catch((err) => {
+          console.log(err);
           console.log('Build done. CSS failure.');
         });
     });
@@ -167,7 +169,7 @@
     return new Promise((resolve, reject) => {
       sass.render({
         file: src,
-      }, function (err, result) {
+      }, (err, result) => {
         if (!err) {
           fs.writeFileSync(dest, result.css);
           return resolve();
