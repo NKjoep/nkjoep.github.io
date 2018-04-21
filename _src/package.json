@@ -1,0 +1,126 @@
+{
+  "name": "stealthefish.com",
+  "private": true,
+  "scripts": {
+    "build": "node metalsmith.js",
+    "update-github-repo-list": "rm repo.json ; npm run build",
+    "start": "nodemon --watch ./package.json --watch _src/ --watch _src/src/posts/ -e md,js,html,scss,json  metalsmith.js & http-server ../"
+  },
+  "metalsmith": {
+    "metadata": {
+      "site": {
+        "title": "Andrea D. Blog",
+        "description": "...and definitely It steals the fish.",
+        "generator": "",
+        "url": "https://stealthefish.com/",
+        "images": [
+          {
+            "url": "/assets/img/img1.jpg",
+            "color": "#208a47",
+            "caption": "Who doesn't like green screens?"
+          },
+          {
+            "url": "/assets/img/img2.jpg",
+            "color": "#83828b",
+            "caption": "Frozen Berlin in 2018"
+          },
+          {
+            "url": "/assets/img/img3.jpg",
+            "color": "#695641",
+            "caption": "Favorite office spot"
+          },
+          {
+            "url": "/assets/img/img4.jpg",
+            "color": "#8b8d8c",
+            "caption": "Footsteps"
+          },
+          {
+            "url": "/assets/img/img5.jpg",
+            "color": "#476580",
+            "caption": "End of the season 2017"
+          },
+          {
+            "url": "/assets/img/img6.jpg",
+            "color": "#7a879f",
+            "caption": "Fernsehturm"
+          },
+          {
+            "url": "/assets/img/img7.jpg",
+            "color": "#786f4a",
+            "caption": "Got used to it"
+          },
+          {
+            "url": "/assets/img/img8.jpg",
+            "color": "#717473",
+            "caption": "And that was Easter"
+          },
+          {
+            "url": "/assets/img/img9.jpg",
+            "color": "#717667",
+            "caption": "Kings"
+          },
+          {
+            "url": "/assets/img/img10.jpg",
+            "color": "#676e71"
+          },
+          {
+            "url": "/assets/img/img11.jpg",
+            "color": "#647068",
+            "caption": "Try not to sneeze"
+          },
+          {
+            "url": "/assets/img/img12.jpg",
+            "color": "#0a0802",
+            "caption": "Pop it"
+          },
+          {
+            "url": "/assets/img/img13.jpg",
+            "color": "#625856",
+            "caption": "<3"
+          },
+          {
+            "url": "/assets/img/img14.jpg",
+            "color": "#838a7d",
+            "caption": "Yes, that's a frog. 🐸"
+          }
+        ]
+      },
+      "author": {
+        "name": "Andrea Dessì",
+        "email": "nkjoep@gmail.com",
+        "github": "nkjoep",
+        "twitter": "NKjoep",
+        "linkedin": "andreadessi",
+        "bio": "Andrea, man, html operator, css dispeller, js runner, web lover.",
+        "emailMd5": "cc669cccf3cf6118c1efac45de802710"
+      }
+    },
+    "disqus_shortname": "stealthefish"
+  },
+  "nodemonConfig": {
+    "events": {
+      "restart": "osascript -e 'display notification \"blog recompiled\" with title \"stealthefish.com\"' giving up after 1 "
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-solid": "^5.0.10",
+    "date-fns": "^1.29.0",
+    "handlebars": "^4.0.5",
+    "handlebars-layouts": "^3.1.4",
+    "metalsmith": "2.3.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-excerpts": "^1.2.0",
+    "metalsmith-feed": "^0.5.0",
+    "metalsmith-layouts": "^1.4.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metallic": "^2.0.2",
+    "metalsmith-open-graph": "0.0.4",
+    "metalsmith-permalinks": "^0.5.0",
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "nodemon": "^1.17.2"
+  }
+}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>It steals the fish | Andrea D. Blog</title>
+  <title>Better bash man pages | Andrea D. Blog</title>
   <link rel="alternate" type="application/rss+xml" title="RSS Feed | Andrea D. Blog" href="/feed.xml">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
   <link rel="stylesheet" href="/assets/css/style.css?rev=826209c-2018-04-21T16:30:20.597Z">
 
-<meta property="og:type" content="website"><meta property="og:title" content="It steals the fish"><meta property="og:description" content=""><meta property="og:image" content="https://stealthefish.com/assets/ico/favicon.png"></head>
+<meta property="og:type" content="website"><meta property="og:title" content="Better bash man pages"><meta property="og:description" content="Colorize them all."><meta property="og:image" content="https://stealthefish.com/assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png"></head>
 
 <body>
   <nav>
@@ -71,6 +71,52 @@
       </blockquote>
   </header>
 
+    <main>
+      <h1 class="text-color-main">Better bash man pages</h1>
+      <p class="text-light first-letter">April 26th, 2014</p>
+      <h2>Colorize them all.</h2>
+      <p>We, developers, live much of our time within a shell.
+Modern <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>s output
+stunning help in a way before was not possible. Think of NPM or Heroku or the great
+GIT.</p>
+<p>However we still have the <a href="http://en.wikipedia.org/wiki/Man_page">man pages</a> with their
+default style: black&amp;white with some underline or bold.</p>
+<p>So, we can change this luckily. It&apos;s a feature, probably an ancient one, most of us
+don&apos;t know or just forgot about it.</p>
+<h3 id="change-it">change it</h3>
+<p><img src="/assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png" alt="standard man page VS. colorized man page"></p>
+<p>How to do that:</p>
+<ul>
+<li>create a file called <strong>.LESS_TERMCAP:</strong> <code>touch ~/.LESS_TERMCAP</code></li>
+<li>edit the <strong>~/.LESS_TERMCAP</strong> file with an editor: <code>nano ~/.LESS_TERMCAP</code></li>
+<li><p>fill <strong>~/.LESS_TERMCAP</strong> with this:</p>
+<pre><code class="hljs bash"><span class="hljs-comment"># Less Colors for Man Pages</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_mb=$<span class="hljs-string">&apos;\E[0;103m&apos;</span> <span class="hljs-comment"># begin blinking</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_md=$<span class="hljs-string">&apos;\E[0;93m&apos;</span> <span class="hljs-comment"># begin bold</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_me=$<span class="hljs-string">&apos;\E[0m&apos;</span> <span class="hljs-comment"># end mode</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_se=$<span class="hljs-string">&apos;\E[0m&apos;</span> <span class="hljs-comment"># end standout-mode</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_so=$(tput bold; tput setaf 8; tput setab 3) <span class="hljs-comment"># begin standout-mode - info box</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ue=$<span class="hljs-string">&apos;\E[0m&apos;</span> <span class="hljs-comment"># end underline</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_us=$<span class="hljs-string">&apos;\E[04;32m&apos;</span> <span class="hljs-comment"># begin underline</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_mr=$(tput rev)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_mh=$(tput dim)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZN=$(tput ssubm)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZV=$(tput rsubm)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZO=$(tput ssupm)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZW=$(tput rsupm)</code></pre>
+</li>
+<li><p>open your <strong>~/.bash_profile</strong> with an editor: <code>nano ~/.bash_profile</code></p>
+</li>
+<li>add to <strong>~/.bash_profile</strong> this:<pre><code class="hljs bash">[[ <span class="hljs-_">-f</span> ~/.LESS_TERMCAP ]] &amp;&amp; . ~/.LESS_TERMCAP</code></pre></li>
+<li>reload the <strong>~/.bash_profile</strong> (or restart the bash session): <code>source ~/.bash_profile</code></li>
+</ul>
+<h3 id="done">done</h3>
+<p>Now you have colorized the man pages. It&apos;s possible also to customize the colors,
+if you google a bit you&apos;ll find the table of colors and the meaning of those variables.</p>
+<p>Enjoy.</p>
+
+    </main>
+    <hr>
 
   <aside>
     <h2 class="text-center text-light first-letter title-spacer">
