@@ -1,6 +1,6 @@
 (async function () {
   const sourcePath = './src';
-  const buildDistPath = '../';
+  const buildDistPath = './dist';
 
   const datefns = require('date-fns');
   const fontawesome = require('@fortawesome/fontawesome');
@@ -114,7 +114,7 @@
     .metadata(websiteOptions.metadata)
     .source(sourcePath)
     .destination(buildDistPath)
-    .clean(false)
+    .clean(true)
     .use(mp_collections({
       'articles': {
         pattern: 'posts/*.md',
@@ -151,6 +151,9 @@
       if (err) { throw err; }
       compileCss()
         .then(() => {
+          return moveDist()
+        })
+        .then(() => {
           console.log(`Build done. Check ${require('path').resolve(buildDistPath, 'index.html')}`);
         })
         .catch((err) => {
@@ -161,23 +164,36 @@
 
   return Promise.resolve();
 
+  function moveDist() {
+    return new Promise((resolve, reject) => {
+      const ncp = require('ncp').ncp;
+      ncp.limit = 16;
+      ncp(buildDistPath, '../', (err) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve();
+      });
+    })
+  }
+
   function compileCss() {
     const sass = require('node-sass');
     const fs = require('fs');
-    const src = 'src/style.scss';
+    const src = '../assets/sass/style.scss';
     const dest = '../assets/css/style.css';
     return new Promise((resolve, reject) => {
       sass.render({
         file: src,
       }, (err, result) => {
-        if (!err) {
-          fs.writeFileSync(dest, result.css);
-          return resolve();
-        }
         if (err) {
           console.error(err);
-          reject();
+          reject(err);
+          return;
         }
+        fs.writeFileSync(dest, result.css);
+        return resolve();
       });
     });
   }

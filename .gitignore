@@ -3,7 +3,4 @@ Gemfile.lock
 .git
 node_modules/
 package-lock.json
-/posts/
-/styles/
-/style.scss
-
+/_src/dist

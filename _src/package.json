@@ -4,7 +4,7 @@
   "scripts": {
     "build": "node metalsmith.js",
     "update-github-repo-list": "rm repo.json ; npm run build",
-    "start": "nodemon --watch ./package.json --watch _src/ --watch _src/src/posts/ -e md,js,html,scss,json  metalsmith.js & http-server ../"
+    "start": "nodemon --ignore dist/ --watch -e md,js,html,scss,json  metalsmith.js & http-server ../"
   },
   "metalsmith": {
     "metadata": {
@@ -117,6 +117,7 @@
     "metalsmith-metallic": "^2.0.2",
     "metalsmith-open-graph": "0.0.4",
     "metalsmith-permalinks": "^0.5.0",
+    "ncp": "^2.0.0",
     "node-sass": "^4.7.2"
   },
   "devDependencies": {
