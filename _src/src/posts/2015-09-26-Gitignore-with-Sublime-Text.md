@@ -2,7 +2,7 @@
 categories: [development]
 date: 2015-09-26
 description: "Guide for fast .gitignore items"
-layout: blog-article.html
+layout: layout-blog-article.html
 tags: [dev, git]
 title: "Gitignore with SublimeText"
 ---

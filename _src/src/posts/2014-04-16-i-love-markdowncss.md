@@ -2,7 +2,7 @@
 categories: [experiments, css]
 date: 2014-04-16
 description: "My personal response to markdown"
-layout: blog-article.html
+layout: layout-blog-article.html
 tags: [css, markdown, experiments]
 title: "i-love-markdown.css"
 ---

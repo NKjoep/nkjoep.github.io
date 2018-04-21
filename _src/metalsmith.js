@@ -89,6 +89,7 @@
   const mp_layouts = require('metalsmith-layouts');
   const mp_markdown = require('metalsmith-markdown');
   const mp_permalinks = require('metalsmith-permalinks');
+  const mp_open_graph = require('metalsmith-open-graph');
 
   Metalsmith(__dirname)
     .metadata(websiteOptions.metadata)
@@ -119,6 +120,12 @@
     .use(mp_feed({
       collection: 'articles',
       destination: 'feed.xml'
+    }))
+    .use(mp_open_graph({
+      siteurl: websiteOptions.metadata.site.url,
+      title: 'title',
+      description: 'description',
+      image: 'image-preview'
     }))
     .build((err, files) => {
       if (err) { throw err; }

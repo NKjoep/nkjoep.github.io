@@ -2,9 +2,10 @@
 categories: [development]
 date: 2017-11-15
 description: "I've worked on something and wrote about it."
-layout: blog-article.html
+layout: layout-blog-article.html
 tags: [blog]
 title: "Angular 4 the new gig"
+image-preview: /assets/img/angular-4-the-new-gig.jpg
 ---
 
 

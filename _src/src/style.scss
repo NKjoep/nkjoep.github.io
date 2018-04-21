@@ -97,8 +97,7 @@ a {
     @include width-limits();
     button {
         @extend .cursor-pointer;
-        border: 1px solid $color_black;
-        padding: .5em .8em;
+        @extend .mybtn;
         &:after {
             font-family: monospace;
             content: " 👍"

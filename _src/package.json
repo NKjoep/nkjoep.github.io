@@ -83,6 +83,11 @@
     },
     "disqus_shortname": "stealthefish"
   },
+  "nodemonConfig": {
+    "events": {
+      "restart": "osascript -e 'display notification \"blog recompiled\" with title \"stealthefish.com\"' giving up after 1 "
+    }
+  },
   "dependencies": {
     "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.4",

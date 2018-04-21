@@ -2,7 +2,7 @@
 categories: [blog]
 date: 2014-04-05
 description: "How I'm starting my blog (again)."
-layout: blog-article.html
+layout: layout-blog-article.html
 tags: [jeykyll,github]
 title: Start with Jekyll and Github
 ---

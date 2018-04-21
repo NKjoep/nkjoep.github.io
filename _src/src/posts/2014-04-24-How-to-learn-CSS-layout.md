@@ -2,7 +2,7 @@
 categories: [development]
 date: 2014-04-24
 description: "Something every frontend developer should know"
-layout: blog-article.html
+layout: layout-blog-article.html
 tags: [frontend, css, howto]
 title: "How to learn CSS layout"
 ---

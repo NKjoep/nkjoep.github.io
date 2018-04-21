@@ -2,7 +2,7 @@
 categories: [development, git]
 date: 2014-04-09
 description: "How to get a nice git prompt in no time."
-layout: blog-article.html
+layout: layout-blog-article.html
 tags: [osx, dev, environment]
 title: "Improve your GIT prompt"
 ---

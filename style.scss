@@ -1,15 +1,15 @@
-/* @import url(http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext); */
+/* @import url(http://fonts.googleapis.com/css?family=Ubuntu:500&amp;subset=latin,latin-ext); */
 
 /* @import url(http://fonts.googleapis.com/css?family=Philosopher); */
 
-/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); */
+/* @import url(&apos;https://fonts.googleapis.com/css?family=Source+Code+Pro&apos;); */
 
-// @import url('https://fonts.googleapis.com/css?family=Expletus+Sans');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css');
-@import './styles/colors.scss';
-@import './styles/helpers.scss';
+// @import url(&apos;https://fonts.googleapis.com/css?family=Expletus+Sans&apos;);
+@import url(&apos;https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext&apos;);
+@import url(&apos;https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css&apos;);
+@import url(&apos;https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css&apos;);
+@import &apos;./styles/colors.scss&apos;;
+@import &apos;./styles/helpers.scss&apos;;
 * {
     box-sizing: border-box;
 }
@@ -19,11 +19,11 @@ html {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: &apos;Raleway&apos;, sans-serif;
     background-color: $color_white;
     padding: 3.1rem 0 0rem 0;
     color: $color_black;
-    &> {
+    &amp;&gt; {
         header,
         aside {
             @include width-limits();
@@ -35,8 +35,8 @@ body {
 }
 
 a {
-    &:link,
-    &:visited {
+    &amp;:link,
+    &amp;:visited {
         @extend .text-color-main;
         text-decoration: none;
         .nolink,
@@ -45,9 +45,9 @@ a {
             -webkit-text-decorations-in-effect: none !important;
         }
     }
-    &:hover,
-    &:active,
-    &:focus {
+    &amp;:hover,
+    &amp;:active,
+    &amp;:focus {
         @extend .text-color-main;
         text-decoration: underline;
         .nolink,
@@ -56,14 +56,14 @@ a {
             -webkit-text-decorations-in-effect: none !important;
         }
     }
-    &.text-color-normal {
-        &:link,
-        &:visited {
+    &amp;.text-color-normal {
+        &amp;:link,
+        &amp;:visited {
             @extend .text-color-normal;
         }
-        &:hover,
-        &:active,
-        &:focus {
+        &amp;:hover,
+        &amp;:active,
+        &amp;:focus {
             @extend .text-color-normal;
         }
     }
@@ -97,18 +97,17 @@ a {
     @include width-limits();
     button {
         @extend .cursor-pointer;
-        border: 1px solid $color_black;
-        padding: .5em .8em;
-        &:after {
+        @extend .mybtn;
+        &amp;:after {
             font-family: monospace;
-            content: " 👍"
+            content: &quot; &#x1F44D;&quot;
         }
     }
-    &:hover {
+    &amp;:hover {
         button {
-            &:after {
+            &amp;:after {
                 font-family: monospace;
-                content: " 😅"
+                content: &quot; &#x1F605;&quot;
             }
         }
     }
@@ -196,7 +195,7 @@ aside {
     letter-spacing: 0.2em;
     margin: 4rem 0 3rem 0;
     text-transform: uppercase;
-    &+.title-spacer {
+    &amp;+.title-spacer {
         margin-top: -2.5rem;
     }
 }
@@ -225,20 +224,20 @@ aside {
     @extend .m-0;
     @extend .p-0;
     list-style-type: none;
-    &:not(.simple) {
+    &amp;:not(.simple) {
         li {
             @extend .border-bottom;
             @extend .m-0;
             @extend .p-0;
             list-style-type: none;
             margin: 1rem 0;
-            &:first-child {
+            &amp;:first-child {
                 h2,
                 h3 {
                     margin-top: 0;
                 }
             }
-            &:last-child {
+            &amp;:last-child {
                 border-bottom: 0;
             }
         }
@@ -250,7 +249,7 @@ aside {
             margin-right: 2.5rem;
         }
     }
-    &.simple {
+    &amp;.simple {
         li {
             padding: 0.2rem 0.4rem;
             display: inline-block;
