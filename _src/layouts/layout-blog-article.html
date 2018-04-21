@@ -183,20 +183,16 @@
 
     <div class="row">
       {{#each site.images}}
-      <div class="col-2" style="
-          background: linear-gradient(to bottom, {{color}} 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url({{ url }}?rev={{../site.revision}});
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat;
-          overflow: hidden;
-          height: 0;
-          padding-top: 12.25%;
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 14.28571%;
-          flex: 0 0 14.28571%;
-          max-width: 14.28571%;
-        ">
+        <div
+          class="col-2 site-image"
+          style="
+            background: linear-gradient(to bottom, {{color}} 55%, rgba(44, 98, 184, 0.5) 100%);
+            background-image: url({{ url }}?rev={{../site.revision}});
+          "
+          {{#if caption}}
+            title="{{caption}}"
+          {{/if}}>
+
         </div>
       {{/each}}
     </div>

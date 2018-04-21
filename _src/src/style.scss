@@ -25,6 +25,7 @@ body {
     color: $color_black;
     &> {
         header,
+        main,
         aside {
             @include width-limits();
         }
@@ -278,7 +279,6 @@ aside {
             max-width: 100%;
             display: block;
             overflow-x: scroll;
-
             display: block;
             padding: 0.5rem;
             margin: 0 0 0.6rem;
@@ -302,7 +302,7 @@ aside {
             }
         }
         h3 {
-          @extend .text-color-light;
+            @extend .text-color-light;
         }
     }
     main+hr {
@@ -310,4 +310,17 @@ aside {
         @extend .m-0;
         @extend .p-0;
     }
+}
+
+.site-image {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden !important;
+    height: 0 !important;
+    padding-top: 12.25% !important;
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 0 14.28571% !important;
+    flex: 0 0 14.28571% !important;
+    max-width: 14.28571% !important;
 }
