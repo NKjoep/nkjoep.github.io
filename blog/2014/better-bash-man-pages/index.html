@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-last-build="2018-04-21T15:05:53.830Z" class="layout-blog" prefix="og: http://ogp.me/ns#">
+<html lang="en" data-last-build="2018-04-21T15:37:45.947Z" class="layout-blog" prefix="og: http://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8">
@@ -10,11 +10,12 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12754582-1"></script>
   <script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <script async src="/assets/js/app.js?rev=4457906-2018-04-21T15:05:53.840Z"></script>
+  <script async src="/assets/js/app.js?rev=8c6915c-2018-04-21T15:37:45.960Z"></script>
 
-  <link rel="icon" href="/assets/ico/favicon.ico?rev=4457906-2018-04-21T15:05:53.840Z">
-  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev=4457906-2018-04-21T15:05:53.840Z">
-  <link rel="stylesheet" href="/assets/css/style.css?rev=4457906-2018-04-21T15:05:53.840Z">
+  <link rel="icon" href="/assets/ico/favicon.ico?rev=8c6915c-2018-04-21T15:37:45.960Z">
+  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev=8c6915c-2018-04-21T15:37:45.960Z">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css?rev=8c6915c-2018-04-21T15:37:45.960Z">
 
 <meta property="og:type" content="website"><meta property="og:title" content="Better bash man pages"><meta property="og:description" content="Colorize them all."><meta property="og:image" content="https://stealthefish.com/assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png"></head>
 
@@ -72,7 +73,8 @@
 
     <main>
       <h1 class="text-color-main">Better bash man pages</h1>
-      <p>Colorize them all.</p>
+      <p class="text-light first-letter">April 26th, 2014</p>
+      <h2>Colorize them all.</h2>
       <p>We, developers, live much of our time within a shell.
 Modern <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>s output
 stunning help in a way before was not possible. Think of NPM or Heroku or the great
@@ -88,27 +90,24 @@ don&apos;t know or just forgot about it.</p>
 <li>create a file called <strong>.LESS_TERMCAP:</strong> <code>touch ~/.LESS_TERMCAP</code></li>
 <li>edit the <strong>~/.LESS_TERMCAP</strong> file with an editor: <code>nano ~/.LESS_TERMCAP</code></li>
 <li><p>fill <strong>~/.LESS_TERMCAP</strong> with this:</p>
-<pre><code class="lang-bash"># Less Colors for Man Pages
-export LESS_TERMCAP_mb=$&apos;\E[0;103m&apos; # begin blinking
-export LESS_TERMCAP_md=$&apos;\E[0;93m&apos; # begin bold
-export LESS_TERMCAP_me=$&apos;\E[0m&apos; # end mode
-export LESS_TERMCAP_se=$&apos;\E[0m&apos; # end standout-mode
-export LESS_TERMCAP_so=$(tput bold; tput setaf 8; tput setab 3) # begin standout-mode - info box
-export LESS_TERMCAP_ue=$&apos;\E[0m&apos; # end underline
-export LESS_TERMCAP_us=$&apos;\E[04;32m&apos; # begin underline
-export LESS_TERMCAP_mr=$(tput rev)
-export LESS_TERMCAP_mh=$(tput dim)
-export LESS_TERMCAP_ZN=$(tput ssubm)
-export LESS_TERMCAP_ZV=$(tput rsubm)
-export LESS_TERMCAP_ZO=$(tput ssupm)
-export LESS_TERMCAP_ZW=$(tput rsupm)
-</code></pre>
+<pre><code class="hljs bash"><span class="hljs-comment"># Less Colors for Man Pages</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_mb=$<span class="hljs-string">&apos;\E[0;103m&apos;</span> <span class="hljs-comment"># begin blinking</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_md=$<span class="hljs-string">&apos;\E[0;93m&apos;</span> <span class="hljs-comment"># begin bold</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_me=$<span class="hljs-string">&apos;\E[0m&apos;</span> <span class="hljs-comment"># end mode</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_se=$<span class="hljs-string">&apos;\E[0m&apos;</span> <span class="hljs-comment"># end standout-mode</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_so=$(tput bold; tput setaf 8; tput setab 3) <span class="hljs-comment"># begin standout-mode - info box</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ue=$<span class="hljs-string">&apos;\E[0m&apos;</span> <span class="hljs-comment"># end underline</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_us=$<span class="hljs-string">&apos;\E[04;32m&apos;</span> <span class="hljs-comment"># begin underline</span>
+<span class="hljs-built_in">export</span> LESS_TERMCAP_mr=$(tput rev)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_mh=$(tput dim)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZN=$(tput ssubm)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZV=$(tput rsubm)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZO=$(tput ssupm)
+<span class="hljs-built_in">export</span> LESS_TERMCAP_ZW=$(tput rsupm)</code></pre>
 </li>
 <li><p>open your <strong>~/.bash_profile</strong> with an editor: <code>nano ~/.bash_profile</code></p>
 </li>
-<li>add to <strong>~/.bash_profile</strong> this:<pre><code class="lang-bash">[[ -f ~/.LESS_TERMCAP ]] &amp;&amp; . ~/.LESS_TERMCAP
-</code></pre>
-</li>
+<li>add to <strong>~/.bash_profile</strong> this:<pre><code class="hljs bash">[[ <span class="hljs-_">-f</span> ~/.LESS_TERMCAP ]] &amp;&amp; . ~/.LESS_TERMCAP</code></pre></li>
 <li>reload the <strong>~/.bash_profile</strong> (or restart the bash session): <code>source ~/.bash_profile</code></li>
 </ul>
 <h3 id="done">done</h3>
@@ -445,7 +444,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
     <div class="row">
       <div class="col-2" style="
           background: linear-gradient(to bottom, #208a47 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img1.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img1.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -460,7 +459,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #83828b 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img2.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img2.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -475,7 +474,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #695641 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img3.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img3.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -490,7 +489,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #8b8d8c 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img4.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img4.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -505,7 +504,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #476580 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img5.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img5.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -520,7 +519,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #7a879f 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img6.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img6.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -535,7 +534,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #786f4a 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img7.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img7.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -550,7 +549,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #717473 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img8.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img8.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -565,7 +564,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #717667 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img9.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img9.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -580,7 +579,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #676e71 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img10.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img10.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -595,7 +594,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #647068 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img11.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img11.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -610,7 +609,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #0a0802 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img12.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img12.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -625,7 +624,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #625856 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img13.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img13.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -640,7 +639,7 @@ if you google a bit you&apos;ll find the table of colors and the meaning of thos
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #838a7d 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img14.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img14.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;

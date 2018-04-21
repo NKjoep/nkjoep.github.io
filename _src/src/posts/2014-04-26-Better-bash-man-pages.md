@@ -28,7 +28,7 @@ How to do that:
 - create a file called **.LESS_TERMCAP:** <code>touch ~/.LESS_TERMCAP</code>
 - edit the **~/.LESS_TERMCAP** file with an editor: <code>nano ~/.LESS_TERMCAP</code>
 - fill **~/.LESS_TERMCAP** with this:
-~~~bash
+```bash
 # Less Colors for Man Pages
  export LESS_TERMCAP_mb=$'\E[0;103m' # begin blinking
  export LESS_TERMCAP_md=$'\E[0;93m' # begin bold
@@ -43,13 +43,13 @@ How to do that:
  export LESS_TERMCAP_ZV=$(tput rsubm)
  export LESS_TERMCAP_ZO=$(tput ssupm)
  export LESS_TERMCAP_ZW=$(tput rsupm)
-~~~
+```
 
 - open your **~/.bash_profile** with an editor: <code>nano ~/.bash_profile</code>
 - add to **~/.bash_profile** this:
-~~~bash
+```bash
 [[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
-~~~
+```
 - reload the **~/.bash_profile** (or restart the bash session): <code>source ~/.bash_profile</code>
 
 ### done

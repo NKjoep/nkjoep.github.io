@@ -88,8 +88,10 @@
   const mp_feed = require('metalsmith-feed');
   const mp_layouts = require('metalsmith-layouts');
   const mp_markdown = require('metalsmith-markdown');
-  const mp_permalinks = require('metalsmith-permalinks');
+  const mp_metallic = require('metalsmith-metallic');
   const mp_open_graph = require('metalsmith-open-graph');
+  const mp_permalinks = require('metalsmith-permalinks');
+
 
   Metalsmith(__dirname)
     .metadata(websiteOptions.metadata)
@@ -108,6 +110,7 @@
         reverse: true
       }
     }))
+    .use(mp_metallic())
     .use(mp_markdown())
     .use(mp_excerpts())
     .use(mp_permalinks({

@@ -28,17 +28,17 @@ and that there is [so much better out there](https://github.com/magicmonty/bash-
 ## use bash-git-prompt
 First of all:
 
-~~~bash
+```bash
 $ cd ~ ;
 $ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt ;
-~~~
+```
 
 Than you have to edit the `.bash_profile` and add this at the end:
 
-~~~bash
+```bash
 export GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
-~~~
+```
 
 `.bash_profile` is in your home folder if you are using OSX, otherwise
 check for a `.bashrc` if you are using linux or unix.
@@ -56,9 +56,9 @@ However, the default config probably will hurt you, the default settings is some
 Don't panic, it's possible to tweak it a bit. Create a file in your home folder called
 <code>.git-prompt-colors.sh</code>, so:
 
-~~~bash
+```bash
 $ touch .git-prompt-colors.sh
-~~~
+```
 
 Then you want to write some variables inside it:
 
@@ -83,7 +83,7 @@ Then you want to write some variables inside it:
 
 Then here's my config for `.git-prompt-color.sh`
 
-~~~bash
+```bash
 BYellow="\[\033[1;33m\]"
 IBlack="\[\033[0;90m\]"
 Green="\[\033[0;32m\]"
@@ -105,7 +105,7 @@ GIT_PROMPT_SYMBOLS_PREHASH=':'
 GIT_PROMPT_START="${ResetColor} "
 GIT_PROMPT_END="${ResetColor}${BYellow}\w${ResetColor} ${IBlack}∫${ResetColor} "
 GIT_PROMPT_LEADING_SPACE="0"
-~~~
+```
 
 
 ## try everything
@@ -118,10 +118,10 @@ Many uses this command `source ~/.bash_profile` but I do not like it. That way y
 Having this configuration you can keep updated the bash-git-prompt pulling it from github.
 Periodically give a `git pull` under `~/.bash-git-prompt`
 
-~~~bash
+```bash
 $ cd ~/.bash-git-prompt
 $ git pull
-~~~
+```
 
 ### enjoy
 

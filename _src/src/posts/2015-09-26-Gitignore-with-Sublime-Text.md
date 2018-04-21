@@ -42,7 +42,7 @@ and add to `files`
 ![2](/assets/posts/2015-09-26-Gitignore-with-Sublime/5-default-config.png)
 
 
-~~~json
+```json
 {
 "files":
 {
@@ -218,7 +218,7 @@ and add to `files`
 {
 }
 }
-~~~
+```
 
 
 ## Finally Use It

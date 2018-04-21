@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-last-build="2018-04-21T15:05:53.830Z" class="layout-blog" prefix="og: http://ogp.me/ns#">
+<html lang="en" data-last-build="2018-04-21T15:37:45.947Z" class="layout-blog" prefix="og: http://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8">
@@ -10,11 +10,12 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12754582-1"></script>
   <script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <script async src="/assets/js/app.js?rev=4457906-2018-04-21T15:05:53.840Z"></script>
+  <script async src="/assets/js/app.js?rev=8c6915c-2018-04-21T15:37:45.960Z"></script>
 
-  <link rel="icon" href="/assets/ico/favicon.ico?rev=4457906-2018-04-21T15:05:53.840Z">
-  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev=4457906-2018-04-21T15:05:53.840Z">
-  <link rel="stylesheet" href="/assets/css/style.css?rev=4457906-2018-04-21T15:05:53.840Z">
+  <link rel="icon" href="/assets/ico/favicon.ico?rev=8c6915c-2018-04-21T15:37:45.960Z">
+  <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev=8c6915c-2018-04-21T15:37:45.960Z">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css?rev=8c6915c-2018-04-21T15:37:45.960Z">
 
 <meta property="og:type" content="website"><meta property="og:title" content="Start with Jekyll and Github"><meta property="og:description" content="How I&apos;m starting my blog (again)."><meta property="og:image" content="https://stealthefish.com/assets/posts/2014-04-05-Start-with-Jekyll-and-Github/jekyll_github.jpg"></head>
 
@@ -72,7 +73,8 @@
 
     <main>
       <h1 class="text-color-main">Start with Jekyll and Github</h1>
-      <p>How I&apos;m starting my blog (again).</p>
+      <p class="text-light first-letter">April 5th, 2014</p>
+      <h2>How I&apos;m starting my blog (again).</h2>
       <p>I&apos;m a web developer and I follow people, stay update with open source projects
 I love &lt;3, I try to fix bugs and sometimes I create them too (oh who doesn&apos;t?).</p>
 <p>I had some blogs. No really. I had more than one, more than once.
@@ -95,24 +97,24 @@ If you have a public domain name, then create a file <code>CNAME</code> and push
 <h3 id="jekyll">jekyll</h3>
 <p>Then move forward to jekyll. The just created repository supports some special files: whenever you push some special <strong>markdown</strong> automatically they are translated to .html and are available as a static website. Cool right?</p>
 <p>In order to preview your blog locally you need to install jekyll in your machine. It&apos;s python based so make sure you have:</p>
-<pre><code class="lang-bash">$ python --version
-Python 2.7.5
-</code></pre>
+<pre><code class="hljs bash">$ python --version
+Python 2.7.5</code></pre>
+
 <p>Install Jekyll it:</p>
-<pre><code class="lang-bash">gem install jekyll ;
-cd &lt;username&gt;.github.com ;
-jekyll new myblog ;
-</code></pre>
+<pre><code class="hljs bash">gem install jekyll ;
+<span class="hljs-built_in">cd</span> &lt;username&gt;.github.com ;
+jekyll new myblog ;</code></pre>
+
 <p>And you&apos;re ready to run it locally with <code>jekyll serve -w</code></p>
-<pre><code class="lang-bash">$ jekyll serve -w
+<pre><code class="hljs bash">$ jekyll serve -w
 Configuration file: username.github.io/_config.yml
             Source: username.github.io
        Destination: username.github.io/_site
       Generating... done.
  Auto-regeneration: enabled
     Server address: http://0.0.0.0:4000
-  Server running... press ctrl-c to stop.
-</code></pre>
+  Server running... press ctrl-c to stop.</code></pre>
+
 <p>now open <a href="http://localhost:4000/">http://localhost:4000/</a>.</p>
 <p>Next step is to create markdown files within the <code>_posts</code> folder.
 Remember you can still create plain .html files.
@@ -454,7 +456,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
     <div class="row">
       <div class="col-2" style="
           background: linear-gradient(to bottom, #208a47 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img1.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img1.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -469,7 +471,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #83828b 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img2.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img2.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -484,7 +486,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #695641 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img3.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img3.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -499,7 +501,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #8b8d8c 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img4.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img4.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -514,7 +516,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #476580 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img5.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img5.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -529,7 +531,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #7a879f 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img6.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img6.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -544,7 +546,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #786f4a 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img7.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img7.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -559,7 +561,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #717473 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img8.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img8.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -574,7 +576,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #717667 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img9.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img9.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -589,7 +591,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #676e71 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img10.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img10.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -604,7 +606,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #647068 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img11.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img11.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -619,7 +621,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #0a0802 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img12.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img12.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -634,7 +636,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #625856 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img13.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img13.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
@@ -649,7 +651,7 @@ repository. Remember that if you want to use jekyll with github projects, use br
         </div>
       <div class="col-2" style="
           background: linear-gradient(to bottom, #838a7d 55%, rgba(44, 98, 184, 0.5) 100%);
-          background-image: url(/assets/img/img14.jpg?rev=4457906-2018-04-21T15:05:53.840Z);
+          background-image: url(/assets/img/img14.jpg?rev=8c6915c-2018-04-21T15:37:45.960Z);
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
