@@ -2,7 +2,7 @@
 categories: [blog]
 date: 2014-04-05
 description: "How I'm starting my blog (again)."
-layout: layout.html
+layout: blog-article.html
 tags: [jeykyll,github]
 title: Start with Jekyll and Github
 ---
@@ -36,7 +36,7 @@ If you have a public domain name, then create a file <code>CNAME</code> and push
 
 ### jekyll
 
-Then move forward to jekyll. The just created repo supports some special files: whenever you push some special **markdown** automatically they are translated to .html and are available as a static website. Cool right?
+Then move forward to jekyll. The just created repository supports some special files: whenever you push some special **markdown** automatically they are translated to .html and are available as a static website. Cool right?
 
 In order to preview your blog locally you need to install jekyll in your machine. It's python based so make sure you have:
 
@@ -77,8 +77,6 @@ Generally Jekyll supports themes too, just google around.
 
 ## github
 You have nothing to do with github, just push the jekyll files to your personal
-repository. Rember that if you want to use jekyll with github projects, use branch *gh-pages*. You have to enable it per project.
-
-----
+repository. Remember that if you want to use jekyll with github projects, use branch *gh-pages*. You have to enable it per project.
 
 So this is my first official post with Jekyll@Github, this configuration gives me so much flexibility. That freedom I need while experimenting.

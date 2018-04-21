@@ -2,7 +2,7 @@
 categories: [development]
 date: 2014-04-26
 description: "Colorize them all."
-layout: layout.html
+layout: blog-article.html
 tags: [osx, dev, environment]
 title: "Better bash man pages"
 ---

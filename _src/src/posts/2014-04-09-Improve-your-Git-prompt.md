@@ -2,7 +2,7 @@
 categories: [development, git]
 date: 2014-04-09
 description: "How to get a nice git prompt in no time."
-layout: layout.html
+layout: blog-article.html
 tags: [osx, dev, environment]
 title: "Improve your GIT prompt"
 ---
@@ -74,7 +74,7 @@ Then you want to write some variables inside it:
 - **GIT_PROMPT_REMOTE**: the remote branch name (if any)
 - **GIT_PROMPT_UNTRACKED**: the number of untracked files/dirs
 - **GIT_PROMPT_STASHED**: the number of stashed files/dir
-- **GIT_PROMPT_CLEAN**: a colored flag indicating a "clean" repo
+- **GIT_PROMPT_CLEAN**: a colored flag indicating a "clean" repository
 - **GIT_PROMPT_SYMBOLS_AHEAD**: indicates when you have commit ahead to push
 - **GIT_PROMPT_SYMBOLS_BEHIND**: indicated when you have commit behind to pull
 - **GIT_PROMPT_SYMBOLS_PREHASH**: hash indicator
@@ -97,7 +97,7 @@ GIT_PROMPT_CHANGED="${Yellow}" # the number of changed files
 GIT_PROMPT_REMOTE=" " # the remote branch name (if any)
 GIT_PROMPT_UNTRACKED="${Cyan}" # the number of untracked files/dirs
 GIT_PROMPT_STASHED="${BoldBlue}" #⚑  	# the number of stashed files/dir
-GIT_PROMPT_CLEAN="${IBlack}✔" # a colored flag indicating a "clean" repo
+GIT_PROMPT_CLEAN="${IBlack}✔" # a colored flag indicating a "clean" repository
 GIT_PROMPT_SYMBOLS_AHEAD='↑'
 GIT_PROMPT_SYMBOLS_BEHIND='↓'
 GIT_PROMPT_SYMBOLS_PREHASH=':'

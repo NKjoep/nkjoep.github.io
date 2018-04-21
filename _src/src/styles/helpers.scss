@@ -1,0 +1,83 @@
+@mixin width-limits {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.border-top {
+    border-top: 1px solid $color_gray;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $color_gray;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.text-color-normal {
+    color: $color_black;
+}
+
+.text-color-main {
+    color: $color_main;
+}
+
+.text-color-light {
+  color: $color_mute;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-normal {
+    font-weight: 400;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-light {
+    font-weight: 200;
+}
+
+a.text-underline,
+.text-underline {
+    text-decoration: underline;
+    &:link,
+    &:visited {
+        text-decoration: underline;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.sr-only {
+    -webkit-clip-path: inset(50%);
+    border: 0;
+    clip-path: inset(50%);
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

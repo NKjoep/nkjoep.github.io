@@ -1,8 +1,6 @@
 /* @import url(http://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext); */
 
-
 /* @import url(http://fonts.googleapis.com/css?family=Philosopher); */
-
 
 /* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); */
 
@@ -10,35 +8,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css');
-$color_main: #2c62b8;
-$color_secondary: lighten($color_main, 40%);
-$color_mute: desaturate($color_main, 20%);
-$color_white: #fdfdfd;
-$color_black: #373737;
-$color_gray: lighten(desaturate($color_main, 60%), 40%);
+@import './styles/colors.scss';
+@import './styles/helpers.scss';
 * {
     box-sizing: border-box;
-}
-
-@mixin width-limits {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-
-.border-top {
-    border-top: 1px solid $color_gray;
-}
-
-.border-bottom {
-    border-bottom: 1px solid $color_gray;
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 html {
@@ -46,36 +19,19 @@ html {
 }
 
 body {
-
     font-family: 'Raleway', sans-serif;
     background-color: $color_white;
     padding: 3.1rem 0 0rem 0;
     color: $color_black;
-    & > {
-      header, aside {
-        @include width-limits();
-      }
-      footer {
-        margin-bottom: 0 !important;
-      }
+    &> {
+        header,
+        aside {
+            @include width-limits();
+        }
+        footer {
+            margin-bottom: 0 !important;
+        }
     }
-}
-
-
-.m-0 {
-    margin: 0;
-}
-
-.p-0 {
-    padding: 0;
-}
-
-.text-color-normal {
-  color: $color_black;
-}
-
-.text-color-main {
-  color: $color_main;
 }
 
 a {
@@ -83,10 +39,10 @@ a {
     &:visited {
         @extend .text-color-main;
         text-decoration: none;
-        .nolink, .nolink * {
+        .nolink,
+        .nolink * {
             text-decoration: none !important;
             -webkit-text-decorations-in-effect: none !important;
-
         }
     }
     &:hover,
@@ -94,36 +50,23 @@ a {
     &:focus {
         @extend .text-color-main;
         text-decoration: underline;
-        .nolink, .nolink * {
+        .nolink,
+        .nolink * {
             text-decoration: none !important;
             -webkit-text-decorations-in-effect: none !important;
-
         }
     }
     &.text-color-normal {
-      &:link,
-      &:visited {
-        @extend .text-color-normal;
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        @extend .text-color-normal;
-      }
+        &:link,
+        &:visited {
+            @extend .text-color-normal;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            @extend .text-color-normal;
+        }
     }
-}
-
-.sr-only {
-    -webkit-clip-path: inset(50%);
-    border: 0;
-    clip-path: inset(50%);
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
 }
 
 .fas,
@@ -137,8 +80,9 @@ a {
     @extend .cursor-pointer;
     @extend .m-0;
     background: #2D559F;
-    background: linear-gradient(to bottom, rgba(45,85,159,1) 90%,rgba(11,51,119,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    border-radius: 0.3rem 0.3rem  0 0;
+    background: linear-gradient(to bottom, rgba(45, 85, 159, 1) 90%, rgba(11, 51, 119, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-radius: 0.3rem 0.3rem 0 0;
     box-shadow: 3px 3px 3px 0px $color_gray;
     color: white;
     position: fixed;
@@ -151,69 +95,63 @@ a {
     padding: 1rem;
     font-size: 0.8rem;
     @include width-limits();
-
     button {
-      @extend .cursor-pointer;
-      border: 1px solid $color_black;
-      padding: .5em .8em;
-      &:after {
-        font-family: monospace;
-        content: " 👍"
-      }
-    }
-
-    &:hover {
-      button {
+        @extend .cursor-pointer;
+        border: 1px solid $color_black;
+        padding: .5em .8em;
         &:after {
-          font-family: monospace;
-          content: " 😅"
+            font-family: monospace;
+            content: " 👍"
         }
-      }
+    }
+    &:hover {
+        button {
+            &:after {
+                font-family: monospace;
+                content: " 😅"
+            }
+        }
     }
 }
 
 nav {
-  position: fixed;
-  background: #efefef;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 0.5rem;
-  background-color: $color_white;
-  background-color: rgba($color_white, 0.98);
-  .nav {
-      // @include width-limits();
-      @extend .m-0;
-      @extend .border-top;
-      @extend .border-bottom;
-      // position: fixed;
-      width: 100%;
-      width: 100vw;
-      // top: 0;
-      height: 3.1rem;
-      // padding: 1rem 1rem 0.8rem 1rem;
-      padding: 1rem 0rem 0.8rem 0rem;
-      ul,
-      li {
-          @extend .m-0;
-          @extend .p-0;
-          list-style-type: none;
-          -webkit-margin-before: 0 !important;
-          -webkit-margin-after: 0 !important;
-          -webkit-margin-start: 0 !important;
-          -webkit-margin-end: 0 !important;
-          -webkit-padding-start: 0 !important;
-      }
-      li {
-          a,
-          a:link,
-          a:visited {
-              padding-left: 0.6rem;
-          }
-      }
-  }
+    position: fixed;
+    background: #efefef;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0.5rem;
+    background-color: $color_white;
+    background-color: rgba($color_white, 0.98);
+    .nav {
+        // @include width-limits();
+        @extend .m-0;
+        @extend .border-top;
+        @extend .border-bottom; // position: fixed;
+        width: 100%;
+        width: 100vw; // top: 0;
+        height: 3.1rem; // padding: 1rem 1rem 0.8rem 1rem;
+        padding: 1rem 0rem 0.8rem 0rem;
+        ul,
+        li {
+            @extend .m-0;
+            @extend .p-0;
+            list-style-type: none;
+            -webkit-margin-before: 0 !important;
+            -webkit-margin-after: 0 !important;
+            -webkit-margin-start: 0 !important;
+            -webkit-margin-end: 0 !important;
+            -webkit-padding-start: 0 !important;
+        }
+        li {
+            a,
+            a:link,
+            a:visited {
+                padding-left: 0.6rem;
+            }
+        }
+    }
 }
-
 
 header,
 main,
@@ -252,51 +190,35 @@ aside {
     display: inline-block; // border: 1px solid $color_secondary;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.text-normal {
-  font-weight: 400;
-}
-
-.text-bold {
-    font-weight: 700;
-}
-
-.text-light {
-    font-weight: 200;
-}
-
 .title-spacer {
     font-size: 0.7rem;
     font-weight: 400;
     letter-spacing: 0.2em;
     margin: 4rem 0 3rem 0;
     text-transform: uppercase;
-    & + .title-spacer {
-      margin-top: -2.5rem;
+    &+.title-spacer {
+        margin-top: -2.5rem;
     }
 }
 
 .title-entry {
-  font-size: 1.6rem;
-  @extend .text-normal;
-  time {
-    .DD {
-      font-size: 1.3em;
-      letter-spacing: -1px;
-      @extend .text-bold;
+    font-size: 1.6rem;
+    @extend .text-normal;
+    time {
+        .DD {
+            font-size: 1.3em;
+            letter-spacing: -1px;
+            @extend .text-bold;
+        }
+        .MMM {
+            font-size: 0.5em;
+            @extend .text-light;
+        }
     }
-    .MMM {
-        font-size: 0.5em;
-        @extend .text-light;
+    small {
+        font-size: 0.6em;
+        @extend .text-color-normal;
     }
-  }
-  small {
-    font-size: 0.6em;
-    @extend .text-color-normal;
-  }
 }
 
 .article-list {
@@ -304,35 +226,35 @@ aside {
     @extend .p-0;
     list-style-type: none;
     &:not(.simple) {
-      li {
-          @extend .border-bottom;
-          @extend .m-0;
-          @extend .p-0;
-          list-style-type: none;
-          margin: 1rem 0;
-          &:first-child {
-              h2,
-              h3 {
-                  margin-top: 0;
-              }
-          }
-          &:last-child {
-              border-bottom: 0;
-          }
-      }
-      h2,
-      h3 {
-          margin: 1rem;
-      }
-      time {
-          margin-right: 2.5rem;
-      }
+        li {
+            @extend .border-bottom;
+            @extend .m-0;
+            @extend .p-0;
+            list-style-type: none;
+            margin: 1rem 0;
+            &:first-child {
+                h2,
+                h3 {
+                    margin-top: 0;
+                }
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        h2,
+        h3 {
+            margin: 1rem;
+        }
+        time {
+            margin-right: 2.5rem;
+        }
     }
     &.simple {
-      li {
-        padding: 0.2rem 0.4rem;
-        display: inline-block;
-      }
+        li {
+            padding: 0.2rem 0.4rem;
+            display: inline-block;
+        }
     }
 }
 
@@ -345,4 +267,47 @@ aside {
     font-size: 11px;
     outline: 0;
     padding: 14px 26px;
+}
+
+.layout-blog {
+    main {
+        img {
+            max-width: 100%;
+        }
+        pre {
+            max-width: 100%;
+            display: block;
+            overflow-x: scroll;
+
+            display: block;
+            padding: 0.5rem;
+            margin: 0 0 0.6rem;
+            font-size: 0.85rem;
+            line-height: 1.42857143;
+            word-break: break-all;
+            word-wrap: break-word;
+            color: #333;
+            background-color: $color_white;
+            border: 1px solid $color_mute;
+            border-radius: 0.25rem;
+        }
+        p {
+            code {
+                padding: 0.12rem 0.22rem;
+                font-size: 90%;
+                color: $color_red;
+                background-color: $color_red_light;
+                white-space: nowrap;
+                border-radius: 4px;
+            }
+        }
+        h3 {
+          @extend .text-color-light;
+        }
+    }
+    main+hr {
+        border: 0.3px solid silver;
+        @extend .m-0;
+        @extend .p-0;
+    }
 }

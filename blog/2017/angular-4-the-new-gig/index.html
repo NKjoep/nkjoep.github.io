@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Better bash man pages | Andrea D. Blog</title>
+  <title>Angular 4 the new gig | Andrea D. Blog</title>
   <link rel="alternate" type="application/rss+xml" title="RSS Feed | Andrea D. Blog" href="/feed.xml?rev=954b689-2018-04-21T11:03:22.776Z">
 
   <meta name="description" content="...and definitely It steals the fish.">
-  <meta property="og:title" content="Better bash man pages | Andrea D. Blog" />
+  <meta property="og:title" content="Angular 4 the new gig | Andrea D. Blog" />
   <meta property="og:type" content="website" />
 
   <meta property="og:url" content="/" />
@@ -80,50 +80,12 @@
   </header>
 
   <main>
-    <h1 class="text-color-main">Better bash man pages</h1>
-    <p>Colorize them all.</p>
-    <p>We, developers, live much of our time within a shell.
-Modern <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>s output
-stunning help in a way before was not possible. Think of NPM or Heroku or the great
-GIT.</p>
-<p>However we still have the <a href="http://en.wikipedia.org/wiki/Man_page">man pages</a> with their
-default style: black&amp;white with some underline or bold.</p>
-<p>So, we can change this luckily. It&#39;s a feature, probably an ancient one, most of us
-don&#39;t know or just forgot about it.</p>
-<h3 id="change-it">change it</h3>
-<p><img src="/assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png" alt="standard man page VS. colorized man page"></p>
-<p>How to do that:</p>
-<ul>
-<li>create a file called <strong>.LESS_TERMCAP:</strong> <code>touch ~/.LESS_TERMCAP</code></li>
-<li>edit the <strong>~/.LESS_TERMCAP</strong> file with an editor: <code>nano ~/.LESS_TERMCAP</code></li>
-<li><p>fill <strong>~/.LESS_TERMCAP</strong> with this:</p>
-<pre><code class="lang-bash"># Less Colors for Man Pages
-export LESS_TERMCAP_mb=$&#39;\E[0;103m&#39; # begin blinking
-export LESS_TERMCAP_md=$&#39;\E[0;93m&#39; # begin bold
-export LESS_TERMCAP_me=$&#39;\E[0m&#39; # end mode
-export LESS_TERMCAP_se=$&#39;\E[0m&#39; # end standout-mode
-export LESS_TERMCAP_so=$(tput bold; tput setaf 8; tput setab 3) # begin standout-mode - info box
-export LESS_TERMCAP_ue=$&#39;\E[0m&#39; # end underline
-export LESS_TERMCAP_us=$&#39;\E[04;32m&#39; # begin underline
-export LESS_TERMCAP_mr=$(tput rev)
-export LESS_TERMCAP_mh=$(tput dim)
-export LESS_TERMCAP_ZN=$(tput ssubm)
-export LESS_TERMCAP_ZV=$(tput rsubm)
-export LESS_TERMCAP_ZO=$(tput ssupm)
-export LESS_TERMCAP_ZW=$(tput rsupm)
-</code></pre>
-</li>
-<li><p>open your <strong>~/.bash_profile</strong> with an editor: <code>nano ~/.bash_profile</code></p>
-</li>
-<li>add to <strong>~/.bash_profile</strong> this:<pre><code class="lang-bash">[[ -f ~/.LESS_TERMCAP ]] &amp;&amp; . ~/.LESS_TERMCAP
-</code></pre>
-</li>
-<li>reload the <strong>~/.bash_profile</strong> (or restart the bash session): <code>source ~/.bash_profile</code></li>
-</ul>
-<h3 id="done">done</h3>
-<p>Now you have colorized the man pages. It&#39;s possible also to customize the colors,
-if you google a bit you&#39;ll find the table of colors and the meaning of those variables.</p>
-<p>Enjoy.</p>
+    <h1 class="text-color-main">Angular 4 the new gig</h1>
+    <p>I&#x27;ve worked on something and wrote about it.</p>
+    <p>I have written a post on Onefootball&#39;s Medium about what I&#39;ve been working in the last months.</p>
+<p>It is about writing a new website with Angular 4, you can read the full article at this address:</p>
+<p><a href="https://medium.com/onefootball-locker-room/angular-4-the-new-gig-fd7d339667e0">https://medium.com/onefootball-locker-room/angular-4-the-new-gig-fd7d339667e0</a></p>
+<p><a href="https://medium.com/onefootball-locker-room/angular-4-the-new-gig-fd7d339667e0"><img src="https://cdn-images-1.medium.com/max/2000/1*qUiGZQv7j3HrHwJamydSbQ.jpeg" alt="Onefootball Office"></a></p>
 
   </main>
 
