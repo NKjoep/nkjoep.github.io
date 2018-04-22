@@ -1,6 +1,18 @@
-(async function () {
-  const sourcePath = './src';
-  const buildDistPath = './dist';
+const downloadRepo = require('./metalsmith-lib/repo');
+const getRevision = require('./metalsmith-lib/revision');
+const compileSass = require('./metalsmith-lib/sass-compile');
+const copyFiles = require('./metalsmith-lib/copy-files');
+
+const stylesSource = '../assets/sass/style.scss';
+const stylesDestination = '../assets/css/style.css';
+
+const sourcePath = './src';
+const buildDistPath = './dist';
+const buildFinalPath = '../';
+
+const websiteOptions = require('./package.json').metalsmith;
+
+(async () => {
 
   const datefns = require('date-fns');
   const fontawesome = require('@fortawesome/fontawesome');
@@ -48,56 +60,12 @@
     return new Handlebars.SafeString(date);
   });
 
-  const websiteOptions = require('./package.json').metalsmith;
+
   websiteOptions.metadata.site.lastBuildDate = new Date();
   websiteOptions.metadata.site.copyrightYear = new Date().getFullYear();
   websiteOptions.metadata.site.lastBuild = new Date().toISOString();
-
-  websiteOptions.metadata.author.githubRepos = await (async () => {
-    let data;
-    try {
-      data = require('./repo.json');
-      console.log('- read repo.json')
-    } catch (e) {
-      const user = websiteOptions.metadata.author.github;
-      const url = `https://api.github.com/users/${user}/repos?sort=pushed&_=${Math.random()}${new Date()}`;
-      data = await fetchUrl(url);
-      require('fs').writeFileSync('repo.json', JSON.stringify(data, null, 2));
-      console.log('- saved repo.json')
-    }
-    const user = websiteOptions.metadata.author.github;
-    return data
-      .filter((repo) => (!repo.fork))
-      .filter((repo) => (repo.name !== `${user}.github.com`) && (repo.name !== `${user}.github.io`))
-      .filter((repo) => (!repo.private))
-      // .filter((repo) => repo.watchers_count > 0)
-      .sort((a, b) => {
-        // if (a is less than b by some ordering criterion) {
-        if (a.pushed_at < b.pushed_at) {
-          return -1;
-        }
-        if (a.pushed_at > b.pushed_at) {
-          return 1;
-        }
-        // a must be equal to b
-        return 0;
-      }).reverse();
-  })();
-
-  websiteOptions.metadata.site.revision = (() => {
-    let REVISION = 'norev';
-    // get the revision git rev-parse --short HEAD
-    const spawn = require('child_process').spawnSync;
-    const gitRevCmd = spawn('git', ['rev-parse', '--short', 'HEAD']);
-
-    // if error, notify
-    if (gitRevCmd.stderr && gitRevCmd.stderr.toString()) {
-      console.error('build-index', gitRevCmd.stderr.toString(), 'using default rev `norev`');
-    } else {
-      REVISION = gitRevCmd.stdout.toString().trim();
-    }
-    return `${REVISION}-${new Date().toISOString()}`;
-  })();
+  websiteOptions.metadata.author.githubRepos = await downloadRepo(websiteOptions.metadata.author.github);
+  websiteOptions.metadata.site.revision = getRevision();
 
   const Metalsmith = require('metalsmith');
   const mp_collections = require('metalsmith-collections');
@@ -149,9 +117,9 @@
     }))
     .build((err, files) => {
       if (err) { throw err; }
-      compileCss()
+      compileSass(stylesSource, stylesDestination)
         .then(() => {
-          return moveDist()
+          return copyFiles(buildDistPath, buildFinalPath)
         })
         .then(() => {
           console.log(`Build done. Check ${require('path').resolve(buildDistPath, 'index.html')}`);
@@ -161,102 +129,5 @@
           console.log('Build done. CSS failure.');
         });
     });
-
   return Promise.resolve();
-
-  function moveDist() {
-    return new Promise((resolve, reject) => {
-      const ncp = require('ncp').ncp;
-      ncp.limit = 16;
-      ncp(buildDistPath, '../', (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve();
-      });
-    })
-  }
-
-  function compileCss() {
-    const sass = require('node-sass');
-    const fs = require('fs');
-    const src = '../assets/sass/style.scss';
-    const dest = '../assets/css/style.css';
-    return new Promise((resolve, reject) => {
-      sass.render({
-        file: src,
-      }, (err, result) => {
-        if (err) {
-          console.error(err);
-          reject(err);
-          return;
-        }
-        fs.writeFileSync(dest, result.css);
-        return resolve();
-      });
-    });
-  }
-
-  /**
-   * @param {String} url
-   */
-  function fetchUrl(urlString) {
-    const httpsClient = require('https');
-    const httpClient = require('http');
-    const urlLib = require('url')
-    const URL = urlLib.URL;
-    return new Promise((resolveFetch, rejectFetch) => {
-
-      const isHttps = urlString.substring(0, 5) === 'https';
-      // const url = new URL(urlString);
-      const url = urlLib.parse(urlString);
-      const client = isHttps ? httpsClient : httpClient;
-
-      const options = {
-        hostname: url.hostname,
-        path: url.pathname || '/',
-        method: 'GET',
-        headers: {
-          'User-Agent': `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36`,
-          'Accept-Language': '*'
-        }
-      };
-      // console.log('fetching', url.href);
-      client.get(options, (res) => {
-        const bodyResponse = [];
-        const statusCode = res.statusCode;
-        const contentType = res.headers['content-type'];
-
-        if (statusCode > 299 && statusCode < 400 && res.headers && res.headers.location) {
-          // follow redirect
-          return fetchUrl(res.headers.location).then(resolveFetch).catch(rejectFetch);
-        }
-
-        if (statusCode !== 200) {
-          // rejectFetch(new Error('invalid response'));
-          res.resume();
-          resolveFetch('');
-          // return;
-        }
-        res.setEncoding('utf8');
-        res.on('data', (chunk) => {
-          bodyResponse.push(chunk);
-        });
-        res.on('end', () => {
-          let fullResp = bodyResponse.join('');
-          if (/json/.test(contentType)) {
-            try {
-              fullResp = JSON.parse(fullResp);
-            } catch (e) { }
-          }
-          resolveFetch(fullResp);
-        });
-      }).on('error', (e) => {
-        // rejectFetch(e);
-        resolveFetch('');
-      });
-    });
-  }
-
 })();
