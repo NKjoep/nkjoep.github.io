@@ -89,11 +89,11 @@ const websiteOptions = require('./package.json').metalsmith;
         sortBy: 'date',
         reverse: true
       },
-      'unwritten': {
-        pattern: 'unwritten/*.md',
-        sortBy: 'date',
-        reverse: true
-      }
+      // 'unwritten': {
+      //   pattern: 'unwritten/*.md',
+      //   sortBy: 'date',
+      //   reverse: true
+      // }
     }))
     .use(mp_metallic())
     .use(mp_markdown())

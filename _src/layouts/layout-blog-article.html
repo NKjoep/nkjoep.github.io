@@ -114,36 +114,38 @@
       {{/each}}
     </ul>
 
-    <h2 class="text-center text-light first-letter title-spacer">
-      Unwritten
-    </h2>
-    <p class="text-light">Topics I had in mind recently and never the time nor the courage to write a full post about.</p>
-    <ul class="article-list">
-      {{#each unwritten}}
-      <li>
-          <a href="/{{path}}" class="d-inline-block">
-            <h3 class="d-flex flex-row-reverse justify-content-end align-items-center title-entry">
-              <span>
-                {{title}}
-              </span>
-              <span class="sr-only">&mdash;</span>
-              <time class="nolink d-flex flex-column justy-content-center align-items-center"
-                    datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
-                <span class="DD text-center">
-                  {{#datefn date 'DD'}}{{/datefn}}
+    {{#if unwritten}}
+      <h2 class="text-center text-light first-letter title-spacer">
+        Unwritten
+      </h2>
+      <p class="text-light">Topics I had in mind recently and never the time nor the courage to write a full post about.</p>
+      <ul class="article-list">
+        {{#each unwritten}}
+        <li>
+            <a href="/{{path}}" class="d-inline-block">
+              <h3 class="d-flex flex-row-reverse justify-content-end align-items-center title-entry">
+                <span>
+                  {{title}}
                 </span>
-                <span class="MMM text-center">
-                  {{#datefn date 'MMM'}}{{/datefn}}
-                </span>
-                <span class="sr-only">
-                  {{#datefn date 'YYYY'}}{{/datefn}}
-                </span>
-              </time>
-            </h3>
-          </a>
-        </li>
-      {{/each}}
-    </ul>
+                <span class="sr-only">&mdash;</span>
+                <time class="nolink d-flex flex-column justy-content-center align-items-center"
+                      datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
+                  <span class="DD text-center">
+                    {{#datefn date 'DD'}}{{/datefn}}
+                  </span>
+                  <span class="MMM text-center">
+                    {{#datefn date 'MMM'}}{{/datefn}}
+                  </span>
+                  <span class="sr-only">
+                    {{#datefn date 'YYYY'}}{{/datefn}}
+                  </span>
+                </time>
+              </h3>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
 
     <h2 class="text-center text-light first-letter title-spacer">
       Projects
