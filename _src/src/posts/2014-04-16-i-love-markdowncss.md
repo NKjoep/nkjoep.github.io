@@ -24,7 +24,7 @@ More than once I had to create css styles for the html result of markdowns, and 
 Then I thought I would be cool to create a css that would dress up everything like the plain markdown source.
 
 ## check it out
-That's why I created [i-love-markdown.css](http://stealthefish.com/i-love-markdown.css/index.html).
+That's why I created [i-love-markdown.css](https://stealthefish.com/i-love-markdown.css/index.html).
 
 ![i-love-markdown.css homepage](/assets/posts/2014-04-16-i-love-markdowncss/i-love-markdown.jpg)
 
