@@ -85,15 +85,15 @@ const websiteOptions = require('./package.json').metalsmith;
     .clean(true)
     .use(mp_collections({
       'articles': {
-        pattern: 'posts/*.md',
+        pattern: 'articles/*.md',
         sortBy: 'date',
         reverse: true
       },
-      // 'unwritten': {
-      //   pattern: 'unwritten/*.md',
-      //   sortBy: 'date',
-      //   reverse: true
-      // }
+      'micro': {
+        pattern: 'micro/*.md',
+        sortBy: 'date',
+        reverse: true
+      }
     }))
     .use(mp_metallic())
     .use(mp_markdown())
@@ -114,6 +114,10 @@ const websiteOptions = require('./package.json').metalsmith;
     .use(mp_feed({
       collection: 'articles',
       destination: 'feed.xml'
+    }))
+    .use(mp_feed({
+      collection: 'micro',
+      destination: 'micro.xml'
     }))
     .build((err, files) => {
       if (err) { throw err; }
