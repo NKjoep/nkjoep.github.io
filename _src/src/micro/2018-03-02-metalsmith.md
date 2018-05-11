@@ -11,4 +11,3 @@ I have started again the re-build of my website. It has always been a _Frankenst
 Completely dropped Jekyll (wasn't compiling anymore) and moved to the full-static-full-js Metalsmith.
 
 The experiment continues...
-
