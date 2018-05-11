@@ -105,15 +105,15 @@ const websiteOptions = require('./package.json').metalsmith;
     .use(mp_layouts({
       engine: 'handlebars'
     }))
-    .use(mp_feed({
-      collection: 'articles',
-      destination: 'feed.xml'
-    }))
     .use(mp_open_graph({
       siteurl: websiteOptions.metadata.site.url,
       title: 'title',
       description: 'description',
       image: 'image-preview'
+    }))
+    .use(mp_feed({
+      collection: 'articles',
+      destination: 'feed.xml'
     }))
     .build((err, files) => {
       if (err) { throw err; }
