@@ -40,8 +40,9 @@ const websiteOptions = require('./package.json').metalsmith;
       const json = JSON.stringify(obj, null, 2);
       return new Handlebars.SafeString(Handlebars.Utils.escapeExpression(json));
     } catch (e) {
-      if (obj && obj.toString) {
-        return new Handlebars.SafeString(obj.toString());
+      if (obj) {
+        const str = require('util').inspect(obj, {showHidden: false, depth: 2});
+        return new Handlebars.SafeString(str);
       }
       return new Handlebars.SafeString(`[object object]`);
     }
@@ -100,7 +101,7 @@ const websiteOptions = require('./package.json').metalsmith;
     .use(mp_excerpts())
     .use(mp_permalinks({
       pattern: 'blog/:date/:title',
-      date: 'YYYY'
+      date: 'YYYY/MM/DD'
     }))
     .use(mp_layouts({
       engine: 'handlebars'
@@ -113,11 +114,27 @@ const websiteOptions = require('./package.json').metalsmith;
     }))
     .use(mp_feed({
       collection: 'articles',
-      destination: 'feed.xml'
+      destination: 'feed.xml',
+      preprocess: (file) => {
+          // console.log(file);
+          const img = file['image-preview'] ? `<p><img src="${websiteOptions.metadata.site.url}${file['image-preview']}"></p>` : '';
+          return {
+            ...file,
+            description: `${file.excerpt} ${img}`
+          };
+      }
     }))
     .use(mp_feed({
       collection: 'micro',
-      destination: 'micro.xml'
+      destination: 'micro.xml',
+      preprocess: (file) => {
+        // console.log(file);
+        const img = file['image-preview'] ? `<p><img src="${websiteOptions.metadata.site.url}${file['image-preview']}"></p>` : '';
+        return {
+          ...file,
+          description: `${file.excerpt || file.less } ${img}`
+        };
+      }
     }))
     .build((err, files) => {
       if (err) { throw err; }

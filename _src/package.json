@@ -4,7 +4,23 @@
   "scripts": {
     "build": "node metalsmith.js",
     "update-github-repo-list": "rm repo.json ; npm run build",
-    "start": "nodemon --ignore dist/ --watch src/ -e md,js,html,scss,json  metalsmith.js & http-server ../"
+    "watch": "nodemon metalsmith.js",
+    "start": "nodemon metalsmith.js & http-server ../"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "dist/"
+    ],
+    "watch": [
+      "./src/",
+      "../assets/sass/",
+      "./layouts/",
+      "package.json"
+    ],
+    "ext": "md,js,html,scss,json",
+    "events": {
+      "restart": "node src/tools/notifier.js 'Blog recompiled'"
+    }
   },
   "metalsmith": {
     "metadata": {
