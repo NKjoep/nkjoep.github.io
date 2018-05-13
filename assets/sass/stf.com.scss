@@ -1,0 +1,217 @@
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css');
+$color_main_fg: #0080C3;
+$color_main_bg: #fff;
+$color_mute: #aaa;
+$breakpoint_desktop: 880px;
+html.layout-stf {
+    font-size: 13px;
+    background: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444;
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+        box-sizing: border-box; // outline: 1px solid rgba(250, 100, 30, 0.8);
+    }
+    body {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0;
+        & > main {
+            @extend .wrapper;
+        }
+    }
+    .box {
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 0.4rem;
+    }
+    .wrapper {
+        max-width: 630px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    .small {
+        font-size: 0.9rem;
+    }
+
+    fieldset {
+        padding: 0;
+        margin: 0;
+    }
+    p,
+    ul,
+    ol,
+    dl,
+    table,
+    blockquote,
+    pre,
+    form,
+        {
+        margin: 1.5rem 0;
+        line-height: 1.4167;
+        ul,
+        ol {
+            margin-top: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    dl {
+        dt {
+            &:not(:first-child) {
+                margin-top: 0;
+            }
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        a {
+            &:link,
+            &:visited {
+                text-decoration: none;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+    b,
+    .strong {
+        font-weight: 600;
+    }
+    .thin {
+        font-weight: lighter;
+        letter-spacing: 0.1rem;
+    }
+    .caps {
+        text-transform: uppercase;
+        letter-spacing: -0.1rem;
+    }
+    .fancy {
+        text-transform: capitalize;
+        letter-spacing: -0.1rem;
+        font-weight: bold;
+        font-variant: small-caps;
+        font-style: italic;
+    }
+    .muted,
+    .mute {
+        color: $color_mute;
+    }
+    table {
+        width: 100%;
+        word-break: break-all;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    blockquote {
+        @extend .box;
+        border-left: 0.4rem solid #ddd;
+        padding-right: 0.5rem;
+        footer:last-child {
+            // border-top: 0.2rem solid #ddd;
+            padding-top: 0.5rem;
+        }
+    }
+    pre {
+        @extend .box;
+        border-top: 0.15rem solid #ddd;
+        border-right: 0.15rem solid #ddd;
+        border-bottom: 0.15rem solid #ddd;
+        border-left: 0.4rem solid #ddd;
+        overflow-x: scroll;
+        code {
+            display: block;
+            overflow: visible;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    cite {
+        &:before {
+            display: inline-block;
+            content: ' — ';
+            margin-right: 0.2em;
+        }
+    }
+    a {
+        &:link,
+        &:visited {
+            color: $color_main_fg;
+            &:not([href^="https://stealthefish.com"]) {}
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color_main_bg;
+            background: $color_main_fg;
+            text-decoration: none;
+            outline-color: $color_main_fg;
+            outline-offset: 0px;
+            outline-style: solid;
+            outline-width: 1rem;
+            -moz-outline-radius: 4px;
+            outline-radius: 4px;
+            :not([href^="https://stealthefish.com"]) {}
+        }
+    }
+    .image {
+        @extend .box;
+        padding: 0;
+        display: block;
+        width: 100%;
+    }
+    .date {
+        font-size: 1.1rem;
+        font-weight: 300;
+        &:before {
+            background-image: url(../ico/blog_freccia.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top left;
+            content: ' ';
+            display: inline-block;
+            height: 10px;
+            width: 9px;
+            vertical-align: top;
+            margin-top: 0.4em;
+            margin-right: 1.5em;
+            margin-right: 2vw;
+        }
+    }
+    .article-post {
+        margin-bottom: 8rem;
+        header {
+            position: relative;
+            display: block;
+            .date {
+                @media (min-width: $breakpoint_desktop) {
+                    top: -1.2rem;
+                    left: -13.5rem;
+                    position: absolute;
+                }
+            }
+        }
+        footer {
+            @extend .small;
+            p {
+                margin: 0.7rem 0;
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@
   "scripts": {
     "build": "node metalsmith.js",
     "update-github-repo-list": "rm repo.json ; npm run build",
-    "start": "nodemon --ignore dist/ --watch src/ -e md,js,html,scss,json  metalsmith.js & http-server ../"
+    "start": "nodemon --ignore dist/ --watch ../assets/sass/ --watch layouts/ --watch src/ -e md,js,html,scss,json  metalsmith.js & http-server ../"
   },
   "metalsmith": {
     "metadata": {
@@ -92,7 +92,6 @@
         "twitter": "NKjoep",
         "linkedin": "andreadessi",
         "bio": "Andrea, man, html operator, css dispeller, js runner, web lover.",
-        "emailMd5": "cc669cccf3cf6118c1efac45de802710",
         "micro": "nkjoep"
       }
     },

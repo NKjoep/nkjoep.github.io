@@ -65,6 +65,7 @@ const websiteOptions = require('./package.json').metalsmith;
   websiteOptions.metadata.site.copyrightYear = new Date().getFullYear();
   websiteOptions.metadata.site.lastBuild = new Date().toISOString();
   websiteOptions.metadata.author.githubRepos = await downloadRepo(websiteOptions.metadata.author.github);
+  websiteOptions.metadata.author.emailMd5 = require('crypto').createHash('md5').update(websiteOptions.metadata.author.email).digest("hex");
   websiteOptions.metadata.site.revision = getRevision();
 
   const Metalsmith = require('metalsmith');
