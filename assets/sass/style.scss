@@ -25,7 +25,7 @@ body {
         }
         footer {
             margin-bottom: 0 !important;
-            padding-bottom: 6rem;
+            padding-bottom: 0;
         }
     }
 }
@@ -70,43 +70,6 @@ a {
     width: .875em;
     height: 1em;
     display: inline-block;
-}
-
-#cookie-ok {
-    @extend .cursor-pointer;
-    @extend .m-0;
-    background: #2D559F;
-    background: linear-gradient(to bottom, rgba(45, 85, 159, 1) 90%, rgba(11, 51, 119, 1) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    border-radius: 0.3rem 0.3rem 0 0;
-    box-shadow: 3px 3px 3px 0px $color_gray;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    width: 100vw;
-    z-index: 10;
-    padding: 1rem;
-    font-size: 0.8rem;
-    @include width-limits();
-    button {
-        @extend .cursor-pointer;
-        @extend .mybtn;
-        &:after {
-            font-family: monospace;
-            content: " 👍"
-        }
-    }
-    &:hover {
-        button {
-            &:after {
-                font-family: monospace;
-                content: " 😅"
-            }
-        }
-    }
 }
 
 nav {
