@@ -36,20 +36,21 @@ html.layout-stf {
         padding: 0;
         & > header {
             background-color: $color_main_fg;
+            box-shadow: 1px 2px 1px hsla(0, 0%, 0%, 0.1);
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             height: 45px;
+            justify-content: flex-end;
+            position: relative;
             @media (min-width: $breakpoint_desktop) {
                 height: 60px;
             }
-
-            justify-content: flex-end;
-            position: relative;
             h1 {
                 @extend .wrapper;
                 @extend .white;
                 z-index: 1;
+                max-width: 40% !important;
                 @media (max-width: $breakpoint_desktop) {
                     font-size: 1.7rem;
                     width: 100% !important;
@@ -63,7 +64,10 @@ html.layout-stf {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: calc((100% - #{$base_width}) /2);
+                    width: calc((100% - 60%) / 2 );
+                    @media (min-width: $breakpoint_desktop) {
+                        width: calc((100% - 40%) / 2 );
+                    }
                     height: 100%;
                     content: "";
                     background: url(/assets/img/header-pesci-cut.jpg) right center no-repeat;
@@ -87,6 +91,8 @@ html.layout-stf {
         }
         & > .col-aside {}
         @media (min-width: $breakpoint_desktop) {
+            $side_size: 30%;
+            padding: 0 2vw;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -97,9 +103,9 @@ html.layout-stf {
                 display: flex;
                 flex-grow: 2;
                 justify-content: flex-end;
-                max-width: 80%;
+                max-width: 100% - $side_size;
                 position: relative;
-                width: 80%;
+                width: 100% - $side_size;
                 & > .col-main-content {
                     width: 75%;
                     position: relative;
@@ -109,8 +115,9 @@ html.layout-stf {
                 align-self: flex-start;
                 flex-grow: 1;
                 justify-content: flex-start;
-                max-width: 20%;
-                width: 20%;
+                max-width: $side_size;
+                width: $side_size;
+                padding-left: 2rem;
             }
         }
     }
@@ -281,7 +288,7 @@ html.layout-stf {
             outline-width: 1rem;
             -moz-outline-radius: 4px;
             outline-radius: 4px;
-            :not([href^="https://stealthefish.com"]) {}
+           &:not([href^="https://stealthefish.com"]) {}
         }
     }
     hr {
@@ -307,9 +314,11 @@ html.layout-stf {
             height: 10px;
             width: 9px;
             vertical-align: top;
-            margin-top: 0.4em;
-            margin-right: 1.5em;
-            margin-right: 2vw;
+            margin-top: 0.3em;
+            margin-right: 0.6em;
+            @media (min-width: $breakpoint_desktop) {
+                margin-top: 0.4em;
+            }
         }
     }
     .article-post {
@@ -318,9 +327,10 @@ html.layout-stf {
             position: relative;
             display: block;
             .date {
+                margin: 0;
                 @media (min-width: $breakpoint_desktop) {
-                    top: -1.2rem;
-                    left: -13.5rem;
+                    top: -1.4rem;
+                    left: -14rem;
                     position: absolute;
                 }
             }
