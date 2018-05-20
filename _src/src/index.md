@@ -2,15 +2,12 @@
 layout: stf.com.html
 title: It steals the fish
 isHomepage: true
+ddate: 2018-05-12T15:00:00Z
 image-preview: /assets/ico/favicon.png
+tags: [blog, pippo]
 ---
 
 <article class="article-post">
-  <header>
-    <h2><a href="#">Lorem, Ipsum, Dolor Sit!</a></h2>
-    <p class="date"><b>Feb 6 '10</b> / 3:06am</p>
-  </header>
-
   <p>Mollit minim minim et pariatur exercitation.</p>
   <p>Dolor dolore aliqua Lorem proident incididunt elit. Aute elit et aute aliqua enim velit reprehenderit ipsum ipsum elit.</p>
   <p>
@@ -25,14 +22,6 @@ image-preview: /assets/ico/favicon.png
       <img class="image" src="https://i.imgur.com/TkXY6lc.png" alt=" ">
     </a>
   </p>
-  <footer>
-    <p>
-      <span class="muted">Filed under</span>
-      &ensp;//&ensp;
-      <span>funny</span>&ensp;
-      <span>things</span>&ensp;
-    </p>
-    <!-- <p>Comments (0)</p> -->
 </article>
 
 

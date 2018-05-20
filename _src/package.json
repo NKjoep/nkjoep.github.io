@@ -3,8 +3,27 @@
   "private": true,
   "scripts": {
     "build": "node metalsmith.js",
-    "update-github-repo-list": "rm repo.json ; npm run build",
-    "start": "nodemon --ignore dist/ --watch ../assets/sass/ --watch layouts/ --watch src/ -e md,js,html,scss,json  metalsmith.js & http-server ../"
+    "update-github-repo-list": "mv repo.json repo.saved.json ; npm run build",
+    "start": "nodemon metalsmith.js & http-server ../",
+    "watch": "nodemon metalsmith.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "dist/"
+    ],
+    "watch": [
+      "../assets/sass/",
+      "package.json",
+      "src/",
+      "layouts/",
+      "src/",
+      "templates/",
+      "metalsmith.js"
+    ],
+    "ext": "md,js,html,scss,json",
+    "events": {
+      "restart": "node tools/notifier.js 'Blog recompiled'"
+    }
   },
   "metalsmith": {
     "metadata": {
@@ -97,17 +116,13 @@
     },
     "disqus_shortname": "stealthefish"
   },
-  "nodemonConfig": {
-    "events": {
-      "restart": "osascript -e 'display notification \"blog recompiled\" with title \"stealthefish.com\"' giving up after 1 "
-    }
-  },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/fontawesome-free-solid": "^5.0.10",
     "date-fns": "^1.29.0",
     "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.4",
+    "node-notifier": "5.2.1",
     "metalsmith": "2.3.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-excerpts": "^1.2.0",

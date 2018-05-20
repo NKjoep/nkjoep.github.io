@@ -3,15 +3,27 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css');
+$font_base_size: 13px;
 $color_main_fg: #0080C3;
 $color_main_bg: #fff;
 $color_mute: #aaa;
 $breakpoint_desktop: 880px;
+$base_width: 60%;
+$base_height: 6rem;
+$color_white: white;
+$color_black: #444;
 html.layout-stf {
-    font-size: 13px;
-    background: #fff;
+
+    background: #f5f6f6;
+    background: -moz-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
+    background: -webkit-linear-gradient(-45deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
+    background: linear-gradient(135deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 );
+
+    font-size: $font_base_size;
+    background: $color_white;
     font-family: Helvetica, Arial, sans-serif;
-    color: #444;
+    color: $color_black;
     *,
     ::after,
     ::before {
@@ -22,17 +34,95 @@ html.layout-stf {
         font-size: 1.2rem;
         margin: 0;
         padding: 0;
-        & > main {
-            @extend .wrapper;
+        & > header {
+            background-color: $color_main_fg;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 45px;
+            @media (min-width: $breakpoint_desktop) {
+                height: 60px;
+            }
+
+            justify-content: flex-end;
+            position: relative;
+            h1 {
+                @extend .wrapper;
+                @extend .white;
+                z-index: 1;
+                @media (max-width: $breakpoint_desktop) {
+                    font-size: 1.7rem;
+                    width: 100% !important;
+                    max-width: 66% !important;
+                    padding: 0 !important;
+                }
+                text-align: right;
+                line-height: 0.7em;
+                &:before, &:after {
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: calc((100% - #{$base_width}) /2);
+                    height: 100%;
+                    content: "";
+                    background: url(/assets/img/header-pesci-cut.jpg) right center no-repeat;
+                }
+                &:after {
+                    transform: scaleX(-1);
+                    right: 0;
+                    left: unset;
+                }
+            }
         }
     }
+
+    .columns {
+        width: 100%;
+        padding: 0 5vw;
+
+        & > .col-main {
+            margin-bottom: 2rem;
+            & > .col-main-content {}
+        }
+        & > .col-aside {}
+        @media (min-width: $breakpoint_desktop) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            min-height: 200px;
+            & > .col-main {
+                align-self: flex-start;
+                display: flex;
+                flex-grow: 2;
+                justify-content: flex-end;
+                max-width: 80%;
+                position: relative;
+                width: 80%;
+                & > .col-main-content {
+                    width: 75%;
+                    position: relative;
+                }
+            }
+            & > .col-aside {
+                align-self: flex-start;
+                flex-grow: 1;
+                justify-content: flex-start;
+                max-width: 20%;
+                width: 20%;
+            }
+        }
+    }
+
     .box {
         box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
         padding: 1rem;
         border-radius: 0.4rem;
     }
     .wrapper {
-        max-width: 630px;
+        width: 100%;
+        max-width: $base_width;
         margin: 0 auto;
         padding: 0 1rem;
     }
@@ -88,6 +178,24 @@ html.layout-stf {
             }
         }
     }
+    h1, .h1 {
+        font-size: 2em;
+        small, .small {
+            font-size: 0.5em;
+        }
+    }
+    h2, .h2 {
+        font-size: 1.5em;
+        small, .small {
+            font-size: 0.5em;
+        }
+    }
+    h3, .h3 {
+        font-size: 1.17em;
+        small, .small {
+            font-size: 0.5em;
+        }
+    }
     b,
     .strong {
         font-weight: 600;
@@ -95,6 +203,9 @@ html.layout-stf {
     .thin {
         font-weight: lighter;
         letter-spacing: 0.1rem;
+    }
+    .text-center {
+        text-align: center;
     }
     .caps {
         text-transform: uppercase;
@@ -110,6 +221,9 @@ html.layout-stf {
     .muted,
     .mute {
         color: $color_mute;
+    }
+    .white {
+        color: $color_white;
     }
     table {
         width: 100%;
@@ -170,6 +284,10 @@ html.layout-stf {
             :not([href^="https://stealthefish.com"]) {}
         }
     }
+    hr {
+        border: 0 none;
+        border-top: 1px solid #d7d8d9;
+    }
     .image {
         @extend .box;
         padding: 0;
@@ -212,6 +330,18 @@ html.layout-stf {
             p {
                 margin: 0.7rem 0;
             }
+        }
+    }
+    footer {
+        .site-image {
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            flex: 0 0 14.28571% !important;
+            height: 0 !important;
+            max-width: 14.28571% !important;
+            overflow: hidden !important;
+            padding-top: 12.25% !important;
         }
     }
 }

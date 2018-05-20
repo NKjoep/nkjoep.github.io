@@ -7,8 +7,6 @@
   <title>{{ title }} | {{ site.title }}</title>
   <link rel="alternate" type="application/rss+xml" title="RSS Feed | {{ site.title }}" href="/feed.xml">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12754582-1"></script>
   <script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script async src="/assets/js/app.js?rev={{site.revision}}"></script>
 
@@ -22,17 +20,60 @@
 
 <body>
 
-  <header style="background: silver;">
-    header!
+  <header>
+    <h1>
+      {{ site.title }}
+      <small class="thin"><br/>{{ site.description }}</small>
+    </h1>
   </header>
 
-  <main>
-    {{{ contents }}}
-  </main>
+  <div class="columns">
+    <div class="col-main">
+      <main class="col-main-content">
 
-  <footer style="background: silver;">
-    this is footer!
-  </footer>
+        <!-- article -->
+        {{#if isHomepage}}
+          <article class="article-post">
+            <header>
+              <h2><a href="{{path}}">{{ title }}</a></h2>
+              <p class="date">{{#datefn ddate '<b>MMM D, YY</b> / H:MMa'}}{{/datefn}}</p>
+            </header>
+            <!-- {{{ contents }}} -->
+            {{#unless tags}}
+              <footer><p><span class="muted">Filed under</span>&#32;//&#32;
+                {{#each tags}}<span>{{this}}</span>{{/each}}</p>
+              </footer>
+            {{/unless}}
+          </article>
+        {{/if}}
+        <!-- article -->
+
+      </main>
+    </div>
+    <aside class="col-aside">
+      side col! <br>
+      <!-- <img src="/assets/img/img1.jpg" width="100%"> -->
+    </aside>
+  </div>
+
+  <hr>
+  <footer class="container-fluid text-center">
+      <p class="thin mute small">
+        &copy; {{ author.name }} {{ site.copyrightYear }}
+        <span class="sr-only">.</span>
+        <br />
+      </p>
+      <p class="thin mute small">
+        All the ideas are mine if not specified otherwise.
+      </p>
+
+      <div class="row">
+        {{#each site.images}}
+          <div class="col-2 site-image" style="background: linear-gradient(to bottom, {{color}} 55%, rgba(44, 98, 184, 0.5) 100%); background-image: url({{ url }}?rev={{../site.revision}});"
+            {{#if caption}}title="{{caption}}"{{/if}}></div>
+        {{/each}}
+      </div>
+    </footer>
 </body>
 
 </html>
