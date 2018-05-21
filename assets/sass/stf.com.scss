@@ -55,6 +55,20 @@ body {
             }
             text-align: right;
             line-height: 0.7em;
+            text-decoration: none;
+            a:link,
+            a:visited {
+                @extend .white;
+            }
+            a:hover,
+            a:active,
+            a:focus {
+                @extend .white;
+                outline: none;
+                text-decoration: none;
+                background: transparent;
+                background-color: transparent;
+            }
             &:before,
             &:after {
                 z-index: -1;
@@ -360,7 +374,7 @@ hr {
     font-size: 1.1rem;
     font-weight: 300;
     &:before {
-        background-image: url(../ico/blog_freccia.png);
+        background-image: url(/assets/ico/blog_freccia.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: top left;
@@ -397,6 +411,9 @@ hr {
 
 .article-post {
     margin-bottom: 4rem;
+    word-break: break-word;
+    width: 100%;
+    max-width: 100%;
     header {
         position: relative;
         display: block;
@@ -422,6 +439,9 @@ hr {
     img {
         @extend .image;
     }
+    h2, h3, h4 {
+        margin-top: 4rem;
+    }
     .videoWrapper {
         width: 100%;
         margin: 0 auto;
@@ -435,6 +455,9 @@ hr {
             width: 100%;
             height: 100%;
         }
+    }
+    .twitter-tweet.twitter-tweet-rendered {
+        margin: 4rem auto !important;
     }
 }
 
@@ -519,4 +542,15 @@ footer {
         min-width: 6%;
         max-width: 6%;
     }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }

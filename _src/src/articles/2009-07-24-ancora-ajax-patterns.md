@@ -1,6 +1,7 @@
 ---
 date: 2009-07-24T15:25:00+02:00
 description: Ancora AJAX Patterns
+image-preview: /assets/posts/2009-07-24-ancora-ajax-patterns/ajax-fig1_small.png
 layout: stf.com.html
 tags: [development, js]
 title: "Ancora AJAX Patterns"

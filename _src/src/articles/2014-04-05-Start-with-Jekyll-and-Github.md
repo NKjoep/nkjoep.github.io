@@ -1,11 +1,10 @@
 ---
-categories: [blog]
 date: 2014-04-05T16:04:00+02:00
 description: "How I'm starting my blog (again)."
-layout: layout-blog-article.html
-tags: [jeykyll,github]
-title: Start with Jekyll and Github
 image-preview: /assets/posts/2014-04-05-Start-with-Jekyll-and-Github/jekyll_github.jpg
+layout: stf.com.html
+tags: [blog, jeykyll, github]
+title: Start with Jekyll and Github
 ---
 
 I'm a web developer and I follow people, stay update with open source projects
@@ -28,7 +27,7 @@ All the alternatives to my old blog were flowing in my mind and after a long tim
 
 so get my advice, use [Jekyll + GitHub Pages](https://pages.github.com/)
 
-## let's do this
+### let's do this
 
 The outstanding guide about **Pages** you find will cover most of common issues, however I'd like to talk you about the some details.
 
@@ -76,7 +75,7 @@ Nothing more to say, follow the [official guide](http://jekyllrb.com/docs/posts/
 ### themes
 Generally Jekyll supports themes too, just google around.
 
-## github
+### github
 You have nothing to do with github, just push the jekyll files to your personal
 repository. Remember that if you want to use jekyll with github projects, use branch *gh-pages*. You have to enable it per project.
 

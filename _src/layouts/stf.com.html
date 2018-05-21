@@ -22,8 +22,10 @@
 
   <header>
     <h1>
-      {{ site.title }}
-      <small class="thin"><br/>{{ site.description }}</small>
+        <a href="/">
+          {{ site.title }}
+          <small class="thin"><br/>{{ site.description }}</small>
+        </a>
     </h1>
   </header>
 
@@ -52,8 +54,11 @@
         {{#unless isHomepage}}
           <article class="article-post">
             <header>
-              <h2><a href="/{{path}}">{{ title }}</a></h2>
-              <p class="date">{{#datefn date '<b>MMM D, YY</b> / h:mma'}}{{/datefn}}</p>
+              <h2><a href="/{{path}}">
+                <span class="sr-only">Article:&#32;</span>
+                {{ title }}
+              </a></h2>
+              <p class="date" title="{{#datefn date 'dddd Do MMMM YYYY, HH:mm'}}{{/datefn}}"> <time datetime="{{date}}">{{#datefn date '<b>MMM D, \'YY</b> / H:MMa'}}{{/datefn}}</time> </p>
             </header>
             {{{ contents }}}
             {{#unless tags}}
@@ -74,7 +79,7 @@
             <article class="article-post">
               <header>
                 <h2><a href="/{{path}}">{{ title }}</a></h2>
-                <p class="date">{{#datefn date '<b>MMM D, YY</b> / H:MMa'}}{{/datefn}}</p>
+                <p class="date" title="{{#datefn date 'dddd Do MMMM YYYY, HH:mm'}}{{/datefn}}"> <time datetime="{{date}}">{{#datefn date '<b>MMM D, \'YY</b> / H:MMa'}}{{/datefn}}</time> </p>
               </header>
               {{{ contents }}}
               {{#unless tags}}
@@ -92,9 +97,9 @@
     <!-- right col -->
     <aside class="col-aside">
       <section>
-        <h3 class="side-title">
+        <h2 class="h3 side-title">
           Connect
-        </h3>
+        </h2>
         <ul class="nostyle simplelist">
             <li class="small">
               <a href="https://twitter.com/{{author.twitter}}" title="Go to: twitter/@{{ author.twitter }}" class="text-color-normal">
@@ -120,9 +125,9 @@
         </ul>
       </section>
       <section>
-        <h3 class="side-title">
+        <h2 class="h3 side-title">
           Projects
-        </h3>
+        </h2>
         <p class="m-0 p-0 small">Experiments, tests and other stuff I've worked on. Have a look.</p>
         <ul class="nostyle simplelist">
           {{#each author.githubRepos}}

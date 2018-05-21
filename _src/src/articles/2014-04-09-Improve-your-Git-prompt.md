@@ -1,11 +1,10 @@
 ---
-categories: [development, git]
 date: 2014-04-09T11:10:00+02:00
 description: "How to get a nice git prompt in no time."
-layout: layout-blog-article.html
-tags: [osx, dev, environment]
-title: "Improve your GIT prompt"
 image-preview: /assets/posts/2014-04-09-Improve-your-Git-prompt/default-gitprompt.png
+layout: stf.com.html
+tags: [development, git]
+title: "Improve your GIT prompt"
 ---
 
 A [friend of mine](http://simoneloru.com/), during a remote shared video session,
@@ -19,13 +18,13 @@ noticed my shell while we were deciding what to commit and what to merge.
 >
 > I want it too!
 
-## so here's how to do it
+### so here's how to do it
 
 Some time ago [I wrote a script](https://gist.github.com/NKjoep/4194041) for parsing the `git status` and return numbers of
 modified files and the current branch. Soon I understood it is annoying to maintain
 and that there is [so much better out there](https://github.com/magicmonty/bash-git-prompt).
 
-## use bash-git-prompt
+### use bash-git-prompt
 First of all:
 
 ```bash
@@ -47,7 +46,7 @@ check for a `.bashrc` if you are using linux or unix.
 
 Doing this you'll have enabled the cool git prompt with its default setting. Setting the `GIT_PROMPT_ONLY_IN_REPO` variable you are preserving the [PS1](http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html) when outside a git folder.
 
-## customize it
+### customize it
 
 However, the default config probably will hurt you, the default settings is something like this:
 
@@ -108,12 +107,12 @@ GIT_PROMPT_LEADING_SPACE="0"
 ```
 
 
-## try everything
+### try everything
 Logout from the current session and login again, or simply close the terminal and open it again.
 
 Many uses this command `source ~/.bash_profile` but I do not like it. That way you are not cleaning previous loaded environment variables, so seems better to me perform a clean login.
 
-## stay updated
+### stay updated
 
 Having this configuration you can keep updated the bash-git-prompt pulling it from github.
 Periodically give a `git pull` under `~/.bash-git-prompt`

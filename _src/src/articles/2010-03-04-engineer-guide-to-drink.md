@@ -1,6 +1,7 @@
 ---
 date: 2010-03-04T20:38:00+02:00
 description:
+image-preview: /assets/posts/2010-03-04-engineer-s-guide-to-drink/Engineers-Guide-to-Drinks-2010-1.jpg
 layout: stf.com.html
 tags: [fun]
 title: "Engineer's Guide to Drinks"

@@ -1,11 +1,10 @@
 ---
-categories: [development]
 date: 2015-09-26T22:36:00+02:00
 description: "Guide for fast .gitignore items"
-layout: layout-blog-article.html
-tags: [dev, git]
-title: "Gitignore with SublimeText"
 image-preview: /assets/posts/2015-09-26-Gitignore-with-Sublime/6-ignore.png
+layout: stf.com.html
+tags: [development, git]
+title: "Gitignore with SublimeText"
 ---
 
 
@@ -33,7 +32,7 @@ Such problem, very Google: I found a [post from  Marc Jenkins](https://plausible
 Basically Nettuts-Fetch is a download & paste tool: you fill its configuration file with name and url then you it will download the content from those urls and paste it directly in your editor.
 
 
-## Configure Nettus
+### Configure Nettus
 
 Soooo, open the default configuration
 ![1](/assets/posts/2015-09-26-Gitignore-with-Sublime/3-fetch-manage.png)
@@ -221,7 +220,7 @@ and add to `files`
 ```
 
 
-## Finally Use It
+### Finally Use It
 
 ![3](/assets/posts/2015-09-26-Gitignore-with-Sublime/6-ignore.png)
 

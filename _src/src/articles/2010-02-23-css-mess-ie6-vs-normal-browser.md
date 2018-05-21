@@ -1,6 +1,7 @@
 ---
 date: 2010-02-23T15:35:00+02:00
 description:
+image-preview: https://c1.staticflickr.com/5/4007/4365152223_a026981156_b.jpg
 layout: stf.com.html
 tags: [fun]
 title: "CSS Mess: IE6 vs Any Normal Browser"

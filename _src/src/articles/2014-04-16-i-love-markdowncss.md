@@ -1,11 +1,10 @@
 ---
-categories: [experiments, css]
 date: 2014-04-16T20:34:00+02:00
 description: "My personal response to markdown"
-layout: layout-blog-article.html
-tags: [css, markdown, experiments]
-title: "i-love-markdown.css"
 image-preview: /assets/posts/2014-04-16-i-love-markdowncss/i-love-markdown.jpg
+layout: stf.com.html
+tags: [experiments, markdown, css]
+title: "i-love-markdown.css"
 ---
 
 As developer I started with Markdown few years ago, when GitHub started trending.
@@ -18,12 +17,12 @@ It's a great too, it makes possible to write HTML knowing nothing about that.
 You can use a simple text editor, and most important, it can be "embedded" in whatever website, desktop app or mobile.
 Seriously, they should teach it in school.
 
-## so?
+### so?
 More than once I had to create css styles for the html result of markdowns, and you probably know I'm talking about the most important html tags: `<h[1-6]>`, `<p>`, `<ul|ol>`, `<blockquote>`, `<code>`, `<pre>`, `<em>`, `<a>` and few others.
 
 Then I thought I would be cool to create a css that would dress up everything like the plain markdown source.
 
-## check it out
+### check it out
 That's why I created [i-love-markdown.css](https://stealthefish.com/i-love-markdown.css/index.html).
 
 ![i-love-markdown.css homepage](/assets/posts/2014-04-16-i-love-markdowncss/i-love-markdown.jpg)

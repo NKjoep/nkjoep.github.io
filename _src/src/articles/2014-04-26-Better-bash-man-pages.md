@@ -1,11 +1,10 @@
 ---
-categories: [development]
 date: 2014-04-26T13:45:00+02:00
 description: "Colorize them all."
-layout: layout-blog-article.html
-tags: [osx, dev, environment]
-title: "Better bash man pages"
 image-preview: /assets/posts/2014-04-26-Better-bash-man-pages/colorized-man-pages.png
+layout: stf.com.html
+tags: [development, osx]
+title: "Better bash man pages"
 ---
 
 We, developers, live much of our time within a shell.

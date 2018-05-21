@@ -119,10 +119,10 @@ const websiteOptions = require('./package.json').metalsmith;
       collection: 'articles',
       destination: 'feed.xml'
     }))
-    .use(mp_feed({
-      collection: 'micro',
-      destination: 'micro.xml'
-    }))
+    // .use(mp_feed({
+    //   collection: 'micro',
+    //   destination: 'micro.xml'
+    // }))
     .build((err, files) => {
       if (err) { throw err; }
       compileSass(stylesSource, stylesDestination)

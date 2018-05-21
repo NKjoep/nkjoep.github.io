@@ -1,6 +1,7 @@
 ---
 date: 2010-01-18T13:12:00+02:00
 description:
+image-preview: /assets/posts/2010-01-18-bad-usability-calendar-2010/bad-usability-calendar-2010.png
 layout: stf.com.html
 tags: [development]
 title: "Bad Usability Calendar 2010 - Check it out!"

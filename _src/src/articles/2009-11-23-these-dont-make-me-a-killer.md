@@ -1,6 +1,7 @@
 ---
 date: 2009-11-23T18:21:00+02:00
 description:
+image-preview: /assets/posts/2009-11-23-these-dont-make-me-a-killer/5728473628952639_l.jpg
 layout: stf.com.html
 tags: [blog, fun]
 title: "These don't make me a killer"
