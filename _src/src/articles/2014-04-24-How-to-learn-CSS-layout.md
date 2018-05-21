@@ -1,6 +1,6 @@
 ---
 categories: [development]
-date: 2014-04-24
+date: 2014-04-24T22:01:30+02:00
 description: "Something every frontend developer should know"
 layout: layout-blog-article.html
 tags: [frontend, css, howto]

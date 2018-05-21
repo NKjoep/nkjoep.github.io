@@ -1,6 +1,6 @@
 ---
 categories: [development]
-date: 2015-09-26
+date: 2015-09-26T22:36:00+02:00
 description: "Guide for fast .gitignore items"
 layout: layout-blog-article.html
 tags: [dev, git]

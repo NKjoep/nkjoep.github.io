@@ -49,11 +49,11 @@
     <div class="col-main">
       <main class="col-main-content">
         <!-- article -->
-        {{#if isHomepage}}
+        {{#unless isHomepage}}
           <article class="article-post">
             <header>
-              <h2><a href="{{path}}">{{ title }}</a></h2>
-              <p class="date">{{#datefn ddate '<b>MMM D, YY</b> / H:MMa'}}{{/datefn}}</p>
+              <h2><a href="/{{path}}">{{ title }}</a></h2>
+              <p class="date">{{#datefn date '<b>MMM D, YY</b> / h:mma'}}{{/datefn}}</p>
             </header>
             {{{ contents }}}
             {{#unless tags}}
@@ -62,10 +62,34 @@
               </footer>
             {{/unless}}
           </article>
-        {{/if}}
+          <hr>
+          <p>
+            <a href="/">Back to the post list</a>
+          </p>
+        {{/unless}}
         <!-- article -->
+
+        {{#if isHomepage}}
+          {{#each articles}}
+            <article class="article-post">
+              <header>
+                <h2><a href="/{{path}}">{{ title }}</a></h2>
+                <p class="date">{{#datefn date '<b>MMM D, YY</b> / H:MMa'}}{{/datefn}}</p>
+              </header>
+              {{{ contents }}}
+              {{#unless tags}}
+                <footer><p><span class="muted">Filed under</span>&#32;//&#32;
+                  {{#each tags}}<span>{{this}}</span>{{/each}}</p>
+                </footer>
+              {{/unless}}
+            </article>
+          {{/each}}
+        {{/if}}
+
       </main>
     </div>
+
+    <!-- right col -->
     <aside class="col-aside">
       <section>
         <h3 class="side-title">
@@ -127,20 +151,20 @@
   <hr>
 
   <footer class="container-fluid text-center">
-      <p class="thin mute small mb-0">
-        &copy; {{ author.name }} {{ site.copyrightYear }}
-      </p>
-      <p class="thin mute small mt-0">
-        All the ideas are mine if not specified otherwise.
-      </p>
+    <p class="thin mute small mb-0">
+      &copy; {{ author.name }} {{ site.copyrightYear }}
+    </p>
+    <p class="thin mute small mt-0">
+      All the ideas are mine if not specified otherwise.
+    </p>
 
-      <div class="row">
-        {{#each site.images}}
-          <div class="col-2 site-image" style="background: linear-gradient(to bottom, {{color}} 55%, rgba(44, 98, 184, 0.5) 100%); background-image: url({{ url }}?rev={{../site.revision}});"
-            {{#if caption}}title="{{caption}}"{{/if}}></div>
-        {{/each}}
-      </div>
-    </footer>
+    <div class="row">
+      {{#each site.images}}
+        <div class="col-2 site-image" style="background: linear-gradient(to bottom, {{color}} 55%, rgba(44, 98, 184, 0.5) 100%); background-image: url({{ url }}?rev={{../site.revision}});"
+          {{#if caption}}title="{{caption}}"{{/if}}></div>
+      {{/each}}
+    </div>
+  </footer>
 </body>
 
 </html>

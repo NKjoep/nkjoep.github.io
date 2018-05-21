@@ -57,6 +57,9 @@ const websiteOptions = require('./package.json').metalsmith;
       datefnsOpts = formatOpts[1];
     }
     const date = datefns.format(dateObj, format, datefnsOpts);
+    if (/invalid/ig.test(date)) {
+      return '';
+    }
     return new Handlebars.SafeString(date);
   });
 

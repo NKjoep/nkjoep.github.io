@@ -4,7 +4,7 @@ title: Move my posts to Metalsmith
 description: How I dropped Jekyll in favour of Metalsmith. Seems <i>yesterday</i> I started with Jekyll.
 categories: []
 tags: [unwritten]
-date: 2018-03-02
+date: 2018-03-02T23:10:00+02:00
 ---
 
 I have started again the re-build of my website. It has always been a _Frankenstein_ rather than a finished job.

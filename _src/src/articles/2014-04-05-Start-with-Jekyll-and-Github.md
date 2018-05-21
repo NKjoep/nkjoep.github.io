@@ -1,6 +1,6 @@
 ---
 categories: [blog]
-date: 2014-04-05
+date: 2014-04-05T16:04:00+02:00
 description: "How I'm starting my blog (again)."
 layout: layout-blog-article.html
 tags: [jeykyll,github]

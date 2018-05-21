@@ -1,6 +1,6 @@
 ---
 categories: [development, git]
-date: 2014-04-09
+date: 2014-04-09T11:10:00+02:00
 description: "How to get a nice git prompt in no time."
 layout: layout-blog-article.html
 tags: [osx, dev, environment]

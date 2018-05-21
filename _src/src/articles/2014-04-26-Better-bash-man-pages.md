@@ -1,6 +1,6 @@
 ---
 categories: [development]
-date: 2014-04-26
+date: 2014-04-26T13:45:00+02:00
 description: "Colorize them all."
 layout: layout-blog-article.html
 tags: [osx, dev, environment]

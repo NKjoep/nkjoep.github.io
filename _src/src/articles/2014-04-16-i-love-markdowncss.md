@@ -1,6 +1,6 @@
 ---
 categories: [experiments, css]
-date: 2014-04-16
+date: 2014-04-16T20:34:00+02:00
 description: "My personal response to markdown"
 layout: layout-blog-article.html
 tags: [css, markdown, experiments]
