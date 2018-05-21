@@ -1,8 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); */
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-grid.min.css');
 $font_base_size: 13px;
 $color_main_fg: #0080C3;
 $color_main_bg: #fff;
@@ -12,346 +9,493 @@ $base_width: 60%;
 $base_height: 6rem;
 $color_white: white;
 $color_black: #444;
-html.layout-stf {
 
-    background: #f5f6f6;
-    background: -moz-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
-    background: -webkit-linear-gradient(-45deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
-    background: linear-gradient(135deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 );
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    box-sizing: border-box; // outline: 1px solid rgba(250, 100, 30, 0.8);
+}
 
-    font-size: $font_base_size;
+html {
     background: $color_white;
-    font-family: Helvetica, Arial, sans-serif;
+    font-size: $font_base_size;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
     color: $color_black;
-    *,
-    ::after,
-    ::before {
-        box-sizing: border-box;
-        box-sizing: border-box; // outline: 1px solid rgba(250, 100, 30, 0.8);
-    }
-    body {
-        font-size: 1.2rem;
-        margin: 0;
-        padding: 0;
-        & > header {
-            background-color: $color_main_fg;
-            box-shadow: 1px 2px 1px hsla(0, 0%, 0%, 0.1);
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            height: 45px;
-            justify-content: flex-end;
-            position: relative;
-            @media (min-width: $breakpoint_desktop) {
-                height: 60px;
-            }
-            h1 {
-                @extend .wrapper;
-                @extend .white;
-                z-index: 1;
-                max-width: 40% !important;
-                @media (max-width: $breakpoint_desktop) {
-                    font-size: 1.7rem;
-                    width: 100% !important;
-                    max-width: 66% !important;
-                    padding: 0 !important;
-                }
-                text-align: right;
-                line-height: 0.7em;
-                &:before, &:after {
-                    z-index: -1;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: calc((100% - 60%) / 2 );
-                    @media (min-width: $breakpoint_desktop) {
-                        width: calc((100% - 40%) / 2 );
-                    }
-                    height: 100%;
-                    content: "";
-                    background: url(/assets/img/header-pesci-cut.jpg) right center no-repeat;
-                }
-                &:after {
-                    transform: scaleX(-1);
-                    right: 0;
-                    left: unset;
-                }
-            }
-        }
-    }
+}
 
-    .columns {
-        width: 100%;
-        padding: 0 5vw;
-
-        & > .col-main {
-            margin-bottom: 2rem;
-            & > .col-main-content {}
-        }
-        & > .col-aside {}
+body {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    &>header {
+        background-color: $color_main_fg;
+        box-shadow: 1px 2px 1px hsla(0, 0%, 0%, 0.1);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 45px;
+        justify-content: flex-end;
+        position: relative;
         @media (min-width: $breakpoint_desktop) {
-            $side_size: 30%;
-            padding: 0 2vw;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            min-height: 200px;
-            & > .col-main {
-                align-self: flex-start;
-                display: flex;
-                flex-grow: 2;
-                justify-content: flex-end;
-                max-width: 100% - $side_size;
-                position: relative;
-                width: 100% - $side_size;
-                & > .col-main-content {
-                    width: 75%;
-                    position: relative;
+            height: 60px;
+        }
+        h1 {
+            @extend .wrapper;
+            @extend .white;
+            @extend .nowrap;
+            z-index: 1;
+            max-width: 40% !important;
+            @media (max-width: $breakpoint_desktop) {
+                font-size: 1.7rem;
+                width: 100% !important;
+                max-width: 66% !important;
+                padding: 0 !important;
+            }
+            text-align: right;
+            line-height: 0.7em;
+            &:before,
+            &:after {
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: calc((100% - 60%) / 2);
+                @media (min-width: $breakpoint_desktop) {
+                    width: calc((100% - 40%) / 2);
                 }
+                height: 100%;
+                content: "";
+                background: url(/assets/img/header-pesci-cut.jpg) right center no-repeat;
             }
-            & > .col-aside {
-                align-self: flex-start;
-                flex-grow: 1;
-                justify-content: flex-start;
-                max-width: $side_size;
-                width: $side_size;
-                padding-left: 2rem;
+            &:after {
+                transform: scaleX(-1);
+                right: 0;
+                left: unset;
             }
         }
     }
+}
 
-    .box {
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-        border-radius: 0.4rem;
+.columns {
+    width: 100%;
+    padding: 1rem 5vw;
+    &>.col-main {
+        margin-bottom: 2rem;
+        &>.col-main-content {}
     }
-    .wrapper {
-        width: 100%;
-        max-width: $base_width;
-        margin: 0 auto;
-        padding: 0 1rem;
+    &>.col-aside {
+        section {
+            margin-bottom: 2rem;
+        }
     }
-    .small {
-        font-size: 0.9rem;
+    @media (min-width: $breakpoint_desktop) {
+        $side_size: 30%;
+        padding: 1rem 2vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; // min-height: 200px;
+        &>.col-main {
+            align-self: flex-start;
+            display: flex;
+            flex-grow: 2;
+            justify-content: flex-end;
+            max-width: 100% - $side_size;
+            position: relative;
+            width: 100% - $side_size;
+            &>.col-main-content {
+                width: 75%;
+                position: relative;
+            }
+        }
+        &>.col-aside {
+            align-self: flex-start;
+            flex-grow: 1;
+            justify-content: flex-start;
+            max-width: $side_size;
+            width: $side_size;
+            padding-left: 2rem;
+        }
     }
+}
 
-    fieldset {
-        padding: 0;
-        margin: 0;
-    }
-    p,
+.box {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: $base_width;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.small {
+    font-size: 0.9rem;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+}
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+pre,
+form,
+    {
+    margin: 1.5rem 0;
+    line-height: 1.4167;
     ul,
-    ol,
-    dl,
-    table,
-    blockquote,
-    pre,
-    form,
-        {
-        margin: 1.5rem 0;
-        line-height: 1.4167;
-        ul,
-        ol {
+    ol {
+        margin-top: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+dl {
+    dt {
+        &:not(:first-child) {
             margin-top: 0;
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
     }
-    dl {
-        dt {
-            &:not(:first-child) {
-                margin-top: 0;
-            }
-        }
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        a {
-            &:link,
-            &:visited {
-                text-decoration: none;
-            }
-            &:hover,
-            &:active,
-            &:focus {
-                text-decoration: none;
-            }
-        }
-    }
-    h1, .h1 {
-        font-size: 2em;
-        small, .small {
-            font-size: 0.5em;
-        }
-    }
-    h2, .h2 {
-        font-size: 1.5em;
-        small, .small {
-            font-size: 0.5em;
-        }
-    }
-    h3, .h3 {
-        font-size: 1.17em;
-        small, .small {
-            font-size: 0.5em;
-        }
-    }
-    b,
-    .strong {
-        font-weight: 600;
-    }
-    .thin {
-        font-weight: lighter;
-        letter-spacing: 0.1rem;
-    }
-    .text-center {
-        text-align: center;
-    }
-    .caps {
-        text-transform: uppercase;
-        letter-spacing: -0.1rem;
-    }
-    .fancy {
-        text-transform: capitalize;
-        letter-spacing: -0.1rem;
-        font-weight: bold;
-        font-variant: small-caps;
-        font-style: italic;
-    }
-    .muted,
-    .mute {
-        color: $color_mute;
-    }
-    .white {
-        color: $color_white;
-    }
-    table {
-        width: 100%;
-        word-break: break-all;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
-    blockquote {
-        @extend .box;
-        border-left: 0.4rem solid #ddd;
-        padding-right: 0.5rem;
-        footer:last-child {
-            // border-top: 0.2rem solid #ddd;
-            padding-top: 0.5rem;
-        }
-    }
-    pre {
-        @extend .box;
-        border-top: 0.15rem solid #ddd;
-        border-right: 0.15rem solid #ddd;
-        border-bottom: 0.15rem solid #ddd;
-        border-left: 0.4rem solid #ddd;
-        overflow-x: scroll;
-        code {
-            display: block;
-            overflow: visible;
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-    }
-    cite {
-        &:before {
-            display: inline-block;
-            content: ' — ';
-            margin-right: 0.2em;
-        }
-    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     a {
         &:link,
         &:visited {
-            color: $color_main_fg;
-            &:not([href^="https://stealthefish.com"]) {}
+            text-decoration: none;
         }
         &:hover,
         &:active,
         &:focus {
-            color: $color_main_bg;
-            background: $color_main_fg;
             text-decoration: none;
-            outline-color: $color_main_fg;
-            outline-offset: 0px;
-            outline-style: solid;
-            outline-width: 1rem;
-            -moz-outline-radius: 4px;
-            outline-radius: 4px;
-           &:not([href^="https://stealthefish.com"]) {}
         }
     }
-    hr {
-        border: 0 none;
-        border-top: 1px solid #d7d8d9;
+}
+
+h1,
+.h1 {
+    font-size: 2em;
+    small,
+    .small {
+        font-size: 0.5em;
     }
-    .image {
-        @extend .box;
-        padding: 0;
+}
+
+h2,
+.h2 {
+    font-size: 1.5em;
+    small,
+    .small {
+        font-size: 0.5em;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 1.17em;
+    small,
+    .small {
+        font-size: 0.5em;
+    }
+}
+
+h5,
+.h5 {
+    font-size: 0.83em;
+    small,
+    .small {
+        font-size: 0.5em;
+    }
+}
+
+b,
+.strong {
+    font-weight: 600;
+}
+
+.thin {
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.caps {
+    text-transform: uppercase;
+    letter-spacing: -0.1rem;
+}
+
+.fancy {
+    text-transform: capitalize;
+    letter-spacing: -0.1rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-style: italic;
+}
+
+.muted,
+.mute {
+    color: $color_mute;
+}
+
+.white {
+    color: $color_white;
+}
+
+.text-highlight {
+    color: $color_main_fg;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.font-alternative {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 100%;
+    word-break: break-all;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+blockquote {
+    @extend .box;
+    border-left: 0.4rem solid #ddd;
+    padding-right: 0.5rem;
+    footer:last-child {
+        // border-top: 0.2rem solid #ddd;
+        padding-top: 0.5rem;
+    }
+}
+
+pre {
+    @extend .box;
+    border-top: 0.15rem solid #ddd;
+    border-right: 0.15rem solid #ddd;
+    border-bottom: 0.15rem solid #ddd;
+    border-left: 0.4rem solid #ddd;
+    overflow-x: scroll;
+    code {
         display: block;
+        overflow: visible;
         width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
     }
-    .date {
-        font-size: 1.1rem;
-        font-weight: 300;
-        &:before {
-            background-image: url(../ico/blog_freccia.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: top left;
-            content: ' ';
-            display: inline-block;
-            height: 10px;
-            width: 9px;
-            vertical-align: top;
-            margin-top: 0.3em;
-            margin-right: 0.6em;
+}
+
+cite {
+    &:before {
+        display: inline-block;
+        content: ' — ';
+        margin-right: 0.2em;
+    }
+}
+
+a {
+    &:link,
+    &:visited {
+        @extend .text-highlight;
+        &:not([href^="https://stealthefish.com"]) {}
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color_main_bg;
+        background: $color_main_fg;
+        text-decoration: none;
+        outline-color: $color_main_fg;
+        outline-offset: 0px;
+        outline-style: solid;
+        outline-width: 1rem;
+        -moz-outline-radius: 4px;
+        outline-radius: 4px;
+        &:not([href^="https://stealthefish.com"]) {}
+        &.muted {
+            background: $color_mute;
+            outline-color: $color_mute;
+            color: $color_black;
+        }
+    }
+}
+
+hr {
+    border: 0 none;
+}
+
+.image {
+    @extend .box;
+    padding: 0;
+    display: block;
+    width: 100%;
+}
+
+.date {
+    font-size: 1.1rem;
+    font-weight: 300;
+    &:before {
+        background-image: url(../ico/blog_freccia.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left;
+        content: ' ';
+        display: inline-block;
+        height: 10px;
+        width: 9px;
+        vertical-align: top;
+        margin-top: 0.3em;
+        margin-right: 0.6em;
+        @media (min-width: $breakpoint_desktop) {
+            margin-top: 0.4em;
+        }
+    }
+}
+
+.author {
+    font-size: 14px;
+    @extend .font-alternative;
+    .author-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 100%;
+        display: inline-block; // border: 1px solid $color_secondary;
+        height: 3em;
+        margin-right: 0.7em;
+        min-height: 3em;
+        min-width: 3em;
+        vertical-align: top;
+        width: 3em;
+    }
+}
+
+.article-post {
+    margin-bottom: 8rem;
+    header {
+        position: relative;
+        display: block;
+        .date {
+            margin: 0;
             @media (min-width: $breakpoint_desktop) {
-                margin-top: 0.4em;
+                top: 0.2rem;
+                left: -14rem;
+                position: absolute;
             }
         }
-    }
-    .article-post {
-        margin-bottom: 8rem;
-        header {
-            position: relative;
-            display: block;
-            .date {
-                margin: 0;
-                @media (min-width: $breakpoint_desktop) {
-                    top: -1.4rem;
-                    left: -14rem;
-                    position: absolute;
-                }
-            }
-        }
-        footer {
-            @extend .small;
-            p {
-                margin: 0.7rem 0;
-            }
+        &>:first-child {
+            margin-top: 0;
         }
     }
     footer {
-        .site-image {
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
-            background-size: cover !important;
-            flex: 0 0 14.28571% !important;
-            height: 0 !important;
-            max-width: 14.28571% !important;
-            overflow: hidden !important;
-            padding-top: 12.25% !important;
+        @extend .small;
+        p {
+            margin: 0.7rem 0;
         }
+    }
+}
+
+.nostyle {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        list-style-type: none;
+    }
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.simplelist {
+    @extend .side-text;
+    li {
+        margin-bottom: 0.2em;
+    }
+    a {
+        &:link,
+        &:visited {
+            @extend .muted;
+            text-decoration: none;
+            &.text-highlight,
+            .text-highlight {
+                @extend .text-highlight;
+            }
+        }
+    }
+}
+
+.side-title {
+    @extend .h5;
+    @extend .text-highlight;
+    @extend .caps;
+    letter-spacing: 0;
+    margin-bottom: 0.5em;
+}
+
+.side-text,
+p.side-text {
+    font-size: 1rem;
+    margin-bottom: 0.3em;
+}
+
+footer {
+    .site-image {
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        flex: 0 0 14.28571% !important;
+        height: 0 !important;
+        max-width: 14.28571% !important;
+        overflow: hidden !important;
+        padding-top: 12.25% !important;
+    }
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .col-2 {
+        width: 6%;
+        min-width: 6%;
+        max-width: 6%;
     }
 }

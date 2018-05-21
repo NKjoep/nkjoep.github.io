@@ -7,7 +7,6 @@ image-preview: /assets/ico/favicon.png
 tags: [blog, pippo]
 ---
 
-<article class="article-post">
   <p>Mollit minim minim et pariatur exercitation.</p>
   <p>Dolor dolore aliqua Lorem proident incididunt elit. Aute elit et aute aliqua enim velit reprehenderit ipsum ipsum elit.</p>
   <p>
@@ -22,11 +21,8 @@ tags: [blog, pippo]
       <img class="image" src="https://i.imgur.com/TkXY6lc.png" alt=" ">
     </a>
   </p>
-</article>
 
-
-<div id="wrapper">
-  <h1>This is the primary heading and there should only be one of these per page</h1>
+  <!-- <h1>This is the primary heading and there should only be one of these per page</h1> -->
   <p>A small paragraph to <em>emphasis</em> and show <strong>important</strong> bits.</p>
   <ul>
     <li>This is a list item</li>
@@ -546,10 +542,6 @@ tags: [blog, pippo]
         <label for="f6">Input Button:</label>
         <input type="button" id="f6" value="button text">
       </div>
-      <div>
-        <label>Button Elements: <span class="small quiet">Can use &lt;button&gt; tag or &lt;a class="button"&gt;</span></label>
-        <button class="button positive"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> Save</button> <a class="button" href="#"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/key.png" alt=""> Change Password</a> <a href="#" class="button negative"><img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> Cancel</a>
-      </div>
     </fieldset>
   </form>
 
@@ -562,16 +554,4 @@ tags: [blog, pippo]
   I am <a href="mailto:something">an email address</a> link, so readers know that I'm not a normal link.<br>
   I am <a href="http://yourwebsite.com">an internal link</a>. Change the stylesheet's "http://yourwebsite.com" to your domain name so I don't look like an external link.<br>
 
-  <br>
-
-  <p class="success">
-    <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/tick.png" alt=""> This is a paragraph with class="success" and <a href="http://www.something.com">a link</a>.
-  </p>
-  <p class="error">
-    <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/cross.png" alt=""> This is a paragraph with class="error" and <a href="http://www.something.com">a link</a>.
-  </p>
-  <p class="notice">
-    <img src="https://raw.githubusercontent.com/ericrasch/html-kitchen-sink/master/web/assets/img/icons/information.png" alt=""> This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.
-  </p>
-</div>
 

@@ -27,7 +27,25 @@
     </h1>
   </header>
 
-  <div class="columns">
+  <section class="columns author">
+    <div class="col-main m-0">
+        <div class="col-main-content">
+          <p class="m-0 p-0" style="
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+            line-height: 1;
+            align-items: center;
+          ">
+            <span class="author-image" style="background-image: url(https://www.gravatar.com/avatar/{{author.emailMd5}}?s=150);"></span>
+            <span class="author-text">{{ author.bio }}</span>
+          </p>
+        </div>
+    </div>
+    <div class="col-aside"></div>
+  </section>
+
+  <section class="columns">
     <div class="col-main">
       <main class="col-main-content">
         <!-- article -->
@@ -46,20 +64,45 @@
           </article>
         {{/if}}
         <!-- article -->
-
       </main>
     </div>
     <aside class="col-aside">
-      side col! <br>
-
       <section>
-        <h2 class="text-center text-light first-letter title-spacer">
+        <h3 class="side-title">
+          Connect
+        </h3>
+        <ul class="nostyle simplelist">
+            <li class="small">
+              <a href="https://twitter.com/{{author.twitter}}" title="Go to: twitter/@{{ author.twitter }}" class="text-color-normal">
+                <span class="fab fa-twitter"></span>
+                <span class="sr-only-">@{{ author.twitter }}</span>
+            </a></li>
+            <li class="small">
+              <a href="https://www.linkedin.com/in/{{author.linkedin}}" title="Go to: linkedin/{{ author.linkedin }}" class="text-color-normal">
+                <span class="fab fa-linkedin"></span>
+                <span class="sr-only-">{{ author.linkedin }}</span>
+            </a></li>
+            <li class="small">
+              <a href="https://github.com/{{author.github}}" title="Go to: github/{{ author.github }}" class="text-color-normal">
+                <span class="fab fa-github"></span>
+                <span class="sr-only-">{{ author.github }}</span>
+            </a></li>
+            <li class="small">
+              <a href="/feed.xml" title="Subscribe to this website's RSS feed" class="text-color-normal">
+                <span class="fas fa-rss"></span>
+                <span class="sr-only-">Feed rss</span>
+                <!-- <span class="text-highlight">(10)</span> -->
+              </a></li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="side-title">
           Projects
-        </h2>
-        <p class="text-light">Experiments, tests and other stuff I've worked on. Have a look.</p>
-        <ul class="article-list simple">
+        </h3>
+        <p class="m-0 p-0 small">Experiments, tests and other stuff I've worked on. Have a look.</p>
+        <ul class="nostyle simplelist">
           {{#each author.githubRepos}}
-          <li>
+          <li class="small">
               <a href="{{html_url}}" title="{{ description }}" class="d-inline-block text-color-normal text-underline">
                 <span class="d-flex flex-row-reverse justify-content-end align-items-center">
                   <span>
@@ -79,17 +122,15 @@
       </section>
 
     </aside>
-  </div>
+  </section>
 
   <hr>
 
   <footer class="container-fluid text-center">
-      <p class="thin mute small">
+      <p class="thin mute small mb-0">
         &copy; {{ author.name }} {{ site.copyrightYear }}
-        <span class="sr-only">.</span>
-        <br />
       </p>
-      <p class="thin mute small">
+      <p class="thin mute small mt-0">
         All the ideas are mine if not specified otherwise.
       </p>
 
