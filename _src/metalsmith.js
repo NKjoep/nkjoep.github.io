@@ -63,6 +63,14 @@ const websiteOptions = require('./package.json').metalsmith;
     return new Handlebars.SafeString(date);
   });
 
+  Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+      return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+  });
+
+  Handlebars.registerHelper('ifNotEquals', function(arg1, arg2, options) {
+      return (arg1 !== arg2) ? options.fn(this) : options.inverse(this);
+  });
+
 
   websiteOptions.metadata.site.lastBuildDate = new Date();
   websiteOptions.metadata.site.copyrightYear = new Date().getFullYear();
@@ -80,6 +88,7 @@ const websiteOptions = require('./package.json').metalsmith;
   const mp_metallic = require('metalsmith-metallic');
   const mp_open_graph = require('metalsmith-open-graph');
   const mp_permalinks = require('metalsmith-permalinks');
+  const mp_pagination = require('metalsmith-pagination');
 
 
   Metalsmith(__dirname)
@@ -99,6 +108,21 @@ const websiteOptions = require('./package.json').metalsmith;
         reverse: true
       }
     }))
+    .use(mp_pagination({
+      'articles': {
+        perPage: 2,
+        layout: 'stf.com.html',
+        first: 'index.html',
+        path: 'blog/archive/page/:num/index.html',
+        pageMetadata: {
+          // title: 'Archive',
+          isHomepage: true,
+          // title: 'It steals the fish',
+          // image-preview: '/assets/ico/favicon.png',
+          // tags: []
+        }
+      }
+    }))
     .use(mp_metallic())
     .use(mp_markdown())
     .use(mp_excerpts())
@@ -116,8 +140,8 @@ const websiteOptions = require('./package.json').metalsmith;
       image: 'image-preview'
     }))
     .use(mp_feed({
-      collection: 'articles',
-      destination: 'feed.xml'
+    collection: 'articles',
+       destination: 'feed.xml'
     }))
     // .use(mp_feed({
     //   collection: 'micro',

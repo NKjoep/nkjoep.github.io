@@ -74,8 +74,11 @@
         {{/unless}}
         <!-- article -->
 
-        {{#if isHomepage}}
-          {{#each articles}}
+
+        {{#if pagination}}
+          {{#if pagination.files}}
+          <!-- content -->
+          {{#each pagination.files}}
             <article class="article-post">
               <header>
                 <h2><a href="/{{path}}">{{ title }}</a></h2>
@@ -83,13 +86,56 @@
               </header>
               {{{ contents }}}
               {{#unless tags}}
-                <footer><p><span class="muted">Filed under</span>&#32;//&#32;
-                  {{#each tags}}<span>{{this}}</span>{{/each}}</p>
-                </footer>
+              <footer><p><span class="muted">Filed under</span>&#32;//&#32;
+                {{#each tags}}<span>{{this}}</span>{{/each}}</p>
+              </footer>
               {{/unless}}
             </article>
-          {{/each}}
+            {{/each}}
+
+            <!-- nav links-->
+            <nav class="article-pagination">
+              <ul>
+                <li>
+                  <a href="{{#if pagination.previous}}/{{pagination.previous.path}}{{/if}}"
+                    class="{{#unless pagination.previous}}active{{/unless}} btn">
+                    &LT;
+                  </a>
+                </li>
+                {{#each pagination.pages}}
+                    <li class="{{#ifEquals pagination.num ../pagination.num }}active-li{{/ifEquals}}"><a
+                      href="/{{path}}" class="{{#ifEquals pagination.num ../pagination.num }}active{{/ifEquals}}"
+                        >{{ pagination.num }}</a></li>
+                {{/each}}
+                <li>
+                  <a href="{{#if pagination.next}}/{{pagination.next.path}}{{/if}}"
+                    class="{{#unless pagination.next}}active{{/unless}} btn">
+                    &GT;
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          {{/if}}
         {{/if}}
+
+        <!--
+          {{#if isHomepage}}
+          {{#each articles}}
+          <article class="article-post">
+            <header>
+              <h2><a href="/{{path}}">{{ title }}</a></h2>
+              <p class="date" title="{{#datefn date 'dddd Do MMMM YYYY, HH:mm'}}{{/datefn}}"> <time datetime="{{date}}">{{#datefn date '<b>MMM D, \'YY</b> / H:MMa'}}{{/datefn}}</time> </p>
+            </header>
+            {{{ contents }}}
+            {{#unless tags}}
+            <footer><p><span class="muted">Filed under</span>&#32;//&#32;
+              {{#each tags}}<span>{{this}}</span>{{/each}}</p>
+            </footer>
+            {{/unless}}
+          </article>
+          {{/each}}
+          {{/if}}
+        -->
 
       </main>
     </div>

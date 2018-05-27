@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&subset=latin-ext');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
 
 $font_base_size: 13px;
@@ -21,7 +22,7 @@ $color_black: #444;
 html {
     background: $color_white;
     font-size: $font_base_size;
-    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-family: "Lato", "Raleway", Helvetica, Arial, sans-serif;
     color: $color_black;
 }
 
@@ -553,4 +554,58 @@ footer {
     clip: rect(0,0,0,0);
     white-space: nowrap;
     border: 0;
+}
+
+.article-pagination {
+    display: block;
+    margin: 3rem;
+    ul, li, a {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: block;
+    }
+    font-size: 1.5rem;
+    ul {
+        border-right: 0 none;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    li {
+        a {
+            $color_2: #1499e0;
+            padding: 0.45em 0.75em;
+            min-width: 2em;
+            text-align: center;
+            border: 1px solid #eee;
+            border-left-color: transparent;
+            border-radius: 0.2em;
+            &:link,
+            &:visited {
+                color: $color_black;
+                outline: none;
+                // color: $color_white;
+                text-decoration: none;
+            }
+            &.btn, &.active {
+                background: linear-gradient(45deg, $color_main_fg, $color_2);
+                color: $color_white;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+                color: $color_white;
+                text-decoration: none;
+                background: linear-gradient(45deg, $color_2, $color_main_fg);
+            }
+        }
+        &:first-child {
+            a {
+                border-left-color: #eee;
+            }
+        }
+    }
 }
