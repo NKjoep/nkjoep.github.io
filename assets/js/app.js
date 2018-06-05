@@ -6,25 +6,6 @@
 	}, false);
 
 	function init() {
-		track();
-		cookies();
+		// welcome aboard
 	}
-
-	function cookies(){
-		var hideCookieNotice = window.localStorage.getItem('c') === '1';
-		var cookieEl = document.querySelector('#cookie-ok');
-		if (hideCookieNotice) { return; }
-		cookieEl.style.display = '';
-		cookieEl.addEventListener('click', function () {
-			window.localStorage.setItem('c', '1');
-			cookieEl.remove();
-		});
-	}
-	function track() {
-		if (window.location.hostname === 'localhost') { console.log('skip tracking'); return; }
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-12754582-1');
-	}
-})();
+})

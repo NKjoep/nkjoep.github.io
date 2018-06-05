@@ -68,9 +68,8 @@ const websiteOptions = require('./package.json').metalsmith;
   });
 
   Handlebars.registerHelper('ifNotEquals', function(arg1, arg2, options) {
-      return (arg1 !== arg2) ? options.fn(this) : options.inverse(this);
+      return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
   });
-
 
   websiteOptions.metadata.site.lastBuildDate = new Date();
   websiteOptions.metadata.site.copyrightYear = new Date().getFullYear();
@@ -110,16 +109,12 @@ const websiteOptions = require('./package.json').metalsmith;
     }))
     .use(mp_pagination({
       'articles': {
-        perPage: 2,
+        perPage: 3,
         layout: 'stf.com.html',
         first: 'index.html',
         path: 'blog/archive/page/:num/index.html',
         pageMetadata: {
-          // title: 'Archive',
           isHomepage: true,
-          // title: 'It steals the fish',
-          // image-preview: '/assets/ico/favicon.png',
-          // tags: []
         }
       }
     }))
@@ -143,10 +138,10 @@ const websiteOptions = require('./package.json').metalsmith;
     collection: 'articles',
        destination: 'feed.xml'
     }))
-    // .use(mp_feed({
-    //   collection: 'micro',
-    //   destination: 'micro.xml'
-    // }))
+    .use(mp_feed({
+      collection: 'micro',
+      destination: 'micro.xml'
+    }))
     .build((err, files) => {
       if (err) { throw err; }
       compileSass(stylesSource, stylesDestination)

@@ -4,7 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{{ title }} | {{ site.title }}</title>
+  <title>
+      {{ title }}
+      {{#if pagination.num}}
+        {{#ifNotEquals pagination.num '1'}}
+          Archive Page {{pagination.num}}
+           |
+        {{/ifNotEquals}}
+      {{/if}}
+      {{#if title}} | {{/if}}
+      {{ site.title }}
+  </title>
   <link rel="alternate" type="application/rss+xml" title="RSS Feed | {{ site.title }}" href="/feed.xml">
 
   <script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -19,7 +29,6 @@
 </head>
 
 <body>
-
   <header>
     <h1>
         <a href="/">
@@ -68,12 +77,14 @@
             {{/unless}}
           </article>
           <hr>
-          <p>
-            <a href="/">Back to the post list</a>
+
+          <p class="article-pagination text-center">
+            <a href="/" class="active btn" style="display: inline-block;">&LT; Back to the post list</a>
           </p>
+
+          <hr>
         {{/unless}}
         <!-- article -->
-
 
         {{#if pagination}}
           {{#if pagination.files}}
@@ -82,7 +93,9 @@
             <article class="article-post">
               <header>
                 <h2><a href="/{{path}}">{{ title }}</a></h2>
-                <p class="date" title="{{#datefn date 'dddd Do MMMM YYYY, HH:mm'}}{{/datefn}}"> <time datetime="{{date}}">{{#datefn date '<b>MMM D, \'YY</b> / H:MMa'}}{{/datefn}}</time> </p>
+                <p class="date" title="{{#datefn date 'dddd Do MMMM YYYY, HH:mm'}}{{/datefn}}">
+                  <time datetime="{{date}}">{{#datefn date '<b>MMM D, \'YY</b> / H:MMa'}}{{/datefn}}</time>
+                </p>
               </header>
               {{{ contents }}}
               {{#unless tags}}
@@ -91,34 +104,40 @@
               </footer>
               {{/unless}}
             </article>
-            {{/each}}
+          {{/each}}
 
-            <!-- nav links-->
-            <nav class="article-pagination">
+            <!-- nav links -->
+            <nav class="article-pagination text-center">
               <ul>
                 <li>
+                  {{#if pagination.previous}}
                   <a href="{{#if pagination.previous}}/{{pagination.previous.path}}{{/if}}"
                     class="{{#unless pagination.previous}}active{{/unless}} btn">
-                    &LT;
+                      &LT; Newer Posts
                   </a>
+                  {{/if}}
                 </li>
-                {{#each pagination.pages}}
+                {{!--
+                  {{#each pagination.pages}}
                     <li class="{{#ifEquals pagination.num ../pagination.num }}active-li{{/ifEquals}}"><a
                       href="/{{path}}" class="{{#ifEquals pagination.num ../pagination.num }}active{{/ifEquals}}"
-                        >{{ pagination.num }}</a></li>
-                {{/each}}
+                      >{{ pagination.num }}</a></li>
+                  {{/each}}
+                --}}
+                {{#if pagination.next}}
                 <li>
                   <a href="{{#if pagination.next}}/{{pagination.next.path}}{{/if}}"
                     class="{{#unless pagination.next}}active{{/unless}} btn">
-                    &GT;
+                      Older Posts &GT;
                   </a>
                 </li>
+                {{/if}}
               </ul>
             </nav>
           {{/if}}
         {{/if}}
 
-        <!--
+        {{!-- <!--
           {{#if isHomepage}}
           {{#each articles}}
           <article class="article-post">
@@ -135,7 +154,7 @@
           </article>
           {{/each}}
           {{/if}}
-        -->
+        --> --}}
 
       </main>
     </div>
@@ -216,6 +235,7 @@
       {{/each}}
     </div>
   </footer>
+
 </body>
 
 </html>
