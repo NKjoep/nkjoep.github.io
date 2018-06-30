@@ -5,7 +5,7 @@
     "build": "node metalsmith.js",
     "debug": "node --nolazy --inspect-brk=9229 metalsmith.js",
     "update-github-repo-list": "mv repo.json repo.saved.json ; npm run build",
-    "start": "nodemon metalsmith.js & http-server ../",
+    "start": "nodemon metalsmith.js",
     "watch": "nodemon metalsmith.js"
   },
   "nodemonConfig": {
@@ -23,6 +23,7 @@
     ],
     "ext": "md,js,html,scss,json",
     "events": {
+      "start": "node_modules/.bin/http-server ../",
       "restart": "node tools/notifier.js 'Blog recompiled'"
     }
   },

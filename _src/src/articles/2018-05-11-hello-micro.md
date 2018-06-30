@@ -6,6 +6,7 @@ tags: [unwritten]
 title: Micro.blog
 ---
 
+
 Hello ~~World~~ Micro! I've registered my blog to [Micro.blog](https://micro.blog).
 
 
