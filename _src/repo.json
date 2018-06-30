@@ -1,5 +1,21 @@
 [
   {
+    "name": "qrcode-bookmarklet",
+    "private": false,
+    "html_url": "https://github.com/NKjoep/qrcode-bookmarklet",
+    "description": "A bookmarklet that generates a qrcode containing the current URL.",
+    "fork": false,
+    "created_at": "2018-06-30T14:02:37Z",
+    "updated_at": "2018-06-30T17:40:03Z",
+    "homepage": "https://stealthefish.com/qrcode-bookmarklet/",
+    "stargazers_count": 1,
+    "language": "JavaScript",
+    "forks_count": 0,
+    "archived": false,
+    "watchers": 1,
+    "pushed_at": "2018-06-30T14:56:09Z"
+  },
+  {
     "name": "microsmith",
     "private": false,
     "html_url": "https://github.com/NKjoep/microsmith",
@@ -58,7 +74,7 @@
     "homepage": "nkjoep.github.io/i-love-markdown.css/",
     "stargazers_count": 30,
     "language": "HTML",
-    "forks_count": 2,
+    "forks_count": 3,
     "archived": false,
     "watchers": 30,
     "pushed_at": "2017-11-17T10:11:07Z"
