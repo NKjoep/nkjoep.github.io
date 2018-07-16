@@ -4,7 +4,6 @@
 *,
 ::after,
 ::before {
-  box-sizing: border-box;
   box-sizing: border-box; }
 
 .nostyle {
@@ -363,16 +362,9 @@ cite:before {
 a:hover, a:active, a:focus {
   color: #fff;
   background: #0080C3;
-  text-decoration: none;
-  outline-color: #0080C3;
-  outline-offset: 0px;
-  outline-style: solid;
-  outline-width: 1rem;
-  -moz-outline-radius: 4px;
-  outline-radius: 4px; }
+  text-decoration: underline; }
   a:hover.muted, .simplelist a:hover:link, .simplelist a:hover:visited, a:active.muted, .simplelist a:active:link, .simplelist a:active:visited, a:focus.muted, .simplelist a:focus:link, .simplelist a:focus:visited {
     background: #aaa;
-    outline-color: #aaa;
     color: #444; }
 
 .image, .article-post img {
@@ -458,6 +450,11 @@ a:hover, a:active, a:focus {
 .simplelist a:link, .simplelist a:visited {
   text-decoration: none; }
 
+.simplelist a:hover, .simplelist a:hover:link, .simplelist a:active, .simplelist a:focus {
+  background: none !important;
+  text-decoration: underline;
+  background-attachment: none; }
+
 .side-title {
   letter-spacing: 0;
   margin-bottom: 0.5em; }
@@ -521,13 +518,11 @@ footer {
     border-radius: 0.2em; }
     .article-pagination a:link, .article-pagination a:visited {
       color: #444;
-      outline: none;
-      text-decoration: none; }
+      text-decoration: underline; }
     .article-pagination a.btn, .article-pagination a.active {
       background: linear-gradient(45deg, #0080C3, #1499e0);
       color: white; }
     .article-pagination a:hover, .article-pagination a:active, .article-pagination a:focus {
-      outline: none;
       color: white;
-      text-decoration: none;
+      text-decoration: underline;
       background: linear-gradient(45deg, #1499e0, #0080C3); }

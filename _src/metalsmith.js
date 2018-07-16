@@ -63,12 +63,12 @@ const websiteOptions = require('./package.json').metalsmith;
     return new Handlebars.SafeString(date);
   });
 
-  Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
-      return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+  Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
   });
 
-  Handlebars.registerHelper('ifNotEquals', function(arg1, arg2, options) {
-      return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
+  Handlebars.registerHelper('ifNotEquals', function (arg1, arg2, options) {
+    return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
   });
 
   websiteOptions.metadata.site.lastBuildDate = new Date();
@@ -135,8 +135,8 @@ const websiteOptions = require('./package.json').metalsmith;
       image: 'image-preview'
     }))
     .use(mp_feed({
-    collection: 'articles',
-       destination: 'feed.xml'
+      collection: 'articles',
+      destination: 'feed.xml'
     }))
     .use(mp_feed({
       collection: 'micro',

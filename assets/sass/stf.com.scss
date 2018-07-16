@@ -225,17 +225,11 @@ a {
     &:focus {
         color: $color_main_bg;
         background: $color_main_fg;
-        text-decoration: none;
-        outline-color: $color_main_fg;
-        outline-offset: 0px;
-        outline-style: solid;
-        outline-width: 1rem;
-        -moz-outline-radius: 4px;
-        outline-radius: 4px;
+        text-decoration: underline;
         &:not([href^="https://stealthefish.com"]) {}
         &.muted {
             background: $color_mute;
-            outline-color: $color_mute;
+            // outline-color: $color_mute;
             color: $color_black;
         }
     }
@@ -356,6 +350,14 @@ a {
                 @extend .text-highlight;
             }
         }
+        &:hover,
+        &:hover:link,
+        &:active,
+        &:focus {
+            background: none !important;
+            text-decoration: underline;
+            background-attachment: none;
+        }
     }
 }
 
@@ -439,9 +441,10 @@ footer {
         &:link,
         &:visited {
             color: $color_black;
-            outline: none;
+            text-decoration: underline;
+            // outline: none;
             // color: $color_white;
-            text-decoration: none;
+            // text-decoration: none;
         }
         &.btn, &.active {
             background: linear-gradient(45deg, $color_main_fg, $color_2);
@@ -450,9 +453,9 @@ footer {
         &:hover,
         &:active,
         &:focus {
-            outline: none;
+            // outline: none;
             color: $color_white;
-            text-decoration: none;
+            text-decoration: underline;
             background: linear-gradient(45deg, $color_2, $color_main_fg);
         }
     }
