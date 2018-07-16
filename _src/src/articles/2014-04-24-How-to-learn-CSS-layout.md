@@ -1,11 +1,10 @@
 ---
-categories: [development]
-date: 2014-04-24
+date: 2014-04-24T22:01:30+02:00
 description: "Something every frontend developer should know"
-layout: layout-blog-article.html
-tags: [frontend, css, howto]
-title: "How to learn CSS layout"
 image-preview: /assets/posts/2014-04-24-How-to-learn-CSS-layout/learn-layout.com.png
+layout: layout-blog-article.html
+tags: [development, css]
+title: "How to learn CSS layout"
 ---
 
 You surely need to check this website out: [learnlayout.com](http://learnlayout.com)

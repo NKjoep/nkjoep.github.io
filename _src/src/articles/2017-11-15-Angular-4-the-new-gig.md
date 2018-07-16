@@ -1,11 +1,10 @@
 ---
-categories: [development]
-date: 2017-11-15
+date: 2017-11-15T11:10:05+02:00
 description: "I've worked on something and wrote about it."
-layout: layout-blog-article.html
-tags: [blog]
-title: "Angular 4 the new gig"
 image-preview: /assets/posts/2017-11-15-Angular-4-the-new-gig/angular-4-the-new-gig.jpg
+layout: layout-blog-article.html
+tags: [development]
+title: "Angular 4 the new gig"
 ---
 
 
