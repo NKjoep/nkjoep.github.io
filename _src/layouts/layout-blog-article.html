@@ -4,11 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{{ title }} | {{ site.title }}</title>
+  <title>
+    {{ title }}
+    {{#if pagination.num}}
+      {{#ifNotEquals pagination.num '1'}}
+        Archive Page {{pagination.num}}
+         |
+      {{/ifNotEquals}}
+    {{/if}}
+    {{#if title}} | {{/if}}
+    {{ site.title }}
+  </title>
   <link rel="alternate" type="application/rss+xml" title="RSS Feed | {{ site.title }}" href="/feed.xml">
 
   <script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <script async src="/assets/js/app.js?rev={{site.revision}}"></script>
+  <!-- <script async src="/assets/js/app.js?rev={{site.revision}}"></script> -->
 
   <link rel="icon" href="/assets/ico/favicon.ico?rev={{site.revision}}">
   <link rel="apple-touch-icon" href="/assets/ico/favicon.png?rev={{site.revision}}">
@@ -59,7 +69,7 @@
       </p>
       <h1 style="font-size: 4vw;">
         <span class="sr-only">
-          {{ site.title }}<br>
+          {{ site.title }} &ndash;<br>
         </span>
         {{ author.bio }}
       </h1>
@@ -73,56 +83,36 @@
     <main>
       <h1 class="text-color-main">{{ title }}</h1>
       <p class="text-light first-letter">{{#datefn date 'MMMM Do, YYYY' }}{{/datefn}}</p>
-      <h2>{{{ description }}}</h2>
+      {{#if description}}
+        <h2>{{{ description }}}</h2>
+      {{/if}}
+
       {{{ contents }}}
+
+      <hr class="sr-only">
+      <p class="pagination" style="
+        padding: 2rem 0 0 0 !important;
+        border-top: 1px solid #d7d8d9;
+        margin: 2rem 0 0 0 !important;
+      ">
+        <a href="/" class="text-bold">&LT;&ensp;Back to the post list</a>
+      </p>
     </main>
-    <hr>
   {{/unless}}
 
   <aside>
-    <h2 class="text-center text-light first-letter title-spacer">
-      Latest from the blog
-    </h2>
-    <ul class="article-list">
-      {{#each articles}}
-      <li>
-        <a href="/{{path}}" class="d-inline-block">
-          <h3 class="d-flex flex-row-reverse justify-content-end align-items-start title-entry">
-            <span>
-              {{title}}<br>
-              {{#if description}}<small>{{{description}}}</small>{{/if}}
-            </span>
-            <span class="sr-only">&mdash;</span>
-            <time class="nolink d-flex flex-column justy-content-center align-items-center"
-                  datetime="{{#datefn date}}{{/datefn}}" title="{{#datefn date 'MMMM Do YYYY' }}{{/datefn}}">
-              <span class="DD text-center">
-                {{#datefn date 'DD'}}{{/datefn}}
-              </span>
-              <span class="MMM text-center">
-                {{#datefn date 'MMM'}}{{/datefn}}
-              </span>
-              <span class="sr-only">
-                {{#datefn date 'YYYY'}}{{/datefn}}
-              </span>
-            </time>
-          </h3>
-        </a>
-      </li>
-      {{/each}}
-    </ul>
-
-    {{#if unwritten}}
+    {{#if pagination}}{{#if pagination.files}}
       <h2 class="text-center text-light first-letter title-spacer">
-        Unwritten
+        Latest from the blog
       </h2>
-      <p class="text-light">Topics I had in mind recently and never the time nor the courage to write a full post about.</p>
       <ul class="article-list">
-        {{#each unwritten}}
-        <li>
+        {{#each pagination.files}}
+          <li>
             <a href="/{{path}}" class="d-inline-block">
-              <h3 class="d-flex flex-row-reverse justify-content-end align-items-center title-entry">
+              <h3 class="d-flex flex-row-reverse justify-content-end align-items-start title-entry">
                 <span>
-                  {{title}}
+                  {{title}}<br>
+                  {{#if description}}<small>{{{description}}}</small>{{/if}}
                 </span>
                 <span class="sr-only">&mdash;</span>
                 <time class="nolink d-flex flex-column justy-content-center align-items-center"
@@ -142,7 +132,38 @@
           </li>
         {{/each}}
       </ul>
-    {{/if}}
+
+      <!-- nav links -->
+      <div class="pagination">
+        <ul class="m-0 p-0 text-center" style="display: block;">
+          <li>
+            {{#if pagination.previous}}
+            <a href="{{#if pagination.previous}}/{{pagination.previous.path}}{{/if}}"
+              class="{{#unless pagination.previous}}active{{/unless}} btn">
+                &LT; Newer Posts
+            </a>
+            {{/if}}
+          </li>
+          {{!--
+            {{#each pagination.pages}}
+            <li
+               class="{{#ifEquals pagination.num ../pagination.num }}active-li{{/ifEquals}}"><a
+                href="/{{path}}" class="{{#ifEquals pagination.num ../pagination.num }}active{{/ifEquals}}"
+                >{{ pagination.num }}</a></li>
+            {{/each}}
+          --}}
+          {{#if pagination.next}}
+          <li>
+            <a href="{{#if pagination.next}}/{{pagination.next.path}}{{/if}}"
+              class="{{#unless pagination.next}}active{{/unless}} btn">
+                Older Posts &GT;
+            </a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+      <hr class="sr-only">
+    {{/if}}{{/if}}
 
     <h2 class="text-center text-light first-letter title-spacer">
       Projects

@@ -58,14 +58,25 @@ const websiteOptions = require('./package.json').metalsmith;
       datefnsOpts = formatOpts[1];
     }
     const date = datefns.format(dateObj, format, datefnsOpts);
+    if (/invalid/ig.test(date)) {
+      return '';
+    }
     return new Handlebars.SafeString(date);
   });
 
+  Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+  });
+
+  Handlebars.registerHelper('ifNotEquals', function (arg1, arg2, options) {
+    return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
+  });
 
   websiteOptions.metadata.site.lastBuildDate = new Date();
   websiteOptions.metadata.site.copyrightYear = new Date().getFullYear();
   websiteOptions.metadata.site.lastBuild = new Date().toISOString();
   websiteOptions.metadata.author.githubRepos = await downloadRepo(websiteOptions.metadata.author.github);
+  websiteOptions.metadata.author.emailMd5 = require('crypto').createHash('md5').update(websiteOptions.metadata.author.email).digest("hex");
   websiteOptions.metadata.site.revision = getRevision();
 
   const Metalsmith = require('metalsmith');
@@ -77,6 +88,7 @@ const websiteOptions = require('./package.json').metalsmith;
   const mp_metallic = require('metalsmith-metallic');
   const mp_open_graph = require('metalsmith-open-graph');
   const mp_permalinks = require('metalsmith-permalinks');
+  const mp_pagination = require('metalsmith-pagination');
 
 
   Metalsmith(__dirname)
@@ -96,12 +108,23 @@ const websiteOptions = require('./package.json').metalsmith;
         reverse: true
       }
     }))
+    .use(mp_pagination({
+      'articles': {
+        perPage: 8,
+        layout: 'layout-blog-article.html',
+        first: 'index.html',
+        path: 'blog/archive/page/:num/index.html',
+        pageMetadata: {
+          isHomepage: true,
+        }
+      }
+    }))
     .use(mp_metallic())
     .use(mp_markdown())
     .use(mp_excerpts())
     .use(mp_permalinks({
       pattern: 'blog/:date/:title',
-      date: 'YYYY/MM/DD'
+      date: 'YYYY'
     }))
     .use(mp_layouts({
       engine: 'handlebars'
@@ -118,10 +141,8 @@ const websiteOptions = require('./package.json').metalsmith;
       preprocess: (file) => {
           // console.log(file);
           const img = file['image-preview'] ? `<p><img src="${websiteOptions.metadata.site.url}${file['image-preview']}"></p>` : '';
-          return {
-            ...file,
-            description: `${file.excerpt} ${img}`
-          };
+          file.description = `${file.excerpt} ${img}`;
+          return file;
       }
     }))
     .use(mp_feed({

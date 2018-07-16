@@ -15,11 +15,11 @@
   cursor: pointer; }
 
 .m-0, nav .nav, nav .nav ul,
-nav .nav li, .article-list, .article-list:not(.simple) li, .layout-blog main + hr {
+nav .nav li, .article-list, .article-list:not(.simple) li, .layout-blog main + hr, .pagination ul {
   margin: 0; }
 
 .p-0, nav .nav ul,
-nav .nav li, .article-list, .article-list:not(.simple) li, .layout-blog main + hr {
+nav .nav li, .article-list, .article-list:not(.simple) li, .layout-blog main + hr, .pagination ul {
   padding: 0; }
 
 .text-color-normal, a.text-color-normal:link, a.text-color-normal:visited, a.text-color-normal:hover, a.text-color-normal:active, a.text-color-normal:focus, .title-entry small {
@@ -31,7 +31,7 @@ nav .nav li, .article-list, .article-list:not(.simple) li, .layout-blog main + h
 .text-color-light, .layout-blog main h3 {
   color: #b3b3b3; }
 
-.text-center, header {
+.text-center, header, .pagination, .pagination ul {
   text-align: center; }
 
 .text-normal, .title-entry {
@@ -105,6 +105,23 @@ a.text-underline,
   .mybtn:active {
     position: relative;
     top: 1px; }
+
+.videoWrapper {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+  .videoWrapper iframe, .videoWrapper object, .videoWrapper embed, .videoWrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.twitter-tweet.twitter-tweet-rendered {
+  margin: 4rem auto !important; }
 
 * {
   box-sizing: border-box; }
@@ -303,3 +320,10 @@ main p, main ul {
   -ms-flex: 0 0 14.28571% !important;
   flex: 0 0 14.28571% !important;
   max-width: 14.28571% !important; }
+
+.pagination {
+  display: block;
+  position: relative; }
+  .pagination ul li {
+    display: inline;
+    margin-right: 0.5rem; }

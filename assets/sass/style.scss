@@ -294,3 +294,19 @@ main {
     flex: 0 0 14.28571% !important;
     max-width: 14.28571% !important;
 }
+
+
+.pagination {
+    display: block;
+    position: relative;
+    @extend .text-center;
+    ul {
+        @extend .m-0;
+        @extend .p-0;
+        @extend .text-center;
+        li {
+            display: inline;
+            margin-right: 0.5rem;
+        }
+    }
+}

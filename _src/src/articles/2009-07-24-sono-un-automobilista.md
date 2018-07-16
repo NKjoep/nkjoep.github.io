@@ -1,6 +1,6 @@
 ---
 date: 2009-07-24T09:11:00+02:00
-description: Sono un automobilista
+description:
 layout: layout-blog-article.html
 tags: [internet, fun]
 title: "Sono un automobilista"
