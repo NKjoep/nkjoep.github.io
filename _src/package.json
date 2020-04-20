@@ -137,7 +137,7 @@
     "metalsmith-permalinks": "^0.5.0",
     "ncp": "^2.0.0",
     "node-notifier": "5.2.1",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.13.1",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
   },
