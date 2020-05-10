@@ -1,6 +1,7 @@
 .DS_Store
-Gemfile.lock
-.git
+Thumbs.db
+db.json
+*.log
 node_modules/
-package-lock.json
-/_src/dist
+public/
+.deploy*/
