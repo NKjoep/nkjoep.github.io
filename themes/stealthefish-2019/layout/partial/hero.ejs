@@ -5,6 +5,10 @@
 <% if (is_home()) { %>
   <%- markdown(theme.hero_content) %>
 <% } else {%>
-  <%- markdown(theme.hero_content).replace(/h1>/g, 'header>') %>
+  <%- markdown(theme.hero_content)
+        .replace('<h1 ', '<header ')
+        .replace('</h1>', '</header>')
+  %>
 <% }%>
 </article>
+<hr>

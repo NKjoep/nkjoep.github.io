@@ -29,6 +29,7 @@ html {
   --font-base: 1rem;
   --font-lg: 1.6rem;
   --font-xl: 2rem;
+  --space-container: 700px;
   --space-xs: 0.5rem;
   --space-base: 1rem;
   --space-lg: 3rem;
@@ -145,7 +146,7 @@ a:hover {
 }
 
 .stealthefish {
-  max-width: 700px;
+  max-width: var(--space-container);
   margin: 0 auto;
   padding: 0 var(--space-base);
 }
@@ -333,7 +334,6 @@ a:hover {
 .stealthefish__postlist>nav>span {
   margin-right: var(--space-base);
   text-decoration: none;
-  /* font-size: 9px; */
 }
 
 .stealthefish__postlist>nav>.page-number {
@@ -413,7 +413,9 @@ a:hover {
   margin-top: var(--space-lg);
 }
 
-.stealthefish__page__header {}
+.stealthefish__page__header {
+    margin-bottom: var(--space-lg);
+}
 
 .stealthefish__page__title {
   color: var(--color-blue);
@@ -557,6 +559,28 @@ a:hover {
   /* font-weight: 700; */
   /* font-size: var(--font-base); */
   color: var(--color-blue);
+}
+
+.stealthefish__page__content {
+  line-height: 1.5;
+}
+
+.stealthefish__page__content li+li {
+  margin-top: var(--space-base);
+}
+
+.stealthefish__page__content code[class*="language-"],
+.stealthefish__page__content pre[class*="language-"] {
+  font-size: 0.8rem;
+}
+
+.stealthefish__page__content blockquote {
+  background: var(--color-silver);
+  border-left: var(--space-xs) solid var(--color-silver-dark);
+  margin: 0 auto;
+  padding: var(--space-xs) var(--space-base);
+  width: 90%;
+  border-radius: 0.2rem;
 }
 
 .stealthefish__page__content .video-container {

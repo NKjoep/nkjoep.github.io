@@ -17,7 +17,12 @@
         <time date-time="<%- page.updated.toISOString() %>"><%- sf_post_date(page.updated) -%></time>)
       </p>
     <% } %>
+
 </header>
+
+<% if (page.description) { %>
+<h2><%- page.description %></h2>
+<% } %>
 
 <section class="stealthefish__page__content">
   <%- page.content .replace(/\<img /g, '<img loading="lazy"') %>
