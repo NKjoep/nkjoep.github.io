@@ -1,0 +1,13 @@
+<header class="stealthefish__header">
+    <%-
+      theme.menu.map((menuItem, index) => {
+        return `${
+          index == 1 ? `<nav class="stealthefish__header-nav">` : ''}
+          ${!!menuItem.url ? `<a href="${url_for(menuItem.url)}">` : ''}${
+              !!menuItem.ico ? `<span class="screen-reader-only">${menuItem.text}</span><img role="presentation" src="${url_for(menuItem.ico)}" alt="" />`
+              : menuItem.text}${
+                !!menuItem.url ? `</a>` : ''}${
+          (index+1) == theme.menu.length ? `</nav>`:''}`;
+      }).join('').trim()
+    %>
+  </header>

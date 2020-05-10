@@ -1,0 +1,108 @@
+debug: false
+
+# used in post list
+date_format:
+  post: MMM DDD, YYYY # May 13th, 2018
+  post_list_line1: DD
+  post_list_line2: MMM
+
+# rss generator plugin - npm install hexo-generator-feed --save
+rss: /atom.xml
+
+# menu valid properties: url, text, ico
+##
+menu:
+  - home:
+    url: /
+    text: Andrea D. Blog
+  - twitter:
+    url: https://twitter.com/nkjoep
+    text: Twitter
+    ico: img/tw.svg
+  - linkedin:
+    url: https://www.linkedin.com/in/andreadessi/
+    text: LinkedIn
+    ico: img/li.svg
+  - github:
+    url: https://github.com/nkjoep
+    text: GitHub
+    ico: img/gh.svg
+  - rss:
+    url: /atom.xml
+    text: rss
+    ico: img/rss.svg
+
+author:
+  email: nkjoep@gmail.com
+  twitter: nkjoep
+  github: nkjoep
+  linkedin: https://www.linkedin.com/in/andreadessi/
+  gravatar: https://www.gravatar.com/avatar/cc669cccf3cf6118c1efac45de802710?s=150
+
+hero_content: |
+  # Andrea, man, html operator, css dispeller, js runner, web lover.
+
+  <blockquote cite="https://www.youtube.com/watch?v=2Zg4ubL4efw&amp;list=PLkB-BAAgmaG0HVzO9YX42S_MRfWvCmIKS">
+    ...and definitely It steals the fish.
+  </blockquote>
+
+footer:
+  images:
+    - color: '#208a47'
+      path: img/footer/img1.jpg
+      title: Who doesn't like green screens?
+    - color: '#83828b'
+      path: img/footer/img2.jpg
+      title: Frozen Berlin 2018
+    - color: '#695641'
+      path: img/footer/img3.jpg
+      title: Favorite office spot
+    - color: '#8b8d8c'
+      path: img/footer/img4.jpg
+      title: Footsteps
+    - color: '#476580'
+      path: img/footer/img5.jpg
+      title: End of the season 2017
+    - color: '#7a879f'
+      path: img/footer/img6.jpg
+      title: Fernsehturm
+    - color: '#786f4a'
+      path: img/footer/img7.jpg
+      title: Got used to it
+    - color: '#717473'
+      path: img/footer/img8.jpg
+      title: And that was Easter
+    - color: '#717667'
+      path: img/footer/img9.jpg
+      title: Kings
+    - color: '#676e71'
+      path: img/footer/img10.jpg
+      title: My city!
+    - color: '#647068'
+      path: img/footer/img11.jpg
+      title: Try not to sneeze
+    - color: '#0a0802'
+      path: img/footer/img12.jpg
+      title: Pop it
+    - color: '#625856'
+      path: img/footer/img13.jpg
+      title: &lt;3
+    - color: '#838a7d'
+      path: img/footer/img14.jpg
+      title: Yes, that's a frog. 🐸
+
+marked:
+  headerIds: false
+
+theme_colors:
+  brand: '#2c62b8'
+
+
+highlight:
+  enable: false
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'material-light'
+  line_number: true    # default false
+  #  custom_css: 'path/to/your/custom.css'     # optional

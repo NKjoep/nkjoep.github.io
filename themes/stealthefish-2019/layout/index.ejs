@@ -1,0 +1,37 @@
+<%- partial('partial/hero') %>
+
+<article class="stealthefish__postlist">
+  <h2>Latest from the blog</h2>
+
+  <%-
+    `<ul>${page.posts.map((post) => {
+      return `<li>
+        <a class="stealthefish__postlist__item" href="${url_for(post.path)}">
+          <div class="stealthefish__postlist__item-text">
+            <h3>${post.title}</h3>
+            ${
+              post.description || post.excerpt ? `<p>${strip_html(post.description || post.excerpt)}</p>` : ''
+            }
+          </div>
+
+          <time datetime="${post.date.toISOString()}" class="stealthefish__postlist__item-time">
+            <span class="stealthefish__postlist__item-time-1">
+              ${post.date.format(theme.date_format.post_list_line1)}
+            </span>
+            <span class="stealthefish__postlist__item-time-2">
+              ${post.date.format(theme.date_format.post_list_line2)}
+            </span>
+          </time>
+
+        </a>
+      </li>`
+    }).join('\n')}</ul>`
+  %>
+
+  <nav aria-label="Articles Pagination Navigation">
+    <%- paginator({
+      prev_text: 'Newer posts',
+      next_text: 'Older posts',
+    }) %>
+  </nav>
+</article>

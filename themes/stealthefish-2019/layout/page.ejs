@@ -1,0 +1,46 @@
+<%- partial('partial/hero') %>
+
+<article class="stealthefish__page">
+  <header class="stealthefish__page__header">
+    <h1 class="stealthefish__page__title"><%- page.title %></h1>
+
+    <p class="stealthefish__page__date">
+      <span class="screen-reader-only">Published</span>
+      <time date-time="<%- page.date.toISOString() %>">
+        <%- sf_post_date(page.date) -%>
+      </time>
+    </p>
+
+    <% if (page.updated) { %>
+      <p class="stealthefish__page__date-updated">
+        (Updated:&#32;
+        <time date-time="<%- page.updated.toISOString() %>"><%- sf_post_date(page.updated) -%></time>)
+      </p>
+    <% } %>
+</header>
+
+<section class="stealthefish__page__content">
+  <%- page.content .replace(/\<img /g, '<img loading="lazy"') %>
+</section>
+
+
+<% if (page.photos && page.photos.length){ var gid = `gallery-${page._id}` %>
+  <section class="stealthefish__page__gallery" id="<%= gid %>">
+      <% page.photos.forEach((photo, i) => {
+        var caption = (page.captions && page.captions[i]) || `Gallery Image #${i+1}`;
+        var url = photo;
+      %>
+        <a href="<%- url_for(url) %>" title="<%= caption %>">
+          <img src="<%- url_for(url) %>" loading="lazy" alt="<%= caption %>">
+        </a>
+      <% }) %>
+  </section>
+  <script>
+    new SimpleLightbox({elements: '#<%= gid %> a'});
+  </script>
+<% } %>
+
+  <footer class="stealthefish__page__footer">
+    <a class="button left" href="/">Back to the post list</a>
+  </footer>
+</article>
