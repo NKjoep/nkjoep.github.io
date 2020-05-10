@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%- !!page.title ? `${page.title + ' | ' }` : '' %><%- theme.title %></title>
+    <title><%- `${page && page.current && page.current > 1 ? `Archive Page ${page.current} | `: ''}` %><%- !!page.title ? `${page.title + ' | ' }` : '' %><%- theme.title %></title>
     <link rel="stylesheet" href="<%- url_for('css/css.css') %>">
     <%- theme.rss ? `<link rel="alternate" href="${ url_for(theme.rss) }" title="${config.title}" type="application/atom+xml">` : '' %>
     <%- theme.favicon ? `<link rel="icon" href="${theme.favicon}">` : '' %>
