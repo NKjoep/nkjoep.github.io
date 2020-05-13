@@ -1,20 +1,24 @@
-# on: push
-# name: Deploy to GitHub Pages
-# jobs:
-#   hexo-deploy-gh-pages:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@master
-#     # - name: Cache node modules
-#     #   uses: actions/cache@v1
-#     #   with:
-#     #     path: node_modules
-#     #     key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-#     #     restore-keys: |
-#     #       ${{ runner.OS }}-build-${{ env.cache-name }}-
-#     #       ${{ runner.OS }}-build-
-#     #       ${{ runner.OS }}-
-#     - name: Deploy Hexo to Github Pages.
-#       uses: nkjoep/gh-actions-hexo-deploy-gh-pages@master
-#       env:
-#         GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - 'hexo'
+jobs:
+  hexo-deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    # - name: Cache node modules
+    #   uses: actions/cache@v1
+    #   with:
+    #     path: node_modules
+    #     key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+    #     restore-keys: |
+    #       ${{ runner.OS }}-build-${{ env.cache-name }}-
+    #       ${{ runner.OS }}-build-
+    #       ${{ runner.OS }}-
+    - name: Deploy Hexo to Github Pages.
+      uses: nkjoep/gh-actions-hexo-deploy-gh-pages@master
+      env:
+        GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+        GITHUB_BRANCH: master
