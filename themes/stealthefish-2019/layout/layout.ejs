@@ -20,7 +20,20 @@
     <!-- gallery end -->
 
     <!-- og meta start -->
-    <%- open_graph({ twitter_id: theme.author.twitter }) %>
+    <% if(is_home()) { %>
+      <meta name="author" content="<%= theme.author.name %>">
+      <meta name="description" content="<%= config.description %>">
+      <meta property="og:type" content="website">
+      <meta name="title" property="og:title" content="<%= config.title %>">
+      <meta property="og:url" content="<%= config.url %>">
+      <meta property="og:site_name" content="<%= config.title %>">
+      <meta property="og:description" content="<%= config.description %>">
+      <meta property="og:locale" content="en_US">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:creator" content="@<%= theme.author.twitter %>">
+    <% } else { %>
+      <%- open_graph({ twitter_id: theme.author.twitter }) %>
+    <% } %>
     <!-- og meta end -->
 
   </head>
