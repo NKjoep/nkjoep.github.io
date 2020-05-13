@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "_gh": "node -e \"require('./themes/stealthefish-2019/scripts/github-repo.js')('nkjoep').catch((e) => { console.log(e)})\"",
-    "build": "npm run _gh && hexo generate",
+    "build": "npm run clean && npm run _gh && hexo generate",
     "clean": "hexo clean",
     "deploy": "npm run _gh && hexo deploy",
     "server": "hexo clean && npm run _gh && hexo server",
