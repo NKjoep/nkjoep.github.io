@@ -187,6 +187,7 @@ a:hover {
 
 .stealthefish__main {
   margin-top: var(--space-xl);
+  min-height: 100vh;
 }
 
 .stealthefish__hero img {
@@ -195,6 +196,7 @@ a:hover {
   margin: 0 auto;
   object-fit: cover;
   width: var(--space-xxl);
+  height: var(--space-xxl);
 }
 
 .stealthefish__aside {
