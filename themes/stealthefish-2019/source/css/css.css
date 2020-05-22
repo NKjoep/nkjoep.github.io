@@ -372,15 +372,25 @@ a:hover {
   position: absolute;
   left: 0;
   line-height: 0;
+  /*
+    this weird number:
+      100vw (the full row)
+      7 cells per row
+      image ratio of 480/640 = 0,75
+      2 rows
+      -->
+      100 / 7 * 0,75 * 2 = 21,4285714286
+  */
+  height: 21.4285714286vw;
 }
 
 .stealthefish__footer-pics a {
   width: 14.2857142857%;
-  height: 14.2857142857%;
+  height: 50%; /* 2 rows, so the tile take half of 100% --> 100/2=50 */
   display: inline-block;
   margin: 0;
   line-height: 1;
-  transition: transform .16s;
+  transition: transform .15s;
   font-size: 0.1px;
   z-index: 9;
 }

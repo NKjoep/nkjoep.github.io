@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%- `${page && page.current && page.current > 1 ? `Archive Page ${page.current} | `: ''}` %><%- !!page.title ? `${page.title + ' | ' }` : '' %><%- theme.title %></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="<%- url_for('css/css.css') %>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" id="tl-id-1" data-turbolinks-permanent />
+    <link rel="stylesheet" href="<%- url_for('css/css.css') %>" data-turbolinks-permanent id="tl-id-2" />
 
     <link rel="preload"
           as="style"
-          href="https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext&display=swap" />
+          href="https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext&display=swap" id="tl-id-6" data-turbolinks-permanent />
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&subset=latin-ext&display=swap"
-          media="print" onload="this.media='all'" />
+          media="all" onload="this.media='all'" id="tl-id-3" data-turbolinks-permanent />
 
-    <%- theme.rss ? `<link rel="alternate" href="${ url_for(theme.rss) }" title="${config.title}" type="application/atom+xml">` : '' %>
-    <%- theme.favicon ? `<link rel="icon" href="${theme.favicon}">` : '' %>
+    <%- theme.rss ? `<link rel="alternate" href="${ url_for(theme.rss) }" title="${config.title}" type="application/atom+xml" id="tl-id-10" data-turbolinks-permanent>` : '' %>
+    <%- theme.favicon ? `<link rel="icon" href="${theme.favicon}" id="tl-id-11 data-turbolinks-permanent>` : '' %>
 
     <!-- icons start -->
     <meta name="theme-color" content="<%- theme.theme_colors.brand %>">
     <link rel="icon" href="/favicon/steal-fav512w.svg">
     <link rel="apple-touch-icon" href="/favicon/steal-fav180w.png">
     <!-- icons end -->
-
     <!-- gallery start -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" id="tl-id-4" data-turbolinks-permanent />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js" id="tl-id-5" data-turbolinks-permanent></script>
     <!-- gallery end -->
 
     <!-- og meta start -->
@@ -46,6 +45,14 @@
     <% } %>
     <!-- og meta end -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" defer async></script>
+    <style>
+    .turbolinks-progress-bar {
+        height: 0.3rem;
+        background-color: var(--color-blue);
+        box-shadow: 1px 0px 5px 1px var(--color-button-shade1);
+      }
+    </style>
   </head>
 
   <body class="stealthefish">
