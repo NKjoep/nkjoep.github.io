@@ -119,9 +119,9 @@
     "disqus_shortname": "stealthefish"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.5",
-    "@fortawesome/fontawesome-free-solid": "^5.0.10",
-    "date-fns": "^1.29.0",
+    "@fortawesome/fontawesome": "1.1.8",
+    "@fortawesome/fontawesome-free-solid": "5.0.13",
+    "date-fns": "1.9.0",
     "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.4",
     "metalsmith": "2.3.0",
@@ -136,7 +136,7 @@
     "metalsmith-permalinks": "^0.5.0",
     "ncp": "^2.0.0",
     "node-notifier": "5.2.1",
-    "node-sass": "^4.7.2",
+    "node-sass": "^9.0.0",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
   },
