@@ -10,6 +10,9 @@
     "server": "hexo clean && npm run _gh && hexo server",
     "start": "npm run server"
   },
+  "engines": {
+    "node": "14.15.2"
+  },
   "hexo": {
     "version": "4.2.1"
   },
